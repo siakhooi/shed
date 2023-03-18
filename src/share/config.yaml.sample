@@ -1,0 +1,7 @@
+sheds:
+    - code: D
+      name: shed-D-development
+    - code: T
+      name: shed-T-testing
+    - code: C
+      name: shed-P-production

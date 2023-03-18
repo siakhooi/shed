@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [[ -z "$SHED_CONFIG_FILE" ]]; then
+    echo 'SHED_CONFIG_FILE is not set.' >&2
+    exit 1
+fi
+
+if [ ! -f "$SHED_CONFIG_FILE" ]; then
+    echo "SHED_CONFIG_FILE does not exist. (value: $SHED_CONFIG_FILE)" >&2
+    exit 2
+fi
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $(basename "$0") yamlPath"
+    exit 0
+fi
+
+yq eval "$1" "$SHED_CONFIG_FILE"

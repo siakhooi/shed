@@ -1,0 +1,4 @@
+#!/bin/bash
+
+YQPATH='[[["Code", "Name"]] + [.sheds|.[]|[.code, .name]]]|.[] '
+yq eval -o=tsv "$YQPATH" "$SHED_CONFIG_FILE" | expand -t10

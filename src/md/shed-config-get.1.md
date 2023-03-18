@@ -1,0 +1,43 @@
+% SHED-CONFIG-GET(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
+% Siak Hooi
+% March 2023
+
+# NAME
+shed-config-get - get value from shed config file
+
+# SYNOPSIS
+**shed-config-get** yamlPath
+
+# DESCRIPTION
+get value from shed config file.
+
+# EXAMPLES
+**shed-config-get** .sheds[0].code
+: D
+
+**shed-config-get** .sheds[0].name
+: shed-D-development
+
+# EXIT CODE
+**1**
+: Environment variable SHED_CONFIG_FILE is not set.
+
+**2**
+: File stated in SHED_CONFIG_FILE does not exist.
+
+# FILES
+~/.shed/config.yaml
+: shed config file
+
+# ENVIRONMENT VARIABLES
+SHED_CONFIG_FILE
+: shed config file, default to $SHED_CONFIG_HOME/config.yaml
+
+# LICENSE
+MIT
+
+# BUGS
+Report bugs at https://github.com/siakhooi/shed/issues.
+
+# SEE ALSO
+shed-config(1), shed-config-edit(1), shed-config.yaml(5), shed(1)

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+YQPATH='.sheds[].code'
+yq eval "$YQPATH" "$SHED_CONFIG_FILE"

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+command -v yq >/dev/null
+if [[ $? -eq 1 ]]; then
+  echo "[1;31mError: yq not found![0m please install at [1;31mhttps://github.com/mikefarah/yq[0m." >&2
+fi
+
+cat <<___EOF___
+Add the following line to your [1;32m~/.bashrc[0m file and restart your shell to use shed!
+  [1;32msource /usr/lib/shed/shed-init[0m
+
+after that, run the follow command to edit your shed config:
+  [1;32mshed-config-edit[0m
+
+___EOF___

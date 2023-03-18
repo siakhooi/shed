@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [[ $# -eq 0 ]]; then
+    man shed
+    exit $?
+fi
+
+MODULE=$1
+shift
+
+case $MODULE in
+config)
+    shed-config "$@"
+    exit $?
+    ;;
+config-get)
+    shed-config-get "$@"
+    exit $?
+    ;;
+config-edit)
+    shed-config-edit "$@"
+    exit $?
+    ;;
+env)
+    shed-env "$@"
+    exit $?
+    ;;
+list)
+    shed-list "$@"
+    exit $?
+    ;;
+list-code)
+    shed-list-code "$@"
+    exit $?
+    ;;
+esac
+
+echo "Unsupported module: $MODULE" >&2
+exit 3
