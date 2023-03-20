@@ -6,7 +6,7 @@ export SHED_CONFIG_FILE=${SHED_CONFIG_HOME}/config.yaml
 [[ -d "$SHED_CONFIG_HOME" ]] || mkdir -p "$SHED_CONFIG_HOME"
 [[ -f "$SHED_CONFIG_FILE" ]] || /usr/lib/shed/shed-config-create-sample
 
-SHED_SYSTEM_INIT_DIRECTORY=/usr/lib/shed/init.d
+SHED_SYSTEM_INIT_DIRECTORY=/usr/lib/shed/init.d/shed-init
 
 if [[ -d $SHED_SYSTEM_INIT_DIRECTORY ]]; then
     for f1 in $(find "$SHED_SYSTEM_INIT_DIRECTORY" -type f | sort); do
@@ -15,7 +15,7 @@ if [[ -d $SHED_SYSTEM_INIT_DIRECTORY ]]; then
     done
 fi
 
-SHED_USER_INIT_DIRECTORY=$SHED_CONFIG_HOME/init.d
+SHED_USER_INIT_DIRECTORY=$SHED_CONFIG_HOME/init.d/shed-init
 
 if [[ -d $SHED_USER_INIT_DIRECTORY ]]; then
     for f1 in $(find "$SHED_USER_INIT_DIRECTORY" -type f | sort); do

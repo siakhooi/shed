@@ -27,6 +27,9 @@ shed programs use environment variable to control which clusters to used. This a
 ~/.shed/config.yaml
 : shed config file, default value of **SHED_CONFIG_FILE** environment variable.
 
+~/.shed/init.d/shed-init
+: user defined scripts that will be executed when shed is initiated by **/usr/lib/shed/shed-init**
+
 # ENVIRONMENT VARIABLES
 SHED_CONFIG_HOME
 : Home directory for **shed** config files, default to $HOME/.shed
