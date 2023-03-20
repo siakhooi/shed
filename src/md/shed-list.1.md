@@ -3,7 +3,7 @@
 % March 2023
 
 # NAME
-shed-list - print list of code and name of available sheds.
+shed-list - print list of codes and names of sheds, configured in the *config.yaml*.
 
 # SYNOPSIS
 **shed-list**
@@ -17,6 +17,14 @@ Print list of code and name of available sheds.
 \ \ \ \  D\ \ \ \ \ \ \ \  shed-D-development\
 \ \ \ \  P\ \ \ \ \ \ \ \  shed-P-production\
 \ \ \ \  T\ \ \ \ \ \ \ \  shed-T-testing
+
+# FILES
+~/.shed/config.yaml
+: shed config file
+
+# ENVIRONMENT VARIABLES
+SHED_CONFIG_FILE
+: shed config file, default to $SHED_CONFIG_HOME/config.yaml
 
 # LICENSE
 MIT
