@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat <<___EOF___
+
+You can now remove the following line from your [1;32m~/.bashrc[0m file!
+  [1;32msource /usr/lib/shed/shed-init[0m
+
+___EOF___

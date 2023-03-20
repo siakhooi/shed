@@ -7,6 +7,6 @@ wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O 
 
 yes | unminimize
 
-apt install -y ./siakhooi-shed_0.1.0_amd64.deb
+apt install -y ./siakhooi-shed_0.1.1_amd64.deb
 
 echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
