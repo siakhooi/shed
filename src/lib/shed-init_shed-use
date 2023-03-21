@@ -1,0 +1,5 @@
+#!/bin/bash
+
+INIT_SHED=$(shed-config-get .init.shed)
+
+[[ -n $INIT_SHED ]] && shed-use "$INIT_SHED"

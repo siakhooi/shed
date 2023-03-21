@@ -14,12 +14,14 @@ Print content of shed config file.
 # EXAMPLES
 **shed-config**\
 \ \ \ \  sheds:\
-\ \ \ \ \ \    - code: D\
-\ \ \ \ \ \ \ \      name: shed-D-development\
-\ \ \ \ \ \    - code: T\
-\ \ \ \ \ \ \ \      name: shed-T-testing\
-\ \ \ \ \ \    - code: P\
-\ \ \ \ \ \ \ \      name: shed-P-production
+\ \ \ \ \ \ \ - code: D\
+\ \ \ \ \ \ \ \ \ name: shed-D-development\
+\ \ \ \ \ \ \ - code: T\
+\ \ \ \ \ \ \ \ \ name: shed-T-testing\
+\ \ \ \ \ \ \ - code: P\
+\ \ \ \ \ \ \ \ \ name: shed-P-production\
+\ \ \ \  init:\
+\ \ \ \ \ \ \ shed: P
 
 # EXIT CODE
 **1**

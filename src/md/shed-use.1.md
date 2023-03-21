@@ -1,0 +1,41 @@
+% SHED-USE(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
+% Siak Hooi
+% March 2023
+
+# NAME
+shed-use - set the environment to use a shed.
+
+# SYNOPSIS
+**shed-use** shedCode
+
+# DESCRIPTION
+Set the environment to use **shedCode** as current shed.
+
+# EXAMPLES
+**shed-use** D
+
+**shed-use** C\
+\ \ \ \  Invalid Shed Code. (found: C).
+
+# FILES
+~/.shed/config.yaml
+: shed config file
+
+~/.shed/init.d/shed-use/
+: user defined scripts that will be executed when shed is set by **shed-use**.
+
+# ENVIRONMENT VARIABLES
+SHED_CONFIG_FILE
+: shed config file, default to $SHED_CONFIG_HOME/config.yaml
+
+SHED_CODE
+: the current Shed, set with this command.
+
+# LICENSE
+MIT
+
+# BUGS
+Report bugs at https://github.com/siakhooi/shed/issues.
+
+# SEE ALSO
+shed-list-code(1), shed-config(1), shed-config-edit(1), shed-config.yaml(5)

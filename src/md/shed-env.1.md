@@ -13,6 +13,7 @@ Print environment variables used by shed programs.
 
 # EXAMPLES
 **shed-env**\
+\ \ \ \  SHED_CODE=P\
 \ \ \ \  SHED_CONFIG_FILE=/home/siakhooi/.shed/config.yaml\
 \ \ \ \  SHED_CONFIG_HOME=/home/siakhooi/.shed
 

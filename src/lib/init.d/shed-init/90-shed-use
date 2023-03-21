@@ -1,0 +1,39 @@
+#!/bin/bash
+
+shed-use() {
+    if [[ $# -ne 1 ]]; then
+        echo "Usage: shed-use shedCode"
+        return
+    fi
+
+    local SHED
+    SHED=$1
+
+    # verify shed exist
+    if ! shed-list-code | grep -w -q "$SHED"; then
+        echo "Invalid Shed Code. (found: ${SHED})."
+        return
+    fi
+
+    export SHED_CODE=$SHED
+
+    SHED_USE_SYSTEM_INIT_DIRECTORY=/usr/lib/shed/init.d/shed-use/
+
+    if [[ -d $SHED_USE_SYSTEM_INIT_DIRECTORY ]]; then
+        for f1 in $(find "$SHED_USE_SYSTEM_INIT_DIRECTORY" -type f | sort); do
+            # shellcheck source=/dev/null
+            source "$f1"
+        done
+    fi
+
+    SHED_USE_USER_INIT_DIRECTORY=$SHED_CONFIG_HOME/init.d/shed-use/
+
+    if [[ -d $SHED_USE_USER_INIT_DIRECTORY ]]; then
+        for f1 in $(find "$SHED_USE_USER_INIT_DIRECTORY" -type f | sort); do
+            # shellcheck source=/dev/null
+            source "$f1"
+        done
+    fi
+}
+
+complete -C shed-list-code shed-use

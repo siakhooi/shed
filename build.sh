@@ -19,8 +19,12 @@ cp -vr $SOURCE/bin $TARGET/usr
 
 # Lib Files
 mkdir -p $TARGET/usr/lib/shed
-chmod +x $SOURCE/lib/*
-cp -vr $SOURCE/lib/* $TARGET/usr/lib/shed
+chmod +x $SOURCE/lib/shed*
+cp -vr $SOURCE/lib/shed* $TARGET/usr/lib/shed
+
+mkdir -p $TARGET/usr/lib/shed/init.d/shed-init
+chmod +x $SOURCE/lib/init.d/shed-init/*
+cp -vr $SOURCE/lib/init.d/shed-init/* $TARGET/usr/lib/shed/init.d/shed-init
 
 # Share file
 mkdir -p $TARGET/usr/share/shed
@@ -37,7 +41,6 @@ fileList=$(cd $SOURCE/md && find *.5.md | sed 's/.md//')
 for file in $fileList; do
   pandoc $SOURCE/md/$file.md -s -t man | gzip -9 >$TARGET/usr/share/man/man5/$file.gz
 done
-
 
 dpkg-deb --build -Zxz $TARGET
 dpkg-name ${TARGET}.deb

@@ -23,3 +23,5 @@ if [[ -d $SHED_USER_INIT_DIRECTORY ]]; then
         source "$f1"
     done
 fi
+
+source /usr/lib/shed/shed-init_shed-use

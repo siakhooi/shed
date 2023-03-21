@@ -1,7 +1,7 @@
 Package: siakhooi-shed
-Version: 0.1.1
+Version: 0.2.0
 Maintainer: Siak Hooi <siakhooi@gmail.com>
-Depends: bash, coreutils, findutils, grep, vim, man-db
+Depends: bash, coreutils, findutils, grep, vim, man-db, sed
 Architecture: amd64
 Homepage: <https://github.com/siakhooi/shed>
 Description: Programs to manage kubernetes environments

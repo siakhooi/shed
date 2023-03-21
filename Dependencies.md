@@ -8,6 +8,7 @@
 | grep      | grep                                         |
 | findutils | find                                         |
 | man-db    | man                                          |
+| sed       | sed                                          |
 
 ## External dependencies
 

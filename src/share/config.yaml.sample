@@ -3,5 +3,7 @@ sheds:
       name: shed-D-development
     - code: T
       name: shed-T-testing
-    - code: C
+    - code: P
       name: shed-P-production
+init:
+  shed: P

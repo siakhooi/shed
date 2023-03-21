@@ -32,3 +32,27 @@ docker-ubuntu-bash:
 docker-debian-bash:
 	docker run --rm -it -w /working -v $$(pwd):/working debian bash
 #	. in-container-init.sh
+
+test-steps:
+# docker exec -it xxxxx bash
+	shed-env
+	shed-config
+	shed-config-get
+	shed-config-edit
+	shed-list
+	shed-list-code
+	shed-values
+	shed-value
+	shed-use
+	shed
+
+	man shed-env
+	man shed-config
+	man shed-config-get
+	man shed-config-edit
+	man shed-list
+	man shed-list-code
+	man shed-values
+	man shed-value
+	man shed-use
+	man shed

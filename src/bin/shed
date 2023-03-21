@@ -33,6 +33,17 @@ list-code)
     shed-list-code "$@"
     exit $?
     ;;
+value)
+    shed-value "$@"
+    exit $?
+    ;;
+values)
+    shed-values "$@"
+    exit $?
+    ;;
+help)
+    man shed
+    exit $?
 esac
 
 echo "Unsupported module: $MODULE" >&2
