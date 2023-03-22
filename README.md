@@ -17,6 +17,17 @@ shed-env
 
 shed-list
 shed-list-code
+
+shed-value yamlPath
+shed-values
+
+shed-use shedCode
+shed-kubeconfig-use kubeconfig-number
+c0
+c1
+c2
+c3
+c4
 ```
 
 ## Installation

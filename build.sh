@@ -9,7 +9,7 @@ SOURCE=src
 mkdir "$TARGET"
 
 # Control File
-chmod +x $SOURCE/DEBIAN/postinst
+chmod +x $SOURCE/DEBIAN/post*
 cp -vr $SOURCE/DEBIAN $TARGET
 
 # Binary Files
@@ -19,12 +19,8 @@ cp -vr $SOURCE/bin $TARGET/usr
 
 # Lib Files
 mkdir -p $TARGET/usr/lib/shed
-chmod +x $SOURCE/lib/shed*
-cp -vr $SOURCE/lib/shed* $TARGET/usr/lib/shed
-
-mkdir -p $TARGET/usr/lib/shed/init.d/shed-init
-chmod +x $SOURCE/lib/init.d/shed-init/*
-cp -vr $SOURCE/lib/init.d/shed-init/* $TARGET/usr/lib/shed/init.d/shed-init
+find src/lib/init.d -type f -exec chmod +x -v {} \;
+cp -vr $SOURCE/lib/* $TARGET/usr/lib/shed
 
 # Share file
 mkdir -p $TARGET/usr/share/shed

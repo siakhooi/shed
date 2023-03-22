@@ -13,9 +13,11 @@ Print environment variables used by shed programs.
 
 # EXAMPLES
 **shed-env**\
+\ \ \ \  EDITOR=nano\
 \ \ \ \  SHED_CODE=P\
 \ \ \ \  SHED_CONFIG_FILE=/home/siakhooi/.shed/config.yaml\
-\ \ \ \  SHED_CONFIG_HOME=/home/siakhooi/.shed
+\ \ \ \  SHED_CONFIG_HOME=/home/siakhooi/.shed\
+\ \ \ \  SHED_KUBECONFIG_NUMBER=0
 
 # LICENSE
 MIT
@@ -24,4 +26,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed(1), shed-config(1), shed-config.yaml(5)
+shed(1), shed-config(1), shed-config.yaml(5), shed-use(1), shed-kubeconfig-use(1)

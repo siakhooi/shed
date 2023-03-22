@@ -22,9 +22,16 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed-config**\
 **shed-config-edit**\
 **shed-config-get** yamlPath\
-**shed-use** shedCode\
 **shed-value** yamlPath\
-**shed-values**
+**shed-values**\
+\ \
+**shed-use** shedCode\
+**shed-kubeconfig-use** kubeconfig-number\
+**c0**\
+**c1**\
+**c2**\
+**c3**\
+**c4**
 
 # DESCRIPTION
 shed programs use environment variable to control which clusters to used. This allow user to connect to different cluster in different shell sessions.
@@ -39,6 +46,9 @@ shed programs use environment variable to control which clusters to used. This a
 ~/.shed/init.d/shed-use/
 : user defined scripts that will be executed when shed is set by **shed-use**.
 
+~/.shed/init.d/shed-kubeconfig-use/
+: user defined scripts that will be executed when shed kubeconfig is set by **shed-kubeconfig-use**.
+
 # ENVIRONMENT VARIABLES
 SHED_CONFIG_HOME
 : Home directory for **shed** config files, default to $HOME/.shed
@@ -52,6 +62,9 @@ EDITOR
 SHED_CODE
 : the current Shed.
 
+SHED_KUBECONFIG_NUMBER
+: the current Shed Kubeconfig Number
+
 # LICENSE
 MIT
 
@@ -63,4 +76,4 @@ shed-env(1)\
 shed-list(1), shed-list-code(1)\
 shed-config(1), shed-config-edit(1), shed-config-get(1), shed-config.yaml(5)\
 shed-value(1), shed-values(1)\
-shed-use(1)
+shed-use(1), shed-kubeconfig-use(1)

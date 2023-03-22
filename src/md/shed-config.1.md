@@ -16,10 +16,19 @@ Print content of shed config file.
 \ \ \ \  sheds:\
 \ \ \ \ \ \ \ - code: D\
 \ \ \ \ \ \ \ \ \ name: shed-D-development\
+\ \ \ \ \ \ \ \ \ kubeconfig:\
+\ \ \ \ \ \ \ \ \ \  - context: kube-dev-1\
+\ \ \ \ \ \ \ \ \ \  - context: kube-dev-2\
 \ \ \ \ \ \ \ - code: T\
 \ \ \ \ \ \ \ \ \ name: shed-T-testing\
+\ \ \ \ \ \ \ \ \ kubeconfig:\
+\ \ \ \ \ \ \ \ \ \  - context: kube-test-1\
+\ \ \ \ \ \ \ \ \ \  - context: kube-test-2\
+\ \ \ \ \ \ \ \ \ \  - context: kube-test-3\
 \ \ \ \ \ \ \ - code: P\
 \ \ \ \ \ \ \ \ \ name: shed-P-production\
+\ \ \ \ \ \ \ \ \ kubeconfig:\
+\ \ \ \ \ \ \ \ \ \  - context: kube-prod-1\
 \ \ \ \  init:\
 \ \ \ \ \ \ \ shed: P
 

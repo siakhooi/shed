@@ -25,13 +25,12 @@ uninstall:
 terminalizer:
 	terminalizer render docs/terminalizer-shed.yml
 
-docker-ubuntu-bash:
-	docker run --rm -it -w /working -v $$(pwd):/working ubuntu bash
+run-in-container:
 #	. in-container-init.sh
 
-docker-debian-bash:
-	docker run --rm -it -w /working -v $$(pwd):/working debian bash
-#	. in-container-init.sh
+test:
+	run-ubuntu
+	run-debian
 
 test-steps:
 # docker exec -it xxxxx bash
@@ -45,6 +44,12 @@ test-steps:
 	shed-value
 	shed-use
 	shed
+	shed-kubeconfig-use
+	c0
+	c1
+	c2
+	c3
+	c4
 
 	man shed-env
 	man shed-config
@@ -56,3 +61,5 @@ test-steps:
 	man shed-value
 	man shed-use
 	man shed
+	man shed-kubeconfig-use
+	

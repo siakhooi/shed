@@ -38,4 +38,5 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-list-code(1), shed-config(1), shed-config-edit(1), shed-config.yaml(5)
+shed-list-code(1), shed-config(1), shed-config-edit(1), shed-config.yaml(5)\
+shed_kubeconfig-use(1)

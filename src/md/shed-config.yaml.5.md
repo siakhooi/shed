@@ -8,18 +8,33 @@
 # DESCRIPTION
 ~/.shed/config.yaml is config file in yaml format, with following available options:
 
-sheds[]\ \ \ \ \  # Array of sheds\
-\  + code\ \ \ \  # code of a shed\
-\  + name\ \ \ \  # name of a shed
+sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # Array of sheds\
+\  + code\ \ \ \ \ \ \ \ \ \ \ \ \ \  # code of a shed\
+\  + name\ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed\
+\  + kubeconfig[0..4]\ \  # Array of kubeconfigs, support up to 5 configs per shed\
+\ \ \  + context\ \ \ \ \ \ \ \ \  # context name of kube config\
+init\
+\  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed to use on initialization
 
 # EXAMPLES
 sheds:\
 \ \ \  - code: D\
 \ \ \ \ \  name: shed-D-development\
+\ \ \ \ \ \ kubeconfig:\
+\ \ \ \ \ \ \  - context: kube-dev-1\
+\ \ \ \ \ \ \  - context: kube-dev-2\
 \ \ \  - code: T\
 \ \ \ \ \  name: shed-T-testing\
-\ \ \  - code: C\
-\ \ \ \ \  name: shed-P-production
+\ \ \ \ \ \ kubeconfig:\
+\ \ \ \ \ \ \  - context: kube-test-1\
+\ \ \ \ \ \ \  - context: kube-test-2\
+\ \ \ \ \ \ \  - context: kube-test-3\
+\ \ \  - code: P\
+\ \ \ \ \  name: shed-P-production\
+\ \ \ \ \ \ kubeconfig:\
+\ \ \ \ \ \ \  - context: kube-prod-1\
+init:\
+\ \ \  shed: P
 
 # FILES
 ~/.shed/config.yaml
