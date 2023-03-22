@@ -30,6 +30,8 @@ c3
 c4
 ```
 
+👉Visit [Screenshots](screenshots/Screenshots.md) of each commands.
+
 ## Installation
 
 - Pre-requisite
