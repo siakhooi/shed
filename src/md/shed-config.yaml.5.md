@@ -13,6 +13,7 @@ sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # Array of sheds\
 \  + name\ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed\
 \  + kubeconfig[0..4]\ \  # Array of kubeconfigs, support up to 5 configs per shed\
 \ \ \  + context\ \ \ \ \ \ \ \ \  # context name of kube config\
+\ \ \  + namespace\ \ \ \ \ \ \  # optional, namespace of kube config\
 init\
 \  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed to use on initialization
 
@@ -22,7 +23,9 @@ sheds:\
 \ \ \ \ \  name: shed-D-development\
 \ \ \ \ \ \ kubeconfig:\
 \ \ \ \ \ \ \  - context: kube-dev-1\
-\ \ \ \ \ \ \  - context: kube-dev-2\
+\ \ \ \ \ \ \ \ \  namespace: ns-application\
+\ \ \ \ \ \ \  - context: kube-dev-1\
+\ \ \ \ \ \ \ \ \  namespace: ns-database\
 \ \ \  - code: T\
 \ \ \ \ \  name: shed-T-testing\
 \ \ \ \ \ \ kubeconfig:\

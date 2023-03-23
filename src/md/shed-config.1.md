@@ -18,7 +18,9 @@ Print content of shed config file.
 \ \ \ \ \ \ \ \ \ name: shed-D-development\
 \ \ \ \ \ \ \ \ \ kubeconfig:\
 \ \ \ \ \ \ \ \ \ \  - context: kube-dev-1\
-\ \ \ \ \ \ \ \ \ \  - context: kube-dev-2\
+\ \ \ \ \ \ \ \ \ \ \ \  namespace: ns-application\
+\ \ \ \ \ \ \ \ \ \  - context: kube-dev-1\
+\ \ \ \ \ \ \ \ \ \ \ \  namespace: ns-database\
 \ \ \ \ \ \ \ - code: T\
 \ \ \ \ \ \ \ \ \ name: shed-T-testing\
 \ \ \ \ \ \ \ \ \ kubeconfig:\

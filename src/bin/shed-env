@@ -1,3 +1,3 @@
 #!/bin/bash
 
-printenv | grep -e '^SHED_' -e 'EDITOR' | sort
+printenv | grep -e '^SHED_' -e '^EDITOR=' | sort

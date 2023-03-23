@@ -1,0 +1,31 @@
+#!/bin/bash
+
+function shed-show-git-branch() {
+  local R
+  R=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
+  echo.green -n "$R"
+}
+
+function shed-current-context() {
+  local R=""
+  if [[ -n "$SHED_CODE" ]]; then
+    if [[ -n "$SHED_KUBECONFIG_NUMBER" ]]; then
+      local context namespace
+      context=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].context")
+      namespace=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].namespace")
+
+      if [[ -n "$context" ]]; then
+        if [[ -n "$namespace" ]]; then
+          R="[$SHED_CODE/$context/$namespace]"
+        else
+          R="[$SHED_CODE/$context]"
+        fi
+      fi
+    else
+      R="[$SHED_CODE]"
+    fi
+  fi
+  echo.yellow -n "$R"
+}
+
+export PS1="\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\$(shed-current-context)\[\033[01;34m\]\w\[\033[00m\]\$(shed-show-git-branch)\$ "

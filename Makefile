@@ -4,15 +4,15 @@ clean:
 build:
 	./build.sh
 
-test-man-all:
-	pandoc src/md/shed-config-edit.1.md -s -t man | man -l -
-	pandoc src/md/shed-config-get.1.md -s -t man | man -l -
-	pandoc src/md/shed-config.1.md -s -t man | man -l -
+test-man:
+#	pandoc src/md/shed-config-edit.1.md -s -t man | man -l -
+#	pandoc src/md/shed-config-get.1.md -s -t man | man -l -
+#	pandoc src/md/shed-config.1.md -s -t man | man -l -
 	pandoc src/md/shed-config.yaml.5.md -s -t man | man -l -
-	pandoc src/md/shed-env.1.md -s -t man | man -l -
-	pandoc src/md/shed-list-code.1.md -s -t man | man -l -
-	pandoc src/md/shed-list.1.md -s -t man | man -l -
-	pandoc src/md/shed.1.md -s -t man | man -l -
+#	pandoc src/md/shed-env.1.md -s -t man | man -l -
+#	pandoc src/md/shed-list-code.1.md -s -t man | man -l -
+#	pandoc src/md/shed-list.1.md -s -t man | man -l -
+#	pandoc src/md/shed.1.md -s -t man | man -l -
 
 delete-tags:
 	git tag --delete 1.0.0
