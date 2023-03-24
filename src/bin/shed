@@ -41,6 +41,10 @@ values)
     shed-values "$@"
     exit $?
     ;;
+kubectl)
+    shed-kubectl "$@"
+    exit $?
+    ;;
 help)
     man shed
     exit $?

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+switch_context=$(shed-config-get .shed-kubeconfig-use.kubectl-switch-context)
+
+if is-true "$switch_context"; then
+    if [[ -n $SHED_CODE ]] && [[ -n $SHED_KUBECONFIG_NUMBER ]]; then
+        context=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].context")
+
+        kubectl config use-context "$context" 1>/dev/null
+    fi
+fi

@@ -8,11 +8,14 @@ test-man:
 #	pandoc src/md/shed-config-edit.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config-get.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config.1.md -s -t man | man -l -
-	pandoc src/md/shed-config.yaml.5.md -s -t man | man -l -
 #	pandoc src/md/shed-env.1.md -s -t man | man -l -
 #	pandoc src/md/shed-list-code.1.md -s -t man | man -l -
 #	pandoc src/md/shed-list.1.md -s -t man | man -l -
 #	pandoc src/md/shed.1.md -s -t man | man -l -
+#	pandoc src/md/shed-kubectl.1.md -s -t man | man -l -
+#	pandoc src/md/shed-kubeconfig-use.1.md -s -t man | man -l -
+test-man-5:
+	pandoc src/md/shed-config.yaml.5.md -s -t man | man -l -
 
 delete-tags:
 	git tag --delete 1.0.0
@@ -50,6 +53,8 @@ test-steps:
 	c2
 	c3
 	c4
+	shed-kubectl
+	k
 
 	man shed-env
 	man shed-config
@@ -62,4 +67,5 @@ test-steps:
 	man shed-use
 	man shed
 	man shed-kubeconfig-use
+	man shed-kubectl
 	

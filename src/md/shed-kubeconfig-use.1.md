@@ -1,4 +1,4 @@
-% SHED-USE(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
+% SHED-KUBECONFIG-USE(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
 % Siak Hooi
 % March 2023
 
@@ -19,7 +19,8 @@ c4 - alias for **shed-kubeconfig-use 4**
 **c4**
 
 # DESCRIPTION
-Set the environment to use a kube config of the shed.
+Set the environment to use a kube config of the shed.\
+Optional by configuration (*.shed-kubeconfig-use.kubectl-switch-context*), **shed-kubeconfig-use** can also change the kubectl context together.
 
 # EXAMPLES
 **shed-kubeconfig-use** 1

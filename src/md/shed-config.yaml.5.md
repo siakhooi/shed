@@ -8,18 +8,24 @@
 # DESCRIPTION
 ~/.shed/config.yaml is config file in yaml format, with following available options:
 
-sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # Array of sheds\
-\  + code\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # code of a shed\
-\  + name\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed\
-\  + kubeconfig[0..4]\ \ \ \ # Array of kubeconfigs, support up to 5 configs per shed\
-\ \ \  + context\ \ \ \ \ \ \ \ \ \ \ # context name of kube config\
-\ \ \  + namespace\ \ \ \ \ \ \ \ \ # optional, namespace of kube config\
+sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # Array of sheds\
+\  + code\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # code of a shed\
+\  + name\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # name of a shed\
+\  + kubeconfig[0..4]\ \ \ \ \ \ \ # Array of kubeconfigs, support up to 5 configs per shed\
+\ \ \  + context\ \ \ \ \ \ \ \ \ \ \ \ \ \ # context name of kube config\
+\ \ \  + namespace\ \ \ \ \ \ \ \ \ \ \ \ # optional, namespace of kube config\
 shed-init\
-\  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # code of a shed to use on initialization\
-\  + load-kubectl-config # update environment variable KUBECONFIG, default: yes
+\  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # code of a shed to use on initialization\
+\  + load-kubectl-config\ \ \ \ # update environment variable KUBECONFIG, default: yes\
+shed-kubeconfig-use\
+\  + kubectl-switch-context # switch kubectl context on kubeconfig-use, default: no
 
+# DETAIL
 **.shed-init.load-kubectl-config**
-: default to yes, update environment variable KUBECONFIG with files in ~/.shed/kubectl-config.
+: default to yes, update environment variable *KUBECONFIG* with files in *~/.shed/kubectl-config*.
+
+**.shed-kubeconfig-use.kubectl-switch-context**
+: default to no, call *kubectl use-context* when **shed-kubeconfig-use** is called.
 
 # EXAMPLES
 sheds:\
@@ -42,7 +48,9 @@ sheds:\
 \ \ \ \ \ \ \  - context: kube-prod-1\
 shed-init:\
 \ \ \  shed: P\
-\ \ \  load-kubectl-config: no
+\ \ \  load-kubectl-config: no\
+shed-kubeconfig-use:\
+\ \ \  kubectl-switch-context: yes
 
 # FILES
 ~/.shed/config.yaml

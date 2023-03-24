@@ -1,19 +1,21 @@
 # Dependencies
 
-| package                       | commands                                     |
-| ----------------------------- | -------------------------------------------- |
-| bash                          | bash                                         |
-| coreutils                     | echo printenv sort expand cp cat mkdir touch |
-| vim                           | vi                                           |
-| grep                          | grep                                         |
-| findutils                     | find                                         |
-| man-db                        | man                                          |
-| sed                           | sed                                          |
-| git                           | git                                          |
-| siakhooi-devutils-echo-colors | echo.green echo.yellow                       |
+| package                       | commands                                        | version    |
+| ----------------------------- | ----------------------------------------------- | ---------- |
+| bash                          | bash                                            |            |
+| coreutils                     | echo printenv sort expand cp cat mkdir touch ls |            |
+| vim                           | vi                                              |            |
+| grep                          | grep                                            |            |
+| findutils                     | find                                            |            |
+| man-db                        | man                                             |            |
+| sed                           | sed                                             |            |
+| git                           | git                                             |            |
+| siakhooi-devutils-echo-colors | echo.green echo.yellow                          | `>= 1.0.0` |
+| siakhooi-textutils            | is-true is-false                                | `>= 1.3.0` |
 
 ## External dependencies
 
 | package | commands |
 | ------- | -------- |
 | yq      | yq       |
+| kubectl | kubectl  |
