@@ -14,7 +14,7 @@ sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # Array of sheds\
 \  + kubeconfig[0..4]\ \  # Array of kubeconfigs, support up to 5 configs per shed\
 \ \ \  + context\ \ \ \ \ \ \ \ \  # context name of kube config\
 \ \ \  + namespace\ \ \ \ \ \ \  # optional, namespace of kube config\
-init\
+shed-init\
 \  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed to use on initialization
 
 # EXAMPLES
@@ -36,7 +36,7 @@ sheds:\
 \ \ \ \ \  name: shed-P-production\
 \ \ \ \ \ \ kubeconfig:\
 \ \ \ \ \ \ \  - context: kube-prod-1\
-init:\
+shed-init:\
 \ \ \  shed: P
 
 # FILES

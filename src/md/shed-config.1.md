@@ -31,7 +31,7 @@ Print content of shed config file.
 \ \ \ \ \ \ \ \ \ name: shed-P-production\
 \ \ \ \ \ \ \ \ \ kubeconfig:\
 \ \ \ \ \ \ \ \ \ \  - context: kube-prod-1\
-\ \ \ \  init:\
+\ \ \ \  shed-init:\
 \ \ \ \ \ \ \ shed: P
 
 # EXIT CODE
