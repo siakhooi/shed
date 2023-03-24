@@ -6,6 +6,14 @@ Shed is a collection of bash scripts to manage k8s environments.
 
 What is the meaning of shed? In kubernetes, we treat resources as cattles, and cattles lives in shed.
 
+in Shed, a shed can be a cluster, a collection of clusters, a namespace or a collection of namespace.
+
+Features:
+
+- A shed comprises of up to 5 kube config, which is a combination or a kube context and/or namespace.
+- Shed uses environment variable to control which kubectl context and namespace to work on.
+- Auto include kubectl config into KUBECONFIG environment on start up.
+
 ## Commands
 
 ```bash

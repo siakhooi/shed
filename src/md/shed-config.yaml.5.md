@@ -8,14 +8,18 @@
 # DESCRIPTION
 ~/.shed/config.yaml is config file in yaml format, with following available options:
 
-sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # Array of sheds\
-\  + code\ \ \ \ \ \ \ \ \ \ \ \ \ \  # code of a shed\
-\  + name\ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed\
-\  + kubeconfig[0..4]\ \  # Array of kubeconfigs, support up to 5 configs per shed\
-\ \ \  + context\ \ \ \ \ \ \ \ \  # context name of kube config\
-\ \ \  + namespace\ \ \ \ \ \ \  # optional, namespace of kube config\
+sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # Array of sheds\
+\  + code\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # code of a shed\
+\  + name\ \ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed\
+\  + kubeconfig[0..4]\ \ \ \ # Array of kubeconfigs, support up to 5 configs per shed\
+\ \ \  + context\ \ \ \ \ \ \ \ \ \ \ # context name of kube config\
+\ \ \  + namespace\ \ \ \ \ \ \ \ \ # optional, namespace of kube config\
 shed-init\
-\  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \  # name of a shed to use on initialization
+\  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # code of a shed to use on initialization\
+\  + load-kubectl-config # update environment variable KUBECONFIG, default: yes
+
+**.shed-init.load-kubectl-config**
+: default to yes, update environment variable KUBECONFIG with files in ~/.shed/kubectl-config.
 
 # EXAMPLES
 sheds:\
@@ -37,7 +41,8 @@ sheds:\
 \ \ \ \ \ \ kubeconfig:\
 \ \ \ \ \ \ \  - context: kube-prod-1\
 shed-init:\
-\ \ \  shed: P
+\ \ \  shed: P\
+\ \ \  load-kubectl-config: no
 
 # FILES
 ~/.shed/config.yaml

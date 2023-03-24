@@ -49,6 +49,9 @@ shed programs use environment variable to control which clusters to used. This a
 ~/.shed/init.d/shed-kubeconfig-use/
 : user defined scripts that will be executed when shed kubeconfig is set by **shed-kubeconfig-use**.
 
+~/.shed/kubectl-config
+: kube config files that will be added to environment variable $KUBECONFIG on by **shed-init**.
+
 # ENVIRONMENT VARIABLES
 SHED_CONFIG_HOME
 : Home directory for **shed** config files, default to $HOME/.shed
@@ -64,6 +67,12 @@ SHED_CODE
 
 SHED_KUBECONFIG_NUMBER
 : the current Shed Kubeconfig Number
+
+PS1
+: shed-init will modified this shell prompt.
+
+KUBECONFIG
+: shed-init will load all files in ~/.shed/kubectl-config directory into this environment variable.
 
 # LICENSE
 MIT
