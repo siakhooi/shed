@@ -1,3 +1,15 @@
 #!/bin/bash
 
 alias k='shed-kubectl'
+
+if [[ $(type -t __start_kubectl) == function ]]; then
+
+  ## modify from command: kubectl completion bash
+  if [[ $(type -t compopt) = "builtin" ]]; then
+    complete -o default -F __start_kubectl shed-kubectl
+    complete -o default -F __start_kubectl k
+  else
+    complete -o default -o nospace -F __start_kubectl shed-kubectl
+    complete -o default -o nospace -F __start_kubectl k
+  fi
+fi
