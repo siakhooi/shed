@@ -13,7 +13,7 @@ apt update -y
 
 yes | unminimize
 
-apt install -y ./siakhooi-shed_0.5.0_amd64.deb
+apt install -y ./siakhooi-shed_1.0.0_amd64.deb
 
 echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 
