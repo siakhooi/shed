@@ -2,17 +2,27 @@
 
 ## Introduction
 
-Shed is a collection of bash scripts to manage k8s environments.
+Shed is a collection of bash scripts to manage kubernetes environments.
 
-What is the meaning of Shed? In kubernetes, we treat resources as cattles, and cattles lives in shed.
+What is the meaning of Shed? In kubernetes, *we treat resources as cattles, and cattles lives in shed*.
 
-in Shed, a shed can be a cluster, a collection of clusters, a namespace or a collection of namespace.
+in Shed, a shed can be a cluster, a collection of clusters, a namespace or a collection of namespaces.
 
 Features:
 
-- A shed comprises of up to 5 kube config, which is a combination or a kube context and/or namespace.
-- Shed uses environment variable to control which kubectl context and namespace to work on.
-- Auto include kubectl config into KUBECONFIG environment on start up.
+- Supports up to 5 kube config per shed. (kube config: a combination or a kube context and/or namespace).
+- Able to work with different shed or kube config in different shell sessions.
+- Auto include kubectl config into `KUBECONFIG` environment on start up.
+- Modified shell prompt for better visibility of which shed/config the shell sessions is working on.
+- Hooks to extends shed functionalities on:
+  - shed-init - when the shell session started.
+  - shed-use - when switch to different shed using command `shed-use`.
+  - shed-kubeconfig-use - when switch to different kube config using commands `shed-kubeconfig-use`, `c0`, `c1`, `c2`, `c3`, `c4`.
+- Support `kubectl` with shorten alias, such as `k`.
+
+Current Development Environment:
+
+- Shed is currently developed in wsl ubuntu and tested with Ubuntu and Debian images.
 
 ## Commands
 
