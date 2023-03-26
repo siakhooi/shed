@@ -9,7 +9,7 @@ config:
   
   # Specify the current working directory path
   # the default is the current working directory path
-  cwd: /home/siakhooi/git/shed/docs
+  cwd: /tmp
   
   # Export additional ENV variables
   env:
