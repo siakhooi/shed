@@ -8,6 +8,10 @@ command -v kubectl >/dev/null
 if [[ $? -eq 1 ]]; then
   echo "[1;31mError: kubectl not found![0m please install at [1;31mhttps://kubernetes.io/docs/tasks/tools/install-kubectl-linux/[0m." >&2
 fi
+command -v helm >/dev/null
+if [[ $? -eq 1 ]]; then
+  echo "[1;31mWarning: helm not found![0m if you want to use helm feature, please install at [1;31mhttps://helm.sh/docs/intro/install/[0m." >&2
+fi
 
 cat <<___EOF___
 

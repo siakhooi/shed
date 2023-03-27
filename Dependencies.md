@@ -12,6 +12,7 @@
 | git                           | git                                             |            |
 | siakhooi-devutils-echo-colors | echo.green echo.yellow                          | `>= 1.0.0` |
 | siakhooi-textutils            | is-true is-false                                | `>= 1.3.0` |
+| bash-completion               |                                                 |            |
 
 ## External dependencies
 
@@ -19,3 +20,4 @@
 | ------- | -------- |
 | yq      | yq       |
 | kubectl | kubectl  |
+| helm    | helm     |

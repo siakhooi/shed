@@ -1,0 +1,15 @@
+#!/bin/bash
+
+alias h='shed-helm'
+
+if [[ $(type -t __start_helm) == function ]]; then
+
+  ## modify from command: helm completion bash
+  if [[ $(type -t compopt) = "builtin" ]]; then
+    complete -o default -F __start_helm shed-helm
+    complete -o default -F __start_helm h
+  else
+    complete -o default -o nospace -F __start_helm shed-helm
+    complete -o default -o nospace -F __start_helm h
+  fi
+fi

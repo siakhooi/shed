@@ -45,6 +45,10 @@ kubectl)
     shed-kubectl "$@"
     exit $?
     ;;
+helm)
+    shed-helm "$@"
+    exit $?
+    ;;
 help)
     man shed
     exit $?
