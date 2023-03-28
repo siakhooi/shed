@@ -16,16 +16,24 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.
 apt update -y
 apt install -y helm 
 
+cd /opt
+curl -L https://istio.io/downloadIstio | sh -
+export PATH=$( ls -d /opt/istio*/bin ):$PATH
+cd /working
+
 yes | unminimize
 
-apt install -y ./siakhooi-shed_1.1.0_amd64.deb
+apt install -y $(find . -name '*.deb')
 
 kubectl completion bash > ~/.kubectl-completion
 helm completion bash > ~/.helm-completion
+istioctl completion bash > ~/.istioctl-completion
 
 echo "source /etc/bash_completion" >> ~/.bashrc
 echo "source ~/.kubectl-completion" >> ~/.bashrc
 echo "source ~/.helm-completion" >> ~/.bashrc
+echo "source ~/.istioctl-completion" >> ~/.bashrc
+echo "PATH=$( ls -d /opt/istio*/bin ):\$PATH" >>~/.bashrc
 
 echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 

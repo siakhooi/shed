@@ -1,4 +1,4 @@
-% SHED-HELM(1) Siak Hooi Development Utilities 1.1.0|Shed Commands
+% SHED-HELM(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
 % Siak Hooi
 % March 2023
 
@@ -31,4 +31,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-kubeconfig-use(1), shed-kubectl(1)
+shed-kubeconfig-use(1), shed-kubectl(1), shed-istioctl(1)

@@ -55,8 +55,10 @@ test-steps:
 	c4
 	shed-kubectl
 	shed-helm
+	shed-istioctl
 	k
 	h
+	i
 
 	man shed-env
 	man shed-config
@@ -71,6 +73,8 @@ test-steps:
 	man shed-kubeconfig-use
 	man shed-kubectl
 	man shed-helm
+	man shed-istioctl
 	
 	completion kubectl, k, shed-kubectl
 	completion helm, h, shed-helm
+	completion istioctl, i, shed-istioctl

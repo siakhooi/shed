@@ -16,8 +16,9 @@
 
 ## External dependencies
 
-| package | commands |
-| ------- | -------- |
-| yq      | yq       |
-| kubectl | kubectl  |
-| helm    | helm     |
+| package  | commands |
+| -------- | -------- |
+| yq       | yq       |
+| kubectl  | kubectl  |
+| helm     | helm     |
+| istioctl | istioctl |

@@ -17,6 +17,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed values**\
 **shed kubectl** [kubectl arguments]\
 **shed helm** [helm arguments]\
+**shed istioctl** [istioctl arguments]\
 \ \
 **shed-list**\
 **shed-list-code**\
@@ -28,6 +29,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed-values**\
 **shed-kubectl** [kubectl arguments]\
 **shed-helm** [helm arguments]\
+**shed-istioctl** [istioctl arguments]\
 \ \
 **shed-use** shedCode\
 **shed-kubeconfig-use** kubeconfig-number\
@@ -38,7 +40,8 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **c3**\
 **c4**\
 **k**  [kubectl arguments]\
-**h**  [helm arguments]
+**h**  [helm arguments]\
+**i** [istioctl arguments]
 
 # DESCRIPTION
 shed programs use environment variable to control which clusters to used. This allow user to connect to different cluster in different shell sessions.
