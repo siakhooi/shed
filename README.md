@@ -30,24 +30,32 @@ Current Development Environment:
 
 ## Commands
 
-| Command                                 | Alias                        | Type     | Manpage |
-| --------------------------------------- | ---------------------------- | -------- | ------- |
-| `shed-config`                           |                              | bin      | ✅      |
-| `shed-config-edit`                      |                              | bin      | ✅      |
-| `shed-config-get` yamlPath              |                              | bin      | ✅      |
-| `shed-env`                              |                              | bin      | ✅      |
-| `shed-list`                             |                              | bin      | ✅      |
-| `shed-list-code`                        |                              | bin      | ✅      |
-| `shed-value` yamlPath                   |                              | bin      | ✅      |
-| `shed-values`                           |                              | bin      | ✅      |
-| `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      |
-| `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      |
-| `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      |
-| `shed-use` shedCode                     |                              | function | ✅      |
-| `shed-kubeconfig-use` kubeconfig-number | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      |
-| `shed`                                  |                              | bin      | ✅      |
+| Command                                 | Alias                        | Type     | Manpage | Docs                              |
+| --------------------------------------- | ---------------------------- | -------- | ------- | --------------------------------- |
+| `shed-config`                           |                              | bin      | ✅      | [📚 Doc](docs/shed-config.md)     |
+| `shed-config-edit`                      |                              | bin      | ✅      |                                   |
+| `shed-config-get` yamlPath              |                              | bin      | ✅      | [📚 Doc](docs/shed-config-get.md) |
+| `shed-env`                              |                              | bin      | ✅      | [📚 Doc](docs/shed-env.md)        |
+| `shed-list`                             |                              | bin      | ✅      | [📚 Doc](docs/shed-list.md)       |
+| `shed-list-code`                        |                              | bin      | ✅      | [📚 Doc](docs/shed-list-code.md)  |
+| `shed-value` yamlPath                   |                              | bin      | ✅      |                                   |
+| `shed-values`                           |                              | bin      | ✅      |                                   |
+| `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      |                                   |
+| `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      |                                   |
+| `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      |                                   |
+| `shed-use` shedCode                     |                              | function | ✅      |                                   |
+| `shed-kubeconfig-use` kubeconfig-number | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      |                                   |
+| `shed`                                  |                              | bin      | ✅      |                                   |
 
-👉Visit [Screenshots](screenshots/Screenshots.md) of each commands.
+## Files and Directories
+
+| Path                                  | Type      | Manpage |
+| ------------------------------------- | --------- | ------- |
+| `~/.shed/config.yaml`                 | file      | ✅      |
+| `~/.shed/init.d/shed-init/`           | directory | ❌      |
+| `~/.shed/init.d/shed-use/`            | directory | ❌      |
+| `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      |
+| `~/.shed/kubectl-config`              | directory | ❌      |
 
 ## Quick Start
 
