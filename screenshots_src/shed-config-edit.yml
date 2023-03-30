@@ -1,0 +1,169 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /tmp
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 69
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 21
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: null
+    title: null
+    style:
+      border: '16px #0C0C0C solid'
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Cascadia Mono"
+  
+  # The size of the font
+  fontSize: 16
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "#0C0C0C"
+    foreground: "#CCCCCC"
+    cursor: "#FFFFFF"
+    black: "#0C0C0C"
+    red: "#C50F1F"
+    green: "#13A10E"
+    yellow: "#C19C00"
+    blue: "#0037DA"
+    magenta: "#881798"
+    cyan: "#3A96DD"
+    white: "#CCCCCC"
+    brightBlack: "#767676"
+    brightRed: "#E74856"
+    brightGreen: "#16C60C"
+    brightYellow: "#F9F1A5"
+    brightBlue: "#3B78FF"
+    brightMagenta: "#B4009E"
+    brightCyan: "#61D6D6"
+    brightWhite: "#F2F2F2"
+  
+# Records, feel free to edit them
+records:
+  - delay: 10
+    content: "\r$ "
+  - delay: 3000
+    content: s
+  - delay: 100
+    content: h
+  - delay: 100
+    content: e
+  - delay: 100
+    content: d
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: c
+  - delay: 100
+    content: o
+  - delay: 100
+    content: 'n'
+  - delay: 100
+    content: f
+  - delay: 100
+    content: i
+  - delay: 100
+    content: g
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: e
+  - delay: 100
+    content: d
+  - delay: 100
+    content: i
+  - delay: 100
+    content: t
+  - delay: 100
+    content: "\r\n"
+  - delay: 100
+    content: "\e[?1049h\e[22;0;0t\e[>4;2m\e[?1h\e=\e[?2004h\e[1;21r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[21;1H\"~/.shed/config.yaml\" 20L, 431C\e[2;1H▽\e[6n\e[2;1H  \e[1;1H\e[>c\e]10;?\a\e]11;?\a"
+  - delay: 100
+    content: "\e[1;1H\e[36msheds\e[m\e[35m:\e[m\r\n  \e[38;5;130m- \e[m\e[36mcode\e[m\e[35m:\e[m D\r\n    \e[36mname\e[m\e[35m:\e[m shed-D-development\r\n    \e[36mkubeconfig\e[m\e[35m:\e[m\e[5;7H\e[38;5;130m- \e[m\e[36mcontext\e[m\e[35m:\e[m kube-dev-1\e[6;9H\e[36mnamespace\e[m\e[35m:\e[m ns-application\e[7;7H\e[38;5;130m- \e[m\e[36mcontext\e[m\e[35m:\e[m kube-dev-1\e[8;9H\e[36mnamespace\e[m\e[35m:\e[m ns-database\r\n  \e[38;5;130m- \e[m\e[36mcode\e[m\e[35m:\e[m T\r\n    \e[36mname\e[m\e[35m:\e[m shed-T-testing\r\n    \e[36mkubeconfig\e[m\e[35m:\e[m\e[12;7H\e[38;5;130m- \e[m\e[36mcontext\e[m\e[35m:\e[m kube-test-1\e[13;7H\e[38;5;130m- \e[m\e[36mcontext\e[m\e[35m:\e[m kube-test-2\e[14;7H\e[38;5;130m- \e[m\e[36mcontext\e[m\e[35m:\e[m kube-test-3\r\n  \e[38;5;130m- \e[m\e[36mcode\e[m\e[35m:\e[m P\r\n    \e[36mname\e[m\e[35m:\e[m shed-P-production\r\n    \e[36mkubeconfig\e[m\e[35m:\e[m\e[18;7H\e[38;5;130m- \e[m\e[36mcontext\e[m\e[35m:\e[m kube-prod-1\r\n\e[36mshed-init\e[m\e[35m:\e[m\r\n  \e[36mshed\e[m\e[35m:\e[m P\e[21;52H8,1\e[11CAll\e[8;1H\e[?25h"
+  - delay: 100
+    content: "\e[?25l\e[21;42H^[\e[8;1H"
+  - delay: 100
+    content: "\e[21;42H  \e[8;1H\e[21;42H^[\e[8;1H\a\e[21;42H  \e[8;1H\e[?25h"
+  - delay: 3000
+    content: "\e[?25l\e[21;42H:\e[8;1H\e[21;1H\e[K\e[21;1H:\e[?2004h\e[?25h"
+  - delay: 100
+    content: q
+  - delay: 100
+    content: '!'
+  - delay: 1000
+    content: "\r\e[?25l\e[?2004l\e[23;2t\e[23;1t\e[21;1H\e[K\e[21;1H\e[?2004l\e[?1l\e>\e[?25h\e[>4;m\e[?1049l\e[23;0;0t"
+  - delay: 10
+    content: "$ "
+  - delay: 4000
+    content: "\r"

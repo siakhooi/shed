@@ -9,3 +9,7 @@ Print environment variables used by shed programs.
 ## SCREENSHOTS
 
 ![shed-env](shed-env.gif "shed-env")
+
+## SEE ALSO
+
+[shed-config](shed-config.md)
