@@ -14,4 +14,4 @@ Run **kubectl** command with context and/or namespace from current KubeConfig.
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-helm](shed-helm.md)
+[shed-config](shed-config.md), [shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-helm](shed-helm.md), [shed-istioctl](shed-istioctl.md)

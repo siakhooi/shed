@@ -22,7 +22,7 @@ Features:
   - shed-kubeconfig-use - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
 - Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md).
 - Support `helm` with shortened alias, ie `h`[📚](docs/shed-helm.md).
-- Support `istioctl` with shortened alias, ie `i`.
+- Support `istioctl` with shortened alias, ie `i`[📚](docs/shed-istioctl.md).
 
 Current Development Environment:
 
@@ -42,7 +42,7 @@ Current Development Environment:
 | `shed-value` yamlPath                   |                              | bin      | ✅      | [📚 Doc](docs/shed-value.md)          |
 | `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      | [📚 Doc](docs/shed-kubectl.md)        |
 | `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      | [📚 Doc](docs/shed-helm.md)           |
-| `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      |                                       |
+| `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      | [📚 Doc](docs/shed-istioctl.md)       |
 | `shed-use` shedCode                     |                              | function | ✅      | [📚 Doc](docs/shed-use.md)            |
 | `shed-kubeconfig-use` kubeconfig-number | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      | [📚 Doc](docs/shed-kubeconfig-use.md) |
 | `shed`                                  |                              | bin      | ✅      |                                       |

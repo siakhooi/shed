@@ -18,4 +18,4 @@ h - alias to shed-helm
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-kubectl](shed-kubectl.md)
+[shed-config](shed-config.md), [shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-kubectl](shed-kubectl.md), [shed-istioctl](shed-istioctl.md)
