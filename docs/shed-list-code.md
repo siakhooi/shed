@@ -12,4 +12,4 @@ Print list of shed codes, configured in the _~/.shed/config.yaml_.
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-list](shed-list.md)
+[shed-config](shed-config.md), [shed-list](shed-list.md), [shed-use](shed-use.md)

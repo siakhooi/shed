@@ -10,7 +10,8 @@ Run **kubectl** command with context and/or namespace from current KubeConfig.
 ## SCREENSHOTS
 
 ![shed-use-shed-kubectl](shed-use-shed-kubectl.gif "shed-use-shed-kubectl")
+![shed-kubeconfig-use-shed-kubectl](shed-kubeconfig-use-shed-kubectl.gif "shed-kubeconfig-use-shed-kubectl")
 
 ## SEE ALSO
 
-[shed-use](shed-use.md)
+[shed-config](shed-config.md), [shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md)

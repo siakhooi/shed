@@ -12,4 +12,4 @@ Set the environment to use **shedCode** as current Shed.
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-list-code](shed-list-code.md)
+[shed-config](shed-config.md), [shed-list-code](shed-list-code.md), [shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-kubectl](shed-kubectl.md)

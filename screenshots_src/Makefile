@@ -75,3 +75,32 @@ shed-use-shed-kubectl:
 	k delete po/hello-dev-db-3
 	shed-use T
 	k delete po/hello-test-app-1 po/hello-test-db-1
+
+shed-kubeconfig-use-shed-kubectl:
+## setup
+	shed-use D
+	k run hello-dev-app-1 --image=siakhooi/starter-web:hello-world
+	k run hello-dev-app-2 --image=siakhooi/starter-web:hello-world
+	c1
+	k run hello-dev-db-3 --image=siakhooi/starter-web:hello-world
+
+	shed-use T
+	k run hello-test-app-1 --image=siakhooi/starter-web:hello-world
+	k run hello-test-db-1 --image=siakhooi/starter-web:hello-world
+
+## create shed-kubeconfig-use, shed-kubectl
+	shed-use D
+	k get po
+	c1
+	k get po
+	c0
+	k get po
+
+## clean up
+	shed-use D
+	k delete po/hello-dev-app-1 po/hello-dev-app-2
+	c1
+	k delete po/hello-dev-db-3
+	shed-use T
+	k delete po/hello-test-app-1 po/hello-test-db-1
+
