@@ -18,9 +18,9 @@ Features:
 - Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.
 - Hooks to extends shed functionalities on:
   - shed-init - when the shell session started.
-  - shed-use - when switch to different Shed using command `shed-use`.
+  - shed-use - when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
   - shed-kubeconfig-use - when switch to different KubeConfig using commands `shed-kubeconfig-use`, `c0`, `c1`, `c2`, `c3`, `c4`.
-- Support `kubectl` with shortened alias, ie `k`.
+- Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md).
 - Support `helm` with shortened alias, ie `h`.
 - Support `istioctl` with shortened alias, ie `i`.
 
@@ -40,10 +40,10 @@ Current Development Environment:
 | `shed-list-code`                        |                              | bin      | ✅      | [📚 Doc](docs/shed-list-code.md)   |
 | `shed-values`                           |                              | bin      | ✅      | [📚 Doc](docs/shed-values.md)      |
 | `shed-value` yamlPath                   |                              | bin      | ✅      | [📚 Doc](docs/shed-value.md)       |
-| `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      |                                    |
+| `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      | [📚 Doc](docs/shed-kubectl.md)     |
 | `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      |                                    |
 | `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      |                                    |
-| `shed-use` shedCode                     |                              | function | ✅      |                                    |
+| `shed-use` shedCode                     |                              | function | ✅      | [📚 Doc](docs/shed-use.md)         |
 | `shed-kubeconfig-use` kubeconfig-number | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      |                                    |
 | `shed`                                  |                              | bin      | ✅      |                                    |
 
@@ -86,9 +86,9 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 ## Using Shed
 
 - you can then start using Shed:
-  - start with `shed-use`.
+  - start with `shed-use`[📚](docs/shed-use.md).
   - optionally `c0`, `c1`, etc.
-  - then `k get po`, or `h list`, etc.
+  - then `k get po`[📚](docs/shed-kubectl.md), or `h list`, etc.
 
 ## Deployments
 
