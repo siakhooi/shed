@@ -3,13 +3,13 @@
 % March 2023
 
 # NAME
-shed-use - set the environment to use a shed.
+shed-use - set the environment to use a Shed.
 
 # SYNOPSIS
 **shed-use** shedCode
 
 # DESCRIPTION
-Set the environment to use **shedCode** as current shed.
+Set the environment to use **shedCode** as current Shed.
 
 # EXAMPLES
 **shed-use** D

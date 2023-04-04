@@ -3,13 +3,13 @@
 % March 2023
 
 # NAME
-shed-config-get - get value from shed config file
+shed-config-get - get value from Shed config file
 
 # SYNOPSIS
 **shed-config-get** yamlPath
 
 # DESCRIPTION
-get value from shed config file.
+get value from Shed config file.
 
 # EXAMPLES
 **shed-config-get** .sheds[0].code
@@ -40,4 +40,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-config(1), shed-config-edit(1), shed-config.yaml(5), shed(1)
+shed-config(1), shed-config-edit(1), shed-config.yaml(5), shed(1), shed-values(1), shed-value(1)

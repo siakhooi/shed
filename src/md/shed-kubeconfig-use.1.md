@@ -3,7 +3,7 @@
 % March 2023
 
 # NAME
-shed-kubeconfig-use - set the environment to use a kubeconfig.\
+shed-kubeconfig-use - set the environment to use a KubeConfig.\
 c0 - alias for **shed-kubeconfig-use 0**\
 c1 - alias for **shed-kubeconfig-use 1**\
 c2 - alias for **shed-kubeconfig-use 2**\
@@ -19,7 +19,7 @@ c4 - alias for **shed-kubeconfig-use 4**
 **c4**
 
 # DESCRIPTION
-Set the environment to use a kube config of the shed.\
+Set the environment to use a KubeConfig.\
 Optional by configuration (*.shed-kubeconfig-use.kubectl-switch-context*), **shed-kubeconfig-use** can also change the kubectl context together.
 
 # EXAMPLES
@@ -41,7 +41,7 @@ SHED_CODE
 : the current Shed.
 
 SHED_KUBECONFIG_NUMBER
-: the number of current kube config of the Shed, set with this command.
+: the number of current KubeConfig, set with this command.
 
 # LICENSE
 MIT

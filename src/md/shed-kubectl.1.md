@@ -3,7 +3,7 @@
 % March 2023
 
 # NAME
-shed-kubectl - run kubectl with context and/or namespace from current shed kube config.\
+shed-kubectl - run kubectl with context and/or namespace from current KubeConfig.\
 k - alias to shed-kubectl
 
 # SYNOPSIS
@@ -11,7 +11,7 @@ k - alias to shed-kubectl
 **k**  [kubectl arguments]
 
 # DESCRIPTION
-Run **kubectl** command with context and/or namespace from current shed kube config.
+Run **kubectl** command with context and/or namespace from current KubeConfig.
 
 # EXAMPLES
 shed-use T; **shed-kubectl** get pods
@@ -31,4 +31,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-kubeconfig-use(1), shed-helm(1), shed-istioctl(1)
+shed-use(1), shed-kubeconfig-use(1), shed-helm(1), shed-istioctl(1)

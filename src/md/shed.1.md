@@ -46,6 +46,14 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 # DESCRIPTION
 shed programs use environment variable to control which clusters to used. This allow user to connect to different cluster in different shell sessions.
 
+# TERMINOLOGY
+**Shed**
+: an environment, such as production, test, or development, etc. It can a cluster, a collection of clusters, a namespace or a collection of namespaces.\
+
+**KubeConfig**
+: a combination or a kubectl context and/or namespace.
+
+
 # FILES
 ~/.shed/config.yaml
 : shed config file, default value of **SHED_CONFIG_FILE** environment variable.
@@ -57,7 +65,7 @@ shed programs use environment variable to control which clusters to used. This a
 : user defined scripts that will be executed when shed is set by **shed-use**.
 
 ~/.shed/init.d/shed-kubeconfig-use/
-: user defined scripts that will be executed when shed kubeconfig is set by **shed-kubeconfig-use**.
+: user defined scripts that will be executed when KubeConfig is set by **shed-kubeconfig-use**.
 
 ~/.shed/kubectl-config
 : kube config files that will be added to environment variable $KUBECONFIG on by **shed-init**.
@@ -76,7 +84,7 @@ SHED_CODE
 : the current Shed.
 
 SHED_KUBECONFIG_NUMBER
-: the current Shed Kubeconfig Number
+: the current KubeConfig Number
 
 PS1
 : shed-init will modified this shell prompt.
@@ -95,4 +103,4 @@ shed-env(1)\
 shed-list(1), shed-list-code(1)\
 shed-config(1), shed-config-edit(1), shed-config-get(1), shed-config.yaml(5)\
 shed-value(1), shed-values(1)\
-shed-use(1), shed-kubeconfig-use(1), shed-kubectl(1), shed-helm(1)
+shed-use(1), shed-kubeconfig-use(1), shed-kubectl(1), shed-helm(1), shed-isioctl(1)

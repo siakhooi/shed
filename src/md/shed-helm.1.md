@@ -3,7 +3,7 @@
 % March 2023
 
 # NAME
-shed-helm - run helm with context and/or namespace from current shed kube config.\
+shed-helm - run helm with context and/or namespace from current KubeConfig.\
 h - alias to shed-helm
 
 # SYNOPSIS
@@ -11,7 +11,7 @@ h - alias to shed-helm
 **h**  [helm arguments]
 
 # DESCRIPTION
-Run helm command with context and/or namespace from current shed kube config.
+Run helm command with context and/or namespace from current KubeConfig.
 
 # EXAMPLES
 shed-use T; **shed-helm** list

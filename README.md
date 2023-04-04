@@ -5,20 +5,20 @@
 Shed is a collection of bash scripts to manage kubernetes environments. If you work with several clusters/namespaces frequently, Shed is suitable to you.\
 What is the meaning of **Shed**? In Kubernetes, _we treat resources as cattles, and cattles live in shed_.
 
-Terminologies:
+Terminology:
 
 Shed: Can be a cluster, a collection of clusters, a namespace or a collection of namespaces.\
 KubeConfig: a combination or a kubectl context and/or namespace.
 
 Features:
 
-- Supports up to 5 Shed KubeConfig per shed.
-- Able to work with different Shed or KubeConfig in different shell sessions.
+- Supports up to 5 KubeConfig per shed.
+- Able to work with different Shed and/or KubeConfig in different shell sessions.
 - Auto include kubectl config file into `KUBECONFIG` environment on start up.
 - Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.
 - Hooks to extends shed functionalities on:
   - shed-init - when the shell session started.
-  - shed-use - when switch to different shed using command `shed-use`.
+  - shed-use - when switch to different Shed using command `shed-use`.
   - shed-kubeconfig-use - when switch to different KubeConfig using commands `shed-kubeconfig-use`, `c0`, `c1`, `c2`, `c3`, `c4`.
 - Support `kubectl` with shortened alias, ie `k`.
 - Support `helm` with shortened alias, ie `h`.
@@ -81,7 +81,7 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 
 - restart shell session.
 - run `shed-config-edit`[📚](docs/shed-config-edit.md) to update the config file. You can also use your favourite text editor to edit `~/.shed/config.yaml` directly.
-- put kubectl config files in `~/.shed/kubectl-config`, restart shell if you do this.
+- Optionally, put kubectl config files in `~/.shed/kubectl-config`, restart shell if you do this. You can skip this step if you have setup the kubectl configs.
 
 ## Using Shed
 
@@ -89,7 +89,6 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
   - start with `shed-use`.
   - optionally `c0`, `c1`, etc.
   - then `k get po`, or `h list`, etc.
-  - Happy Shedding!
 
 ## Deployments
 

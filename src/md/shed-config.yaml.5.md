@@ -18,7 +18,7 @@ shed-init\
 \  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # code of a shed to use on initialization\
 \  + load-kubectl-config\ \ \ \ # update environment variable KUBECONFIG, default: yes\
 shed-kubeconfig-use\
-\  + kubectl-switch-context # switch kubectl context on kubeconfig-use, default: no
+\  + kubectl-switch-context # switch kubectl context on shed-kubeconfig-use, default: no
 
 # DETAIL
 **.shed-init.load-kubectl-config**

@@ -3,7 +3,7 @@
 % March 2023
 
 # NAME
-shed-list - print list of codes and names of sheds, configured in the *config.yaml*.
+shed-list - print list of codes and names of sheds, configured in the *~/.shed/config.yaml*.
 
 # SYNOPSIS
 **shed-list**

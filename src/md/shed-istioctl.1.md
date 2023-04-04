@@ -3,7 +3,7 @@
 % March 2023
 
 # NAME
-shed-istioctl - run istioctl with context and/or namespace from current shed kube config.\
+shed-istioctl - run istioctl with context and/or namespace from current KubeConfig.\
 i - alias to shed-istioctl
 
 # SYNOPSIS
@@ -11,7 +11,7 @@ i - alias to shed-istioctl
 **i**  [istioctl arguments]
 
 # DESCRIPTION
-Run istioctl command with context and/or namespace from current shed kube config.
+Run istioctl command with context and/or namespace from current KubeConfig.
 
 # EXAMPLES
 shed-use T; **shed-istioctl** install
