@@ -54,12 +54,12 @@ shed programs use environment variable to control which clusters to used. This a
 : a combination or a kubectl context and/or namespace.
 
 
-# FILES
+# FILES AND DIRECTORIES
 ~/.shed/config.yaml
 : shed config file, default value of **SHED_CONFIG_FILE** environment variable.
 
 ~/.shed/init.d/shed-init/
-: user defined scripts that will be executed when shed is initiated by **/usr/lib/shed/shed-init**
+: user defined scripts that will be executed when shed is initiated by **shed-init**
 
 ~/.shed/init.d/shed-use/
 : user defined scripts that will be executed when shed is set by **shed-use**.
@@ -72,19 +72,19 @@ shed programs use environment variable to control which clusters to used. This a
 
 # ENVIRONMENT VARIABLES
 SHED_CONFIG_HOME
-: Home directory for **shed** config files, default to $HOME/.shed
+: Home directory for shed config files, default to $HOME/.shed
 
 SHED_CONFIG_FILE
-: **shed** config file, default to $SHED_CONFIG_HOME/config.yaml
-
-EDITOR
-: Text editor to edit config file, see **shed-config-edit**, default to **vi**.
+: shed config file, default to $SHED_CONFIG_HOME/config.yaml
 
 SHED_CODE
 : the current Shed.
 
 SHED_KUBECONFIG_NUMBER
 : the current KubeConfig Number
+
+EDITOR
+: Text editor to edit config file, see **shed-config-edit**, default to **vi**.
 
 PS1
 : shed-init will modified this shell prompt.

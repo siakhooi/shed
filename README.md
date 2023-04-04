@@ -45,7 +45,7 @@ Current Development Environment:
 | `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      | [📚 Doc](docs/shed-istioctl.md)       |
 | `shed-use` shedCode                     |                              | function | ✅      | [📚 Doc](docs/shed-use.md)            |
 | `shed-kubeconfig-use` kubeconfig-number | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      | [📚 Doc](docs/shed-kubeconfig-use.md) |
-| `shed`                                  |                              | bin      | ✅      |                                       |
+| `shed`                                  |                              | bin      | ✅      | [📚 Doc](docs/shed.md)                |
 
 ## Files and Directories
 
