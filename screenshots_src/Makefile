@@ -104,3 +104,24 @@ shed-kubeconfig-use-shed-kubectl:
 	shed-use T
 	k delete po/hello-test-app-1 po/hello-test-db-1
 
+shed-helm:
+## setup
+	docker pull bitnami/mariadb:10.6.12-debian-11-r16
+	docker pull bitnami/wordpress:6.2.0-debian-11-r1
+
+	kind --name kube-test-1 load docker-image bitnami/mariadb:10.6.12-debian-11-r16
+	kind --name kube-test-1 load docker-image bitnami/wordpress:6.2.0-debian-11-r1
+
+	helm repo add bitnami https://charts.bitnami.com/bitnami
+	h repo update
+
+## run
+	shed-use T
+	h list
+	k get po
+	h install test-wp1 bitnami/wordpress
+	h list
+	k get po
+
+
+

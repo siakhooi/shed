@@ -21,7 +21,7 @@ Features:
   - shed-use - when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
   - shed-kubeconfig-use - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
 - Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md).
-- Support `helm` with shortened alias, ie `h`.
+- Support `helm` with shortened alias, ie `h`[📚](docs/shed-helm.md).
 - Support `istioctl` with shortened alias, ie `i`.
 
 Current Development Environment:
@@ -41,7 +41,7 @@ Current Development Environment:
 | `shed-values`                           |                              | bin      | ✅      | [📚 Doc](docs/shed-values.md)         |
 | `shed-value` yamlPath                   |                              | bin      | ✅      | [📚 Doc](docs/shed-value.md)          |
 | `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      | [📚 Doc](docs/shed-kubectl.md)        |
-| `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      |                                       |
+| `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      | [📚 Doc](docs/shed-helm.md)           |
 | `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      |                                       |
 | `shed-use` shedCode                     |                              | function | ✅      | [📚 Doc](docs/shed-use.md)            |
 | `shed-kubeconfig-use` kubeconfig-number | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      | [📚 Doc](docs/shed-kubeconfig-use.md) |
@@ -88,7 +88,7 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 - you can then start using Shed:
   - start with `shed-use`[📚](docs/shed-use.md).
   - optionally `c0`[📚](docs/shed-kubeconfig-use.md), `c1`, etc.
-  - then `k get po`[📚](docs/shed-kubectl.md), or `h list`, etc.
+  - then `k get po`[📚](docs/shed-kubectl.md), or `h list`[📚](docs/shed-helm.md), etc.
 
 ## Deployments
 
