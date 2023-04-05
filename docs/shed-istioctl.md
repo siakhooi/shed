@@ -5,6 +5,7 @@ Run istioctl command with context and/or namespace from current KubeConfig.
 ## SYNOPSIS
 
 **shed-istioctl** [istioctl arguments]\
+**shed istioctl** [istioctl arguments]\
 **i** [istioctl arguments]
 
 ## DESCRIPTION

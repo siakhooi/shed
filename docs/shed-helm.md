@@ -5,6 +5,7 @@ Run helm command with context and/or namespace from current KubeConfig.
 ## SYNOPSIS
 
 **shed-helm** [helm arguments]\
+**shed helm** [helm arguments]\
 **h** [helm arguments]
 
 ## DESCRIPTION

@@ -5,6 +5,7 @@ Print environment variables used by shed programs.
 ## SYNOPSIS
 
 **shed-env**
+**shed env**
 
 ## SCREENSHOTS
 

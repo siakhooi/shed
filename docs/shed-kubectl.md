@@ -5,6 +5,7 @@ Run **kubectl** command with context and/or namespace from current KubeConfig.
 ## SYNOPSIS
 
 **shed-kubectl** [kubectl arguments]\
+**shed kubectl** [kubectl arguments]\
 **k** [kubectl arguments]
 
 ## SCREENSHOTS

@@ -5,6 +5,7 @@ Print list of sheds' code and name, configured in the _~/.shed/config.yaml_.
 ## SYNOPSIS
 
 **shed-list**
+**shed list**
 
 ## SCREENSHOTS
 
