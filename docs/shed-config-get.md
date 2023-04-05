@@ -12,4 +12,4 @@ get value from shed config file, _~/.shed/config.yaml_.
 
 ## SEE ALSO
 
-[shed-config-edit](shed-config-edit.md), [shed-config](shed-config.md), [shed-values](shed-values.md), [shed-value](shed-value.md)
+[shed-config-edit](shed-config-edit.md), [shed-config](shed-config.md), [shed-values](shed-values.md), [shed-value](shed-value.md), [~/.shed/config.yaml](file-shed-config.yaml.md)

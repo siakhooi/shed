@@ -25,7 +25,7 @@ shed is also a program that provides alternate way to run shed programs.
 
 ## TERMINOLOGY
 
-**Shed** - an environment, such as production, test, or development, etc. It can a cluster, a collection of clusters, a namespace or a collection of namespaces.\
+**Shed** - an environment, such as production, test, or development, etc. It can a cluster, a collection of clusters, a namespace or a collection of namespaces.
 
 **KubeConfig** - a combination or a kubectl context and/or namespace.
 
@@ -54,8 +54,10 @@ shed is also a program that provides alternate way to run shed programs.
 ## SEE ALSO
 
 [shed-env](shed-env.md)
-[shed-list](shed-list.md), [shed-list-code](shed-list-code.md)
-[shed-config](shed-config.md), [shed-config-edit](shed-config-edit.md), [shed-config-get](shed-config-get.md)
-[shed-value](shed-value.md), [shed-values](shed-values.md)
-[shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md)
-[shed-kubectl](shed-kubectl.md), [shed-helm](shed-helm.md), [shed-isioctl](shed-isioctl.md)
+[shed-list](shed-list.md), [shed-list-code](shed-list-code.md),
+[shed-config](shed-config.md), [shed-config-edit](shed-config-edit.md), [shed-config-get](shed-config-get.md),
+[shed-value](shed-value.md), [shed-values](shed-values.md),
+[shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md),
+[shed-kubectl](shed-kubectl.md), [shed-helm](shed-helm.md), [shed-isioctl](shed-isioctl.md),
+[~/.shed/config.yaml](file-shed-config.yaml.md),
+[~/.shed/init.d/shed-init](directory-init.d-shed-init.md)

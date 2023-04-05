@@ -17,7 +17,7 @@ Features:
 - Auto include kubectl config file into `KUBECONFIG` environment on start up.
 - Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.
 - Hooks to extends shed functionalities on:
-  - shed-init - when the shell session started.
+  - shed-init [📚](docs/directory-init.d-shed-init.md) - when the shell session started.
   - shed-use - when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
   - shed-kubeconfig-use - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
 - Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md).
@@ -49,10 +49,10 @@ Current Development Environment:
 
 ## Files and Directories
 
-| Path                                  | Type      | Manpage | Docs                                    |
-| ------------------------------------- | --------- | ------- | --------------------------------------- |
-| `~/.shed/config.yaml`                 | file      | ✅      | [📚 Doc](docs/file-shed-config.yaml.md) |
-| `~/.shed/init.d/shed-init/`           | directory | ❌      |
+| Path                                  | Type      | Manpage | Docs                                         |
+| ------------------------------------- | --------- | ------- | -------------------------------------------- |
+| `~/.shed/config.yaml`                 | file      | ✅      | [📚 Doc](docs/file-shed-config.yaml.md)      |
+| `~/.shed/init.d/shed-init/`           | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-init.md) |
 | `~/.shed/init.d/shed-use/`            | directory | ❌      |
 | `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      |
 | `~/.shed/kubectl-config`              | directory | ❌      |
