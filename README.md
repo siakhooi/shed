@@ -13,13 +13,13 @@ KubeConfig: a combination or a kubectl context and/or namespace.
 Features:
 
 - Supports up to 5 KubeConfig per shed[📚](docs/file-shed-config.yaml.md).
-- Able to work with different Shed[📚](docs/shed-use.md) and/or KubeConfig[📚](docs/shed-kubeconfig-use.md)  in different shell sessions.
+- Able to work with different Shed[📚](docs/shed-use.md) and/or KubeConfig[📚](docs/shed-kubeconfig-use.md) in different shell sessions.
 - Auto include kubectl config file into `KUBECONFIG` environment on start up.
 - Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.
 - Hooks to extends shed functionalities on:
   - shed-init [📚](docs/directory-init.d-shed-init.md) - when the shell session started.
   - shed-use [📚](docs/directory-init.d-shed-use.md)- when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
-  - shed-kubeconfig-use - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
+  - shed-kubeconfig-use [📚](docs/directory-init.d-shed-kubeconfig-use.md) - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
 - Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md).
 - Support `helm` with shortened alias, ie `h`[📚](docs/shed-helm.md).
 - Support `istioctl` with shortened alias, ie `i`[📚](docs/shed-istioctl.md).
@@ -49,12 +49,12 @@ Current Development Environment:
 
 ## Files and Directories
 
-| Path                                  | Type      | Manpage | Docs                                         |
-| ------------------------------------- | --------- | ------- | -------------------------------------------- |
-| `~/.shed/config.yaml`                 | file      | ✅      | [📚 Doc](docs/file-shed-config.yaml.md)      |
-| `~/.shed/init.d/shed-init/`           | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-init.md) |
-| `~/.shed/init.d/shed-use/`            | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-use.md)  |
-| `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      |
+| Path                                  | Type      | Manpage | Docs                                                   |
+| ------------------------------------- | --------- | ------- | ------------------------------------------------------ |
+| `~/.shed/config.yaml`                 | file      | ✅      | [📚 Doc](docs/file-shed-config.yaml.md)                |
+| `~/.shed/init.d/shed-init/`           | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-init.md)           |
+| `~/.shed/init.d/shed-use/`            | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-use.md)            |
+| `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-kubeconfig-use.md) |
 | `~/.shed/kubectl-config`              | directory | ❌      |
 
 ## Quick Start
