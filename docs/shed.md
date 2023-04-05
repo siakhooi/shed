@@ -60,4 +60,4 @@ shed is also a program that provides alternate way to run shed programs.
 [shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md),
 [shed-kubectl](shed-kubectl.md), [shed-helm](shed-helm.md), [shed-isioctl](shed-isioctl.md),
 [~/.shed/config.yaml](file-shed-config.yaml.md),
-[~/.shed/init.d/shed-init](directory-init.d-shed-init.md)
+[~/.shed/init.d/shed-init](directory-init.d-shed-init.md), [~/.shed/init.d/shed-use](directory-init.d-shed-use.md)

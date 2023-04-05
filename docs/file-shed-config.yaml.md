@@ -50,4 +50,4 @@ shed-kubeconfig-use:
 
 ## SEE ALSO
 
-[shed-config-edit](shed-config-edit.md), [shed-config-get](shed-config-get.md), [shed-config](shed-config.md), [shed](shed.md), [~/.shed/init.d/shed-init](directory-init.d-shed-init.md)
+[shed-config-edit](shed-config-edit.md), [shed-config-get](shed-config-get.md), [shed-config](shed-config.md), [shed](shed.md), [~/.shed/init.d/shed-init](directory-init.d-shed-init.md), [~/.shed/init.d/shed-use](directory-init.d-shed-use.md)

@@ -13,12 +13,12 @@ KubeConfig: a combination or a kubectl context and/or namespace.
 Features:
 
 - Supports up to 5 KubeConfig per shed[📚](docs/file-shed-config.yaml.md).
-- Able to work with different Shed and/or KubeConfig in different shell sessions.
+- Able to work with different Shed[📚](docs/shed-use.md) and/or KubeConfig[📚](docs/shed-kubeconfig-use.md)  in different shell sessions.
 - Auto include kubectl config file into `KUBECONFIG` environment on start up.
 - Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.
 - Hooks to extends shed functionalities on:
   - shed-init [📚](docs/directory-init.d-shed-init.md) - when the shell session started.
-  - shed-use - when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
+  - shed-use [📚](docs/directory-init.d-shed-use.md)- when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
   - shed-kubeconfig-use - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
 - Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md).
 - Support `helm` with shortened alias, ie `h`[📚](docs/shed-helm.md).
@@ -53,7 +53,7 @@ Current Development Environment:
 | ------------------------------------- | --------- | ------- | -------------------------------------------- |
 | `~/.shed/config.yaml`                 | file      | ✅      | [📚 Doc](docs/file-shed-config.yaml.md)      |
 | `~/.shed/init.d/shed-init/`           | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-init.md) |
-| `~/.shed/init.d/shed-use/`            | directory | ❌      |
+| `~/.shed/init.d/shed-use/`            | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-use.md)  |
 | `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      |
 | `~/.shed/kubectl-config`              | directory | ❌      |
 
@@ -80,7 +80,7 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 ### Initial Setup
 
 - restart shell session.
-- run `shed-config-edit`[📚](docs/shed-config-edit.md) to update the config file. You can also use your favourite text editor to edit `~/.shed/config.yaml` directly.
+- run `shed-config-edit`[📚](docs/shed-config-edit.md) to update the Shed config file. You can also use your favourite text editor to edit `~/.shed/config.yaml`[📚](docs/file-shed-config.yaml.md) directly.
 - Optionally, put kubectl config files in `~/.shed/kubectl-config`, restart shell if you do this. You can skip this step if you have setup the kubectl configs.
 
 ## Using Shed
