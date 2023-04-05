@@ -31,13 +31,13 @@ shed is also a program that provides alternate way to run shed programs.
 
 ## FILES AND DIRECTORIES
 
-| Path                                  | Type | Description                                                                                   |
-| ------------------------------------- | ---- | --------------------------------------------------------------------------------------------- |
-| `~/.shed/config.yaml`                 | file | shed config file, default value of `SHED_CONFIG_FILE` environment variable.                   |
-| `~/.shed/init.d/shed-init/`           | dir  | user defined scripts that will be executed when shed is initiated by `shed-init`              |
-| `~/.shed/init.d/shed-use/`            | dir  | user defined scripts that will be executed when shed is set by `shed-use`.                    |
-| `~/.shed/init.d/shed-kubeconfig-use/` | dir  | user defined scripts that will be executed when KubeConfig is set by `shed-kubeconfig-use`.   |
-| `~/.shed/kubectl-config`              | dir  | kube config files that will be added to environment variable `$KUBECONFIG` on by `shed-init`. |
+| Path                                  | Type | Description                                                                                      |
+| ------------------------------------- | ---- | ------------------------------------------------------------------------------------------------ |
+| `~/.shed/config.yaml`                 | file | shed config file, default value of `SHED_CONFIG_FILE` environment variable.                      |
+| `~/.shed/init.d/shed-init/`           | dir  | user defined scripts that will be executed when shed is initiated by `shed-init`                 |
+| `~/.shed/init.d/shed-use/`            | dir  | user defined scripts that will be executed when shed is set by `shed-use`.                       |
+| `~/.shed/init.d/shed-kubeconfig-use/` | dir  | user defined scripts that will be executed when KubeConfig is set by `shed-kubeconfig-use`.      |
+| `~/.shed/kubectl-config`              | dir  | kubectl config files that will be added to environment variable `$KUBECONFIG` on by `shed-init`. |
 
 ## ENVIRONMENT VARIABLES
 
@@ -61,4 +61,5 @@ shed is also a program that provides alternate way to run shed programs.
 [shed-kubectl](shed-kubectl.md), [shed-helm](shed-helm.md), [shed-isioctl](shed-isioctl.md),
 [~/.shed/config.yaml](file-shed-config.yaml.md),
 [~/.shed/init.d/shed-init](directory-init.d-shed-init.md), [~/.shed/init.d/shed-use](directory-init.d-shed-use.md),
-[~/.shed/init.d/shed-kubeconfig-use](directory-init.d-shed-kubeconfig-use.md)
+[~/.shed/init.d/shed-kubeconfig-use](directory-init.d-shed-kubeconfig-use.md),
+[~/.shed/kubectl-config](directory-kubectl-config.md)

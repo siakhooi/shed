@@ -14,7 +14,7 @@ Features:
 
 - Supports up to 5 KubeConfig per shed[📚](docs/file-shed-config.yaml.md).
 - Able to work with different Shed[📚](docs/shed-use.md) and/or KubeConfig[📚](docs/shed-kubeconfig-use.md) in different shell sessions.
-- Auto include kubectl config file into `KUBECONFIG` environment on start up.
+- Auto include kubectl config file into `KUBECONFIG` environment on start up [📚](docs/directory-kubectl-config.md).
 - Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.
 - Hooks to extends shed functionalities on:
   - shed-init [📚](docs/directory-init.d-shed-init.md) - when the shell session started.
@@ -55,7 +55,7 @@ Current Development Environment:
 | `~/.shed/init.d/shed-init/`           | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-init.md)           |
 | `~/.shed/init.d/shed-use/`            | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-use.md)            |
 | `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-kubeconfig-use.md) |
-| `~/.shed/kubectl-config`              | directory | ❌      |
+| `~/.shed/kubectl-config`              | directory | ❌      | [📚 Doc](docs/directory-kubectl-config.md)             |
 
 ## Quick Start
 
@@ -81,7 +81,7 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 
 - restart shell session.
 - run `shed-config-edit`[📚](docs/shed-config-edit.md) to update the Shed config file. You can also use your favourite text editor to edit `~/.shed/config.yaml`[📚](docs/file-shed-config.yaml.md) directly.
-- Optionally, put kubectl config files in `~/.shed/kubectl-config`, restart shell if you do this. You can skip this step if you have setup the kubectl configs.
+- Optionally, put kubectl config files in `~/.shed/kubectl-config` [📚](docs/directory-kubectl-config.md), restart shell if you do this. You can skip this step if you have setup the kubectl configs.
 
 ## Using Shed
 
