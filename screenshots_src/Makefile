@@ -35,6 +35,9 @@ shed-value:
 	shed-value .code
 	shed-value .name
 
+shed-value-key-list:
+	shed-value-key-list
+
 cluster-setup:
 	docker pull kindest/node:v1.26.3 siakhooi/starter-web:hello-world
 	kind create cluster --name kube-dev-1 --image=kindest/node:v1.25.3 --kubeconfig ~/.shed/kubectl-config/kube-dev-1

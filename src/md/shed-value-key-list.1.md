@@ -1,0 +1,45 @@
+% SHED-VALUE-KEY-LIST(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
+% Siak Hooi
+% April 2023
+
+# NAME
+shed-value-key-list - print list of keys of Shed values.
+
+# SYNOPSIS
+**shed-value-key-list**\
+**shed value-key-list**
+
+# DESCRIPTION
+Print list of keys of Shed values. Use by `shed-value` for completion logic.
+
+# EXAMPLES
+**shed-value-key-list**\
+\ \ \ \  .code\
+\ \ \ \  .name\
+\ \ \ \  .kubeconfig[0].context\
+\ \ \ \  .kubeconfig[1].context\
+\ \ \ \  .kubeconfig[2].context\
+\ \ \ \  .kubeconfig[3].context\
+\ \ \ \  .kubeconfig[4].context\
+\ \ \ \  .kubeconfig[0].namespace\
+\ \ \ \  .kubeconfig[1].namespace\
+\ \ \ \  .kubeconfig[2].namespace\
+\ \ \ \  .kubeconfig[3].namespace\
+\ \ \ \  .kubeconfig[4].namespace
+
+# FILES
+~/.shed/config.yaml
+: shed config file
+
+# ENVIRONMENT VARIABLES
+SHED_CONFIG_FILE
+: shed config file, default to $SHED_CONFIG_HOME/config.yaml
+
+# LICENSE
+MIT
+
+# BUGS
+Report bugs at https://github.com/siakhooi/shed/issues.
+
+# SEE ALSO
+shed-config(1), shed-config.yaml(5), shed-values(1), shed-value(1), shed(1)

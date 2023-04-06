@@ -1,0 +1,12 @@
+.code
+.name
+.kubeconfig[0].context
+.kubeconfig[1].context
+.kubeconfig[2].context
+.kubeconfig[3].context
+.kubeconfig[4].context
+.kubeconfig[0].namespace
+.kubeconfig[1].namespace
+.kubeconfig[2].namespace
+.kubeconfig[3].namespace
+.kubeconfig[4].namespace

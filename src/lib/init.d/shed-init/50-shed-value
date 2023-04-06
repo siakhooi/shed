@@ -1,0 +1,11 @@
+#!/bin/bash
+
+shed-completions-with-shed-value-key-list() {
+    local cur choices
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    choices=$(shed-value-key-list)
+    mapfile -t COMPREPLY < <(compgen -W "${choices}" -- "${cur}")
+
+}
+complete -F shed-completions-with-shed-value-key-list shed-value

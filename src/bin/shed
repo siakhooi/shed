@@ -37,6 +37,10 @@ value)
     shed-value "$@"
     exit $?
     ;;
+value-key-list)
+    shed-value-key-list "$@"
+    exit $?
+    ;;
 values)
     shed-values "$@"
     exit $?

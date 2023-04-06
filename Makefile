@@ -4,7 +4,10 @@ clean:
 build:
 	./build.sh
 
+test-generate:
+	pandoc src/md/shed-value-key-list.1.md -s -t man|man --pager=cat -l - > test/expected/man_shed-value-key-list.out
 test-man:
+	pandoc src/md/shed-value-key-list.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config-edit.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config-get.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config.1.md -s -t man | man -l -
@@ -28,12 +31,13 @@ uninstall:
 terminalizer:
 	terminalizer render docs/terminalizer-shed.yml
 
-run-in-container:
-#	. in-container-init.sh
-
 test:
 	run-ubuntu
 	run-debian
+
+run-in-container:
+#	. in-container-init.sh
+# . run-test.sh
 
 test-steps:
 # docker exec -it xxxxx bash

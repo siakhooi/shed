@@ -11,6 +11,7 @@
 | `shed-list`                             |                              | bin      | ✅      | [📚 Doc](shed-list.md)           |
 | `shed-list-code`                        |                              | bin      | ✅      | [📚 Doc](shed-list-code.md)      |
 | `shed-values`                           |                              | bin      | ✅      | [📚 Doc](shed-values.md)         |
+| `shed-value-key-list`                   |                              | bin      | ✅      | [📚 Doc](shed-value-key-list.md) |
 | `shed-value` yamlPath                   |                              | bin      | ✅      | [📚 Doc](shed-value.md)          |
 | `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      | [📚 Doc](shed-kubectl.md)        |
 | `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      | [📚 Doc](shed-helm.md)           |

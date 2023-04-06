@@ -1,6 +1,6 @@
 # shed-list-code
 
-Print list of shed codes, configured in the _~/.shed/config.yaml_.
+Print list of shed codes, configured in the _~/.shed/config.yaml_. Use by `shed-use` for completion logic.
 
 ## SYNOPSIS
 
