@@ -28,34 +28,11 @@ Current Development Environment:
 
 - Shed is currently developed in wsl ubuntu and tested with Ubuntu and Debian images.
 
-## Commands
+## Documentation
 
-| Command                                 | Alias                        | Type     | Manpage | Docs                                  |
-| --------------------------------------- | ---------------------------- | -------- | ------- | ------------------------------------- |
-| `shed-config`                           |                              | bin      | ✅      | [📚 Doc](docs/shed-config.md)         |
-| `shed-config-edit`                      |                              | bin      | ✅      | [📚 Doc](docs/shed-config-edit.md)    |
-| `shed-config-get` yamlPath              |                              | bin      | ✅      | [📚 Doc](docs/shed-config-get.md)     |
-| `shed-env`                              |                              | bin      | ✅      | [📚 Doc](docs/shed-env.md)            |
-| `shed-list`                             |                              | bin      | ✅      | [📚 Doc](docs/shed-list.md)           |
-| `shed-list-code`                        |                              | bin      | ✅      | [📚 Doc](docs/shed-list-code.md)      |
-| `shed-values`                           |                              | bin      | ✅      | [📚 Doc](docs/shed-values.md)         |
-| `shed-value` yamlPath                   |                              | bin      | ✅      | [📚 Doc](docs/shed-value.md)          |
-| `shed-kubectl` [kubectl arguments]      | `k`                          | bin      | ✅      | [📚 Doc](docs/shed-kubectl.md)        |
-| `shed-helm` [helm arguments]            | `h`                          | bin      | ✅      | [📚 Doc](docs/shed-helm.md)           |
-| `shed-istioctl` [istioctl arguments]    | `i`                          | bin      | ✅      | [📚 Doc](docs/shed-istioctl.md)       |
-| `shed-use` shedCode                     |                              | function | ✅      | [📚 Doc](docs/shed-use.md)            |
-| `shed-kubeconfig-use` kubeconfig-number | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      | [📚 Doc](docs/shed-kubeconfig-use.md) |
-| `shed`                                  |                              | bin      | ✅      | [📚 Doc](docs/shed.md)                |
+- [Documentation](docs/documentation.md)
 
-## Files and Directories
-
-| Path                                  | Type      | Manpage | Docs                                                   |
-| ------------------------------------- | --------- | ------- | ------------------------------------------------------ |
-| `~/.shed/config.yaml`                 | file      | ✅      | [📚 Doc](docs/file-shed-config.yaml.md)                |
-| `~/.shed/init.d/shed-init/`           | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-init.md)           |
-| `~/.shed/init.d/shed-use/`            | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-use.md)            |
-| `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      | [📚 Doc](docs/directory-init.d-shed-kubeconfig-use.md) |
-| `~/.shed/kubectl-config`              | directory | ❌      | [📚 Doc](docs/directory-kubectl-config.md)             |
+![shed-use-shed-kubectl](docs/shed-use-shed-kubectl.gif "shed-use-shed-kubectl")
 
 ## Quick Start
 
