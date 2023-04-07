@@ -29,11 +29,13 @@ kubectl completion bash > ~/.kubectl-completion
 helm completion bash > ~/.helm-completion
 istioctl completion bash > ~/.istioctl-completion
 
+# test related
 mkdir -p ~/.shed/kubectl-config
 touch ~/.shed/kubectl-config/a
 touch ~/.shed/kubectl-config/b
-
 echo "KUBECONFIG=abc" >> ~/.bashrc
+## test related end
+
 echo "source /etc/bash_completion" >> ~/.bashrc
 echo "source ~/.kubectl-completion" >> ~/.bashrc
 echo "source ~/.helm-completion" >> ~/.bashrc

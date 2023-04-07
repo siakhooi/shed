@@ -4,6 +4,10 @@ EXPECTED_DIRECTORY=test/expected
 ACTUAL_DIRECTORY=$(mktemp -d)
 
 ## Testing start
+shed-env > $ACTUAL_DIRECTORY/shed-env.out
+shed env > $ACTUAL_DIRECTORY/shed_env.out
+man --pager=cat shed-env > $ACTUAL_DIRECTORY/man_shed-env.out
+
 shed-value-key-list > $ACTUAL_DIRECTORY/shed-value-key-list.out
 shed value-key-list > $ACTUAL_DIRECTORY/shed_value-key-list.out
 man --pager=cat shed-value-key-list > $ACTUAL_DIRECTORY/man_shed-value-key-list.out
@@ -16,4 +20,3 @@ if [[ $? == 0 ]] ; then echo.green "Look good!"; else echo.red "Something wrong!
 echo.blue "Actual Result in: $ACTUAL_DIRECTORY"
 
 ls -l "$ACTUAL_DIRECTORY"
-

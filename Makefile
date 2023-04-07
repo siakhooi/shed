@@ -6,6 +6,7 @@ build:
 
 test-generate:
 	pandoc src/md/shed-value-key-list.1.md -s -t man|man --pager=cat -l - > test/expected/man_shed-value-key-list.out
+	pandoc src/md/shed-env.1.md -s -t man|man --pager=cat -l - > test/expected/man_shed-env.out
 test-man:
 	pandoc src/md/shed-value-key-list.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config-edit.1.md -s -t man | man -l -
