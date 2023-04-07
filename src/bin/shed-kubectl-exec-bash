@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]] && [[ $# -ne 2 ]]; then
+  echo "Usage: $(basename "$0") (pod | type/name) [container]" >&2
+  exit 0
+fi
+
+OPTIONS=()
+
+if [[ $# -eq 1 ]]; then
+  OPTIONS=("$1")
+elif [[ $# -eq 2 ]]; then
+  OPTIONS=("$1" -c "$2")
+fi
+
+shed-kubectl exec -it "${OPTIONS[@]}" -- bash

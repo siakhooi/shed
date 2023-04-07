@@ -49,6 +49,14 @@ kubectl)
     shed-kubectl "$@"
     exit $?
     ;;
+kubectl-exec-bash)
+    shed-kubectl-exec-bash "$@"
+    exit $?
+    ;;
+kubectl-exec-sh)
+    shed-kubectl-exec-sh "$@"
+    exit $?
+    ;;
 helm)
     shed-helm "$@"
     exit $?

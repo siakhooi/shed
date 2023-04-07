@@ -1,0 +1,4 @@
+#!/bin/bash
+
+alias k-sh='shed-kubectl-exec-sh'
+alias k-bash='shed-kubectl-exec-bash'

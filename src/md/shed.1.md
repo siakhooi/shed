@@ -17,6 +17,8 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed value-key-list**\
 **shed values**\
 **shed kubectl** [kubectl arguments]\
+**shed kubectl-exec-sh**  (pod \| type/name) [container]\
+**shed kubectl-exec-bash**  (pod \| type/name) [container]\
 **shed helm** [helm arguments]\
 **shed istioctl** [istioctl arguments]\
 \ \
@@ -30,6 +32,8 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed-value-key-list**\
 **shed-values**\
 **shed-kubectl** [kubectl arguments]\
+**shed-kubectl-exec-sh**  (pod \| type/name) [container]\
+**shed-kubectl-exec-bash**  (pod \| type/name) [container]\
 **shed-helm** [helm arguments]\
 **shed-istioctl** [istioctl arguments]\
 \ \
@@ -105,4 +109,5 @@ shed-env(1)\
 shed-list(1), shed-list-code(1)\
 shed-config(1), shed-config-edit(1), shed-config-get(1), shed-config.yaml(5)\
 shed-value(1), shed-values(1), shed-value-key-list(1)\
-shed-use(1), shed-kubeconfig-use(1), shed-kubectl(1), shed-helm(1), shed-isioctl(1)
+shed-use(1), shed-kubeconfig-use(1), shed-kubectl(1), shed-helm(1), shed-isioctl(1)\
+shed-kubectl-exec-sh(1),shed-kubectl-exec-bash(1)

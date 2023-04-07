@@ -39,17 +39,43 @@ shed-value-key-list:
 	shed-value-key-list
 
 cluster-setup:
-	docker pull kindest/node:v1.26.3 siakhooi/starter-web:hello-world
+	docker pull kindest/node:v1.26.3
+	docker pull siakhooi/starter-web:hello-world
 	kind create cluster --name kube-dev-1 --image=kindest/node:v1.25.3 --kubeconfig ~/.shed/kubectl-config/kube-dev-1
 	kind create cluster --name kube-test-1 --image=kindest/node:v1.25.3 --kubeconfig ~/.shed/kubectl-config/kube-test-1
 	kind --name kube-dev-1 load docker-image siakhooi/starter-web:hello-world
 	kind --name kube-test-1 load docker-image siakhooi/starter-web:hello-world
+	kind --name kube-dev-1 load docker-image ubuntu
 	shed-use D
 	k create ns ns-application
 	k create ns ns-database
 
 cluster-tear-down:
 	kind delete clusters kube-dev-1 kube-test-1
+
+shed-kubectl-exec-sh:
+#	setup
+	shed-use D
+	k run hello-dev-app-1 --image=siakhooi/starter-web:hello-world
+#	run
+	shed-use D
+	k get po
+	k-sh hello-dev-app-1
+	hostname
+	ps
+	exit
+	exit
+
+shed-kubectl-exec-bash:
+#	setup
+	shed-use D
+	k run hello-dev-app-1 --image=siakhooi/starter-web:hello-world
+#	run
+	shed-use D
+	k get po
+	k-bash hello-dev-app-1
+	ps
+	exit
 
 shed-use-shed-kubectl:
 ## setup
@@ -125,6 +151,4 @@ shed-helm:
 	h install test-wp1 bitnami/wordpress
 	h list
 	k get po
-
-
 

@@ -18,12 +18,12 @@ config:
   # Explicitly set the number of columns
   # or use `auto` to take the current
   # number of columns of your shell
-  cols: 50
+  cols: 91
   
   # Explicitly set the number of rows
   # or use `auto` to take the current
   # number of rows of your shell
-  rows: 14
+  rows: 16
   
   # Amount of times to repeat GIF
   # If value is -1, play once
@@ -112,8 +112,8 @@ config:
 # Records, feel free to edit them
 records:
   - delay: 10
-    content: "\e[?2004h\e]0;user1@host1: ~\a\e[01;32muser1@host1\e[00m:\e[1;33m[P/kube-prod-1]\e[0m\e[01;34m~\e[00m\e[1;32m\e[0m$ "
-  - delay: 1000
+    content: "\r\e]0;user1@host1: ~\a\e[01;32muser1@host1\e[00m:\e[1;33m[P/kube-prod-1]\e[0m\e[01;34m~\e[00m\e[1;32m\e[0m$ "
+  - delay: 2000
     content: s
   - delay: 100
     content: h
@@ -124,36 +124,130 @@ records:
   - delay: 100
     content: '-'
   - delay: 100
-    content: v
+    content: u
+  - delay: 100
+    content: s
+  - delay: 100
+    content: e
+  - delay: 100
+    content: ' '
+  - delay: 100
+    content: D
+  - delay: 100
+    content: "\r\n"
+  - delay: 10
+    content: "\e]0;user1@host1: ~\a\e[01;32muser1@host1\e[00m:\e[1;33m[D/kube-dev-1/ns-application]\e[0m\e[01;34m~\e[00m\e[1;32m\e[0m$ "
+  - delay: 2000
+    content: k
+  - delay: 100
+    content: ' '
+  - delay: 100
+    content: g
+  - delay: 100
+    content: e
+  - delay: 100
+    content: t
+  - delay: 100
+    content: ' '
+  - delay: 100
+    content: p
+  - delay: 100
+    content: o
+  - delay: 100
+    content: "\r\n"
+  - delay: 10
+    content: "+ kubectl --context kube-dev-1 --namespace ns-application get po\r\n"
+  - delay: 10
+    content: "NAME              READY   STATUS    RESTARTS   AGE\r\nhello-dev-app-1   1/1     Running   0          107s\r\n"
+  - delay: 10
+    content: "\e]0;user1@host1: ~\a\e[01;32muser1@host1\e[00m:\e[1;33m[D/kube-dev-1/ns-application]\e[0m\e[01;34m~\e[00m\e[1;32m\e[0m$ "
+  - delay: 2000
+    content: k
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: b
   - delay: 100
     content: a
   - delay: 100
-    content: l
+    content: s
   - delay: 100
-    content: u
+    content: h
   - delay: 100
-    content: e
+    content: ' '
   - delay: 100
-    content: '-'
-  - delay: 100
-    content: k
+    content: h
   - delay: 100
     content: e
   - delay: 100
-    content: 'y'
-  - delay: 100
-    content: '-'
+    content: l
   - delay: 100
     content: l
   - delay: 100
-    content: i
+    content: o
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: d
+  - delay: 100
+    content: e
+  - delay: 100
+    content: v
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: a
+  - delay: 100
+    content: p
+  - delay: 100
+    content: p
+  - delay: 100
+    content: '-'
+  - delay: 100
+    content: '1'
+  - delay: 100
+    content: "\r\n"
+  - delay: 10
+    content: "+ kubectl --context kube-dev-1 --namespace ns-application exec -it hello-dev-app-1 -- bash\r\n"
+  - delay: 1000
+    content: "\e[?2004h\e]0;root@hello-dev-app-1: /\aroot@hello-dev-app-1:/# "
+  - delay: 2000
+    content: h
+  - delay: 100
+    content: o
   - delay: 100
     content: s
   - delay: 100
     content: t
   - delay: 100
-    content: "\r\n\e[?2004l\r.code\r\n.name\r\n.kubeconfig[0].context\r\n.kubeconfig[1].context\r\n.kubeconfig[2].context\r\n.kubeconfig[3].context\r\n.kubeconfig[4].context\r\n.kubeconfig[0].namespace\r\n.kubeconfig[1].namespace\r\n.kubeconfig[2].namespace\r\n.kubeconfig[3].namespace\r\n.kubeconfig[4].namespace\r\n"
+    content: 'n'
+  - delay: 100
+    content: a
+  - delay: 100
+    content: m
+  - delay: 100
+    content: e
+  - delay: 100
+    content: "\r\n"
   - delay: 10
-    content: "\e[?2004h\e]0;user1@host1: ~\a\e[01;32muser1@host1\e[00m:\e[1;33m[P/kube-prod-1]\e[0m\e[01;34m~\e[00m\e[1;32m\e[0m$ "
+    content: "\e[?2004l\rhello-dev-app-1\r\n\e[?2004h\e]0;root@hello-dev-app-1: /\aroot@hello-dev-app-1:/# "
+  - delay: 2000
+    content: p
+  - delay: 100
+    content: s
+  - delay: 10
+    content: "\r\n\e[?2004l\r    PID TTY          TIME CMD\r\n    100 pts/0    00:00:00 bash\r\n    113 pts/0    00:00:00 ps\r\n\e[?2004h\e]0;root@hello-dev-app-1: /\aroot@hello-dev-app-1:/# "
+  - delay: 2000
+    content: e
+  - delay: 100
+    content: x
+  - delay: 100
+    content: i
+  - delay: 100
+    content: t
+  - delay: 100
+    content: "\r\n\e[?2004l\rexit\r\n"
+  - delay: 10
+    content: "\e]0;user1@host1: ~\a\e[01;32muser1@host1\e[00m:\e[1;33m[D/kube-dev-1/ns-application]\e[0m\e[01;34m~\e[00m\e[1;32m\e[0m$ "
   - delay: 4000
     content: "\r\n"

@@ -20,7 +20,9 @@ test-generate-in-container:
 	shed list-code > test/expected/shed_list-code.out
 
 test-man:
-	pandoc src/md/shed-value-key-list.1.md -s -t man | man -l -
+	pandoc src/md/shed-kubectl-exec-sh.1.md -s -t man | man -l -
+	pandoc src/md/shed-kubectl-exec-bash.1.md -s -t man | man -l -
+#	pandoc src/md/shed-value-key-list.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config-edit.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config-get.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config.1.md -s -t man | man -l -
