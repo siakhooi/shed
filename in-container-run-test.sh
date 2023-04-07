@@ -6,11 +6,19 @@ ACTUAL_DIRECTORY=$(mktemp -d)
 ## Testing start
 shed-env > $ACTUAL_DIRECTORY/shed-env.out
 shed env > $ACTUAL_DIRECTORY/shed_env.out
-man --pager=cat shed-env > $ACTUAL_DIRECTORY/man_shed-env.out
+MANWIDTH=120 man --pager=cat shed-env > $ACTUAL_DIRECTORY/man_shed-env.out
+
+shed-list > $ACTUAL_DIRECTORY/shed-list.out
+shed list > $ACTUAL_DIRECTORY/shed_list.out
+MANWIDTH=120 man --pager=cat shed-list > $ACTUAL_DIRECTORY/man_shed-list.out
+
+shed-list-code > $ACTUAL_DIRECTORY/shed-list-code.out
+shed list-code > $ACTUAL_DIRECTORY/shed_list-code.out
+MANWIDTH=120 man --pager=cat shed-list-code > $ACTUAL_DIRECTORY/man_shed-list-code.out
 
 shed-value-key-list > $ACTUAL_DIRECTORY/shed-value-key-list.out
 shed value-key-list > $ACTUAL_DIRECTORY/shed_value-key-list.out
-man --pager=cat shed-value-key-list > $ACTUAL_DIRECTORY/man_shed-value-key-list.out
+MANWIDTH=120 man --pager=cat shed-value-key-list > $ACTUAL_DIRECTORY/man_shed-value-key-list.out
 ## Testing end
 
 diff $EXPECTED_DIRECTORY $ACTUAL_DIRECTORY 

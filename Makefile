@@ -5,8 +5,20 @@ build:
 	./build.sh
 
 test-generate:
-	pandoc src/md/shed-value-key-list.1.md -s -t man|man --pager=cat -l - > test/expected/man_shed-value-key-list.out
-	pandoc src/md/shed-env.1.md -s -t man|man --pager=cat -l - > test/expected/man_shed-env.out
+	pandoc src/md/shed-value-key-list.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-value-key-list.out
+	pandoc src/md/shed-env.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-env.out
+	pandoc src/md/shed-list.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-list.out
+	pandoc src/md/shed-list-code.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-list-code.out
+test-generate-in-container:
+	shed-env > test/expected/shed-env.out
+	shed env > test/expected/shed_env.out
+	shed-value-key-list > test/expected/shed-value-key-list.out
+	shed value-key-list > test/expected/shed_value-key-list.out
+	shed-list > test/expected/shed-list.out
+	shed list > test/expected/shed_list.out
+	shed-list-code > test/expected/shed-list-code.out
+	shed list-code > test/expected/shed_list-code.out
+
 test-man:
 	pandoc src/md/shed-value-key-list.1.md -s -t man | man -l -
 #	pandoc src/md/shed-config-edit.1.md -s -t man | man -l -

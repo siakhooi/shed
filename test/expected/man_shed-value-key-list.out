@@ -1,4 +1,4 @@
-SHED-VALUE-KEY-LIST(1)                                    Shed Commands                                    SHED-VALUE-KEY-LIST(1)
+SHED-VALUE-KEY-LIST(1)                              Shed Commands                              SHED-VALUE-KEY-LIST(1)
 
 NAME
        shed-value-key-list - print list of keys of Shed values.
@@ -45,4 +45,4 @@ SEE ALSO
 AUTHORS
        Siak Hooi.
 
-Siak Hooi DevUtils 1.1.0                                    April 2023                                     SHED-VALUE-KEY-LIST(1)
+Siak Hooi DevUtils 1.1.0                              April 2023                               SHED-VALUE-KEY-LIST(1)
