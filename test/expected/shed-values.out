@@ -1,0 +1,4 @@
+code: P
+name: shed-P-production
+kubeconfig:
+  - context: kube-prod-1

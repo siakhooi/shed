@@ -5,6 +5,7 @@ build:
 	./build.sh
 
 test-generate:
+	pandoc src/md/shed-values.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-values.out
 	pandoc src/md/shed-value-key-list.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-value-key-list.out
 	pandoc src/md/shed-env.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-env.out
 	pandoc src/md/shed-list.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-list.out
@@ -12,6 +13,8 @@ test-generate:
 test-generate-in-container:
 	shed-env > test/expected/shed-env.out
 	shed env > test/expected/shed_env.out
+	shed-values > test/expected/shed-values.out
+	shed values > test/expected/shed_values.out
 	shed-value-key-list > test/expected/shed-value-key-list.out
 	shed value-key-list > test/expected/shed_value-key-list.out
 	shed-list > test/expected/shed-list.out
