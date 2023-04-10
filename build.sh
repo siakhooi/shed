@@ -42,4 +42,9 @@ dpkg-deb --build -Zxz $TARGET
 dpkg-name ${TARGET}.deb
 
 DEBFILE=$(ls ./*.deb)
+
+md5sum "$DEBFILE" >$DEBFILE.md5sum
+sha256sum "$DEBFILE" >$DEBFILE.sha256sum
+sha512sum "$DEBFILE" >$DEBFILE.sha512sum
+
 dpkg --contents "$DEBFILE"
