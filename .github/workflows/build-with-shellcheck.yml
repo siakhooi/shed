@@ -14,7 +14,9 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: deliverables
-          path: ./*.deb
+          path: |
+            ./*.deb
+            ./*.deb.*sum
       - uses: actions/upload-artifact@v3
         with:
           name: target
