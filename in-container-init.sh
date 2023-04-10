@@ -44,5 +44,5 @@ echo "PATH=$( ls -d /opt/istio*/bin ):\$PATH" >>~/.bashrc
 
 echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+git config --global user.email "siakhooi@gmail.com"
+git config --global user.name "Siak Hooi"
