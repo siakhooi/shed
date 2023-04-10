@@ -5,6 +5,7 @@ NAME
 
 SYNOPSIS
        shed-list-code
+       shed list-code
 
 DESCRIPTION
        Print list of code of available sheds.

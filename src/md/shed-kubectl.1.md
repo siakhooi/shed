@@ -8,6 +8,7 @@ k - alias to shed-kubectl
 
 # SYNOPSIS
 **shed-kubectl** [kubectl arguments]\
+**shed kubectl** [kubectl arguments]\
 **k**  [kubectl arguments]
 
 # DESCRIPTION

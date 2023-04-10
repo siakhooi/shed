@@ -6,7 +6,8 @@
 shed-use - set the environment to use a Shed.
 
 # SYNOPSIS
-**shed-use** shedCode
+**shed-use** shedCode\
+**shed use** shedCode
 
 # DESCRIPTION
 Set the environment to use **shedCode** as current Shed.

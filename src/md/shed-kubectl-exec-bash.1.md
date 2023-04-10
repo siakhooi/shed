@@ -8,6 +8,7 @@ k-bash - alias to shed-kubectl-exec-bash
 
 # SYNOPSIS
 **shed-kubectl-exec-bash** (pod | type/name) [container]\
+**shed kubectl-exec-bash** (pod | type/name) [container]\
 **k-bash** (pod | type/name) [container]
 
 # DESCRIPTION

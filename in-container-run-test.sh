@@ -18,6 +18,7 @@ MANWIDTH=120 man --pager=cat shed-list-code > $ACTUAL_DIRECTORY/man_shed-list-co
 
 shed-values > $ACTUAL_DIRECTORY/shed-values.out
 shed values > $ACTUAL_DIRECTORY/shed_values.out
+MANWIDTH=120 man --pager=cat shed-values > $ACTUAL_DIRECTORY/man_shed-values.out
 
 shed-value-key-list > $ACTUAL_DIRECTORY/shed-value-key-list.out
 shed value-key-list > $ACTUAL_DIRECTORY/shed_value-key-list.out

@@ -8,6 +8,7 @@ i - alias to shed-istioctl
 
 # SYNOPSIS
 **shed-istioctl** [istioctl arguments]\
+**shed istioctl** [istioctl arguments]\
 **i**  [istioctl arguments]
 
 # DESCRIPTION

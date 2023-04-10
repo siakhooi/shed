@@ -6,7 +6,8 @@
 shed-config-edit - edit shed config file with text editor
 
 # SYNOPSIS
-**shed-config-edit**
+**shed-config-edit**\
+**shed config-edit**
 
 # DESCRIPTION
 Edit shed config file using text editor defined in variable EDITOR, default to *vi*.

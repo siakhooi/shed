@@ -5,6 +5,7 @@ NAME
 
 SYNOPSIS
        shed-env
+       shed env
 
 DESCRIPTION
        Print environment variables used by shed programs.

@@ -8,6 +8,7 @@ h - alias to shed-helm
 
 # SYNOPSIS
 **shed-helm** [helm arguments]\
+**shed helm** [helm arguments]\
 **h**  [helm arguments]
 
 # DESCRIPTION

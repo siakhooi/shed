@@ -6,7 +6,8 @@
 shed-list-code - print list of shed codes, configured in the *~/.shed/config.yaml*.
 
 # SYNOPSIS
-**shed-list-code**
+**shed-list-code**\
+**shed list-code**
 
 # DESCRIPTION
 Print list of code of available sheds.

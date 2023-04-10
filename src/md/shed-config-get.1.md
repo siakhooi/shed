@@ -6,7 +6,8 @@
 shed-config-get - get value from Shed config file
 
 # SYNOPSIS
-**shed-config-get** yamlPath
+**shed-config-get** yamlPath\
+**shed config-get** yamlPath
 
 # DESCRIPTION
 get value from Shed config file.

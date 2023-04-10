@@ -6,7 +6,8 @@
 shed-value - get the config value of current shed.
 
 # SYNOPSIS
-**shed-value** yamlPath
+**shed-value** yamlPath\
+**shed value** yamlPath
 
 # DESCRIPTION
 Get the config value at path **yamlPath** of current shed.

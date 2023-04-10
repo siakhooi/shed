@@ -6,7 +6,8 @@
 shed-values - print all config values of current shed.
 
 # SYNOPSIS
-**shed-values**
+**shed-values**\
+**shed values**
 
 # DESCRIPTION
 print all config values of current shed.

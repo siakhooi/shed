@@ -12,6 +12,7 @@ c4 - alias for **shed-kubeconfig-use 4**
 
 # SYNOPSIS
 **shed-kubeconfig-use** kubeconfig-number\
+**shed kubeconfig-use** kubeconfig-number\
 **c0**\
 **c1**\
 **c2**\

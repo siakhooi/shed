@@ -6,7 +6,8 @@
 shed-config - print content of shed config file.
 
 # SYNOPSIS
-**shed-config**
+**shed-config**\
+**shed config**
 
 # DESCRIPTION
 Print content of shed config file.
