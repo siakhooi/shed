@@ -23,6 +23,8 @@ MANWIDTH=120 man --pager=cat shed-values > $ACTUAL_DIRECTORY/man_shed-values.out
 shed-value-key-list > $ACTUAL_DIRECTORY/shed-value-key-list.out
 shed value-key-list > $ACTUAL_DIRECTORY/shed_value-key-list.out
 MANWIDTH=120 man --pager=cat shed-value-key-list > $ACTUAL_DIRECTORY/man_shed-value-key-list.out
+
+MANWIDTH=120 man --pager=cat shed-kubectl-scale > $ACTUAL_DIRECTORY/man_shed-kubectl-scale.out
 ## Testing end
 
 diff $EXPECTED_DIRECTORY $ACTUAL_DIRECTORY 

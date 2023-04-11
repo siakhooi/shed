@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $# -ne 2 ]]; then
+  echo "Usage: $(basename "$0") replicas resourceName" >&2
+  exit 0
+fi
+
+REPLICAS=$1
+RESOURCE=$2
+
+shed-kubectl scale --replicas="$REPLICAS"  "$RESOURCE"

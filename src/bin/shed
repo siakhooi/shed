@@ -57,6 +57,10 @@ kubectl-exec-sh)
     shed-kubectl-exec-sh "$@"
     exit $?
     ;;
+kubectl-scale)
+    shed-kubectl-scale "$@"
+    exit $?
+    ;;
 helm)
     shed-helm "$@"
     exit $?

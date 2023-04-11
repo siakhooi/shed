@@ -16,6 +16,7 @@
 | `shed-kubectl` [kubectl arguments]                      | `k`                          | bin      | ✅      | [📚 Doc](shed-kubectl.md)           |
 | `shed-kubectl-exec-sh` (pod \| type/name) [container]   | `k-sh`                       | bin      | ✅      | [📚 Doc](shed-kubectl-exec-sh.md)   |
 | `shed-kubectl-exec-bash` (pod \| type/name) [container] | `k-bash`                     | bin      | ✅      | [📚 Doc](shed-kubectl-exec-bash.md) |
+| `shed-kubectl-scale` replicas resourceName              | `k-scale`                    | bin      | ✅      | [📚 Doc](shed-kubectl-scale.md)     |
 | `shed-helm` [helm arguments]                            | `h`                          | bin      | ✅      | [📚 Doc](shed-helm.md)              |
 | `shed-istioctl` [istioctl arguments]                    | `i`                          | bin      | ✅      | [📚 Doc](shed-istioctl.md)          |
 | `shed-use` shedCode                                     |                              | function | ✅      | [📚 Doc](shed-use.md)               |

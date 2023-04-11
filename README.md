@@ -20,7 +20,7 @@ Features:
   - shed-init [📚](docs/directory-init.d-shed-init.md) - when the shell session started.
   - shed-use [📚](docs/directory-init.d-shed-use.md)- when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
   - shed-kubeconfig-use [📚](docs/directory-init.d-shed-kubeconfig-use.md) - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
-- Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md).
+- Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md), `k-sh`[📚](docs/shed-kubectl-exec-sh.md), `k-bash`[📚](docs/shed-kubectl-exec-bash.md), `k-scale`[📚](docs/shed-kubectl-scale.md).
 - Support `helm` with shortened alias, ie `h`[📚](docs/shed-helm.md).
 - Support `istioctl` with shortened alias, ie `i`[📚](docs/shed-istioctl.md).
 

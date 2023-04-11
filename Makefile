@@ -1,5 +1,5 @@
 clean:
-	rm -rf target *.deb
+	rm -rf target *.deb *.deb.*sum
 
 build:
 	./build.sh
@@ -10,6 +10,7 @@ test-generate:
 	pandoc src/md/shed-env.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-env.out
 	pandoc src/md/shed-list.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-list.out
 	pandoc src/md/shed-list-code.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-list-code.out
+	pandoc src/md/shed-kubectl-scale.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-kubectl-scale.out
 test-generate-in-container:
 	shed-env > test/expected/shed-env.out
 	shed env > test/expected/shed_env.out
