@@ -1,4 +1,4 @@
-# shed-kubectl-exec-bash
+# shed-kubectl-scale
 
 Run **kubectl scale** with the given resource and replicas in the context and/or namespace from current KubeConfig.
 
