@@ -25,6 +25,7 @@ shed value-key-list > $ACTUAL_DIRECTORY/shed_value-key-list.out
 MANWIDTH=120 man --pager=cat shed-value-key-list > $ACTUAL_DIRECTORY/man_shed-value-key-list.out
 
 MANWIDTH=120 man --pager=cat shed-kubectl-scale > $ACTUAL_DIRECTORY/man_shed-kubectl-scale.out
+MANWIDTH=120 man --pager=cat shed-kubectl-logs-follow > $ACTUAL_DIRECTORY/man_shed-kubectl-logs-follow.out
 ## Testing end
 
 diff $EXPECTED_DIRECTORY $ACTUAL_DIRECTORY 

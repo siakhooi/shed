@@ -61,6 +61,10 @@ kubectl-scale)
     shed-kubectl-scale "$@"
     exit $?
     ;;
+kubectl-logs-follow)
+    shed-kubectl-logs-follow "$@"
+    exit $?
+    ;;
 helm)
     shed-helm "$@"
     exit $?

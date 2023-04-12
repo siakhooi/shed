@@ -2,26 +2,27 @@
 
 ## COMMANDS
 
-| Command                                                 | Alias                        | Type     | Manpage | Docs                                |
-| ------------------------------------------------------- | ---------------------------- | -------- | ------- | ----------------------------------- |
-| `shed-config`                                           |                              | bin      | ✅      | [📚 Doc](shed-config.md)            |
-| `shed-config-edit`                                      |                              | bin      | ✅      | [📚 Doc](shed-config-edit.md)       |
-| `shed-config-get` yamlPath                              |                              | bin      | ✅      | [📚 Doc](shed-config-get.md)        |
-| `shed-env`                                              |                              | bin      | ✅      | [📚 Doc](shed-env.md)               |
-| `shed-list`                                             |                              | bin      | ✅      | [📚 Doc](shed-list.md)              |
-| `shed-list-code`                                        |                              | bin      | ✅      | [📚 Doc](shed-list-code.md)         |
-| `shed-values`                                           |                              | bin      | ✅      | [📚 Doc](shed-values.md)            |
-| `shed-value-key-list`                                   |                              | bin      | ✅      | [📚 Doc](shed-value-key-list.md)    |
-| `shed-value` yamlPath                                   |                              | bin      | ✅      | [📚 Doc](shed-value.md)             |
-| `shed-kubectl` [kubectl arguments]                      | `k`                          | bin      | ✅      | [📚 Doc](shed-kubectl.md)           |
-| `shed-kubectl-exec-sh` (pod \| type/name) [container]   | `k-sh`                       | bin      | ✅      | [📚 Doc](shed-kubectl-exec-sh.md)   |
-| `shed-kubectl-exec-bash` (pod \| type/name) [container] | `k-bash`                     | bin      | ✅      | [📚 Doc](shed-kubectl-exec-bash.md) |
-| `shed-kubectl-scale` replicas resourceName              | `k-scale`                    | bin      | ✅      | [📚 Doc](shed-kubectl-scale.md)     |
-| `shed-helm` [helm arguments]                            | `h`                          | bin      | ✅      | [📚 Doc](shed-helm.md)              |
-| `shed-istioctl` [istioctl arguments]                    | `i`                          | bin      | ✅      | [📚 Doc](shed-istioctl.md)          |
-| `shed-use` shedCode                                     |                              | function | ✅      | [📚 Doc](shed-use.md)               |
-| `shed-kubeconfig-use` kubeconfig-number                 | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      | [📚 Doc](shed-kubeconfig-use.md)    |
-| `shed`                                                  |                              | bin      | ✅      | [📚 Doc](shed.md)                   |
+| Command                                                   | Alias                        | Type     | Manpage | Docs                                  |
+| --------------------------------------------------------- | ---------------------------- | -------- | ------- | ------------------------------------- |
+| `shed-config`                                             |                              | bin      | ✅      | [📚 Doc](shed-config.md)              |
+| `shed-config-edit`                                        |                              | bin      | ✅      | [📚 Doc](shed-config-edit.md)         |
+| `shed-config-get` yamlPath                                |                              | bin      | ✅      | [📚 Doc](shed-config-get.md)          |
+| `shed-env`                                                |                              | bin      | ✅      | [📚 Doc](shed-env.md)                 |
+| `shed-list`                                               |                              | bin      | ✅      | [📚 Doc](shed-list.md)                |
+| `shed-list-code`                                          |                              | bin      | ✅      | [📚 Doc](shed-list-code.md)           |
+| `shed-values`                                             |                              | bin      | ✅      | [📚 Doc](shed-values.md)              |
+| `shed-value-key-list`                                     |                              | bin      | ✅      | [📚 Doc](shed-value-key-list.md)      |
+| `shed-value` yamlPath                                     |                              | bin      | ✅      | [📚 Doc](shed-value.md)               |
+| `shed-kubectl` [kubectl arguments]                        | `k`                          | bin      | ✅      | [📚 Doc](shed-kubectl.md)             |
+| `shed-kubectl-exec-sh` (pod \| type/name) [container]     | `k-sh`                       | bin      | ✅      | [📚 Doc](shed-kubectl-exec-sh.md)     |
+| `shed-kubectl-exec-bash` (pod \| type/name) [container]   | `k-bash`                     | bin      | ✅      | [📚 Doc](shed-kubectl-exec-bash.md)   |
+| `shed-kubectl-scale` replicas resourceName                | `k-scale`                    | bin      | ✅      | [📚 Doc](shed-kubectl-scale.md)       |
+| `shed-kubectl-logs-follow` (pod \| type/name) [container] | `k-logs-f`                   | bin      | ✅      | [📚 Doc](shed-kubectl-logs-follow.md) |
+| `shed-helm` [helm arguments]                              | `h`                          | bin      | ✅      | [📚 Doc](shed-helm.md)                |
+| `shed-istioctl` [istioctl arguments]                      | `i`                          | bin      | ✅      | [📚 Doc](shed-istioctl.md)            |
+| `shed-use` shedCode                                       |                              | function | ✅      | [📚 Doc](shed-use.md)                 |
+| `shed-kubeconfig-use` kubeconfig-number                   | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      | [📚 Doc](shed-kubeconfig-use.md)      |
+| `shed`                                                    |                              | bin      | ✅      | [📚 Doc](shed.md)                     |
 
 ## FILES AND DIRECTORIES
 

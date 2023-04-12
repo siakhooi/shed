@@ -4,6 +4,7 @@ alias k='shed-kubectl'
 alias k-sh='shed-kubectl-exec-sh'
 alias k-bash='shed-kubectl-exec-bash'
 alias k-scale='shed-kubectl-scale'
+alias k-logs-f='shed-kubectl-logs-follow'
 
 if [[ $(type -t __start_kubectl) == function ]]; then
 
