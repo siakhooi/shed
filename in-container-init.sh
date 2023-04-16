@@ -2,7 +2,7 @@
 
 apt update -y
 
-apt install wget curl git apt-transport-https  bash-completion gpg -y
+apt install wget curl git apt-transport-https  bash-completion gpg make -y
 wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq
 
 curl -L -o /usr/bin/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x /usr/bin/kubectl

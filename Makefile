@@ -4,27 +4,6 @@ clean:
 build:
 	./build.sh
 
-test-generate:
-	pandoc src/md/shed-values.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-values.out
-	pandoc src/md/shed-value-key-list.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-value-key-list.out
-	pandoc src/md/shed-env.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-env.out
-	pandoc src/md/shed-list.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-list.out
-	pandoc src/md/shed-list-code.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-list-code.out
-	pandoc src/md/shed-kubectl-scale.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-kubectl-scale.out
-	pandoc src/md/shed-kubectl-logs-follow.1.md -s -t man|MANWIDTH=120 man --pager=cat -l - > test/expected/man_shed-kubectl-logs-follow.out
-
-test-generate-in-container:
-	shed-env > test/expected/shed-env.out
-	shed env > test/expected/shed_env.out
-	shed-values > test/expected/shed-values.out
-	shed values > test/expected/shed_values.out
-	shed-value-key-list > test/expected/shed-value-key-list.out
-	shed value-key-list > test/expected/shed_value-key-list.out
-	shed-list > test/expected/shed-list.out
-	shed list > test/expected/shed_list.out
-	shed-list-code > test/expected/shed-list-code.out
-	shed list-code > test/expected/shed_list-code.out
-
 test-man:
 	pandoc src/md/shed-kubectl-exec-sh.1.md -s -t man | man -l -
 	pandoc src/md/shed-kubectl-exec-bash.1.md -s -t man | man -l -
@@ -52,13 +31,15 @@ uninstall:
 terminalizer:
 	terminalizer render docs/terminalizer-shed.yml
 
-test:
+test1:
 	run-ubuntu
 	run-debian
 
-run-in-container:
-#	. in-container-init.sh
-# . run-test.sh
+init-container:
+	. in-container-init.sh
+
+run-test:
+	. test/run-tests.sh
 
 test-steps:
 # docker exec -it xxxxx bash
