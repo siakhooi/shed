@@ -16,10 +16,10 @@ Run helm command with context and/or namespace from current KubeConfig.
 
 # EXAMPLES
 shed-use T; **shed-helm** list
-: helm --kube-context kube-test-1  list
+: helm \-\-kube-context kube-test-1  list
 
 shed-use D; **shed-helm** list
-: helm --kube-context kube-dev-1 --namespace ns-application list
+: helm \-\-kube-context kube-dev-1 \-\-namespace ns-application list
 
 # ENVIRONMENT VARIABLES
 KUBECONFIG

@@ -16,10 +16,10 @@ Run **kubectl** command with context and/or namespace from current KubeConfig.
 
 # EXAMPLES
 shed-use T; **shed-kubectl** get pods
-: kubectl --context kube-test-1 get pods
+: kubectl \-\-context kube-test-1 get pods
 
 shed-use D; **shed-kubectl** get pods
-: kubectl --context kube-dev-1 --namespace ns-application get pods
+: kubectl \-\-context kube-dev-1 \-\-namespace ns-application get pods
 
 # ENVIRONMENT VARIABLES
 KUBECONFIG
