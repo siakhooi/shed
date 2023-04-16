@@ -25,11 +25,6 @@ jobs:
         with:
           repo_token: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
           file_glob: true
-          file: ./*.deb.md5sum
-      - uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
-          file_glob: true
           file: ./*.deb.sha256sum
       - uses: svenstaro/upload-release-action@v2
         with:
