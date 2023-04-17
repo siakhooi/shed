@@ -25,7 +25,7 @@ BUGS
        Report bugs at https://github.com/siakhooi/shed/issues.
 
 SEE ALSO
-       shed(1), shed-config(1), shed-config.yaml(5), shed-use(1), shed-kubeconfig-use(1)
+       shed-aliases(1), shed(1), shed-config(1), shed-config.yaml(5), shed-use(1), shed-kubeconfig-use(1)
 
 AUTHORS
        Siak Hooi.

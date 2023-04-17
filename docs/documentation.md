@@ -8,6 +8,7 @@
 | `shed-config-edit`                                        |                              | bin      | ✅      | [📚 Doc](shed-config-edit.md)         |
 | `shed-config-get` yamlPath                                |                              | bin      | ✅      | [📚 Doc](shed-config-get.md)          |
 | `shed-env`                                                |                              | bin      | ✅      | [📚 Doc](shed-env.md)                 |
+| `shed-aliases`                                            |                              | alias    | ✅      | [📚 Doc](shed-aliases.md)             |
 | `shed-list`                                               |                              | bin      | ✅      | [📚 Doc](shed-list.md)                |
 | `shed-list-code`                                          |                              | bin      | ✅      | [📚 Doc](shed-list-code.md)           |
 | `shed-values`                                             |                              | bin      | ✅      | [📚 Doc](shed-values.md)              |

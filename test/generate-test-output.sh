@@ -22,15 +22,8 @@ shed values >$OUTPUT_DIRECTORY/shed_values.out
 shed-value-key-list >$OUTPUT_DIRECTORY/shed-value-key-list.out
 shed value-key-list >$OUTPUT_DIRECTORY/shed_value-key-list.out
 
-MANWIDTH=120 man --pager=cat shed-env >$OUTPUT_DIRECTORY/man_shed-env.out
-MANWIDTH=120 man --pager=cat shed-kubectl-scale >$OUTPUT_DIRECTORY/man_shed-kubectl-scale.out
-MANWIDTH=120 man --pager=cat shed-kubectl-logs-follow >$OUTPUT_DIRECTORY/man_shed-kubectl-logs-follow.out
-MANWIDTH=120 man --pager=cat shed-list >$OUTPUT_DIRECTORY/man_shed-list.out
-MANWIDTH=120 man --pager=cat shed-list-code >$OUTPUT_DIRECTORY/man_shed-list-code.out
-MANWIDTH=120 man --pager=cat shed-values >$OUTPUT_DIRECTORY/man_shed-values.out
-MANWIDTH=120 man --pager=cat shed-value-key-list >$OUTPUT_DIRECTORY/man_shed-value-key-list.out
-
 ALL_MAN_PAGES_1=(
+    shed-aliases
     shed-config-edit
     shed-config-get
     shed-config

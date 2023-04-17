@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alias shed-aliases='alias | grep  ''shed-'' --color=no|grep -v ''shed-aliases'' --color=no'

@@ -27,6 +27,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed-list**\
 **shed-list-code**\
 **shed-env**\
+**shed-aliases**\
 **shed-config**\
 **shed-config-edit**\
 **shed-config-get** yamlPath\
@@ -114,7 +115,7 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-env(1)\
+shed-env(1), shed-aliases(1)\
 shed-list(1), shed-list-code(1)\
 shed-config(1), shed-config-edit(1), shed-config-get(1), shed-config.yaml(5)\
 shed-value(1), shed-values(1), shed-value-key-list(1)\
