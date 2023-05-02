@@ -5,5 +5,11 @@ on:
       - "*"
 
 jobs:
-  test:
+  build:
     uses: ./.github/workflows/build-with-shellcheck.yml
+  test-ubuntu:
+    needs: build
+    uses: ./.github/workflows/test-with-ubuntu.yml
+  test-debian:
+    needs: build
+    uses: ./.github/workflows/test-with-debian.yml

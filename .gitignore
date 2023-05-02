@@ -2,3 +2,4 @@ target
 *.deb
 temp
 *.deb.*sum
+test/actual-tests
