@@ -1,5 +1,6 @@
 clean:
 	rm -rf target *.deb *.deb.*sum
+	sudo rm -rf test/actual-tests
 
 build:
 	./build.sh

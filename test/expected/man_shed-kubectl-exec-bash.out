@@ -1,6 +1,4 @@
-SHED-KUBECTL-EXEC-BASH(1)                                Shed                               SHED-KUBECTL-EXEC-BASH(1)
-
-Commands"
+SHED-KUBECTL-EXEC-BASH(1)                           Shed Commands                           SHED-KUBECTL-EXEC-BASH(1)
 
 NAME
        shed-kubectl-exec-bash  -  run bash in kubernetes resource via kubectl exec with context and/or namespace from
@@ -41,4 +39,4 @@ SEE ALSO
 AUTHORS
        Siak Hooi.
 
-Siak Hooi Development Utilities 1.1.0                 April 2023                            SHED-KUBECTL-EXEC-BASH(1)
+Siak Hooi DevUtils 1.1.0                              April 2023                            SHED-KUBECTL-EXEC-BASH(1)

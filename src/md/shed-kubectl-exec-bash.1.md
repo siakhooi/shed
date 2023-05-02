@@ -1,4 +1,4 @@
-% SHED-KUBECTL-EXEC-BASH(1) Siak Hooi Development Utilities 1.1.0|Shed Commands
+% SHED-KUBECTL-EXEC-BASH(1) Siak Hooi DevUtils 1.1.0|Shed Commands
 % Siak Hooi
 % April 2023
 
