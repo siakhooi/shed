@@ -10,7 +10,7 @@ jobs:
         with:
           name: deliverables
           path: ./
-      - run: .github/bin/test-ubuntu.sh
+      - run: ./.github/bin/test-ubuntu.sh
       - uses: actions/upload-artifact@v3
         with:
           name: test-result-ubuntu
