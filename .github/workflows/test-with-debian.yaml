@@ -1,0 +1,17 @@
+name: Test-Debian
+
+on: workflow_call
+
+jobs:
+  test-debian:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: deliverables
+          path: ./
+      - run: .github/bin/test-debian.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: test-result-debian
+          path: ./test/actual-tests

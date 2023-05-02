@@ -20,9 +20,19 @@ delete-tags:
 terminalizer:
 	terminalizer render docs/terminalizer-shed.yml
 
-test1:
-	run-ubuntu
-	run-debian
+build-debian:
+	cd test && docker build . -f Dockerfiles/Dockerfile_debian -t shed-tester:debian -t siakhooi/shed-tester:debian
+test-debian:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:debian bash /working/test/in-container-init-test.sh
+run-shed-debian:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:debian bash
+
+build-ubuntu:
+	cd test && docker build . -f Dockerfiles/Dockerfile_ubuntu -t shed-tester:ubuntu -t siakhooi/shed-tester:ubuntu
+test-ubuntu:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:ubuntu bash /working/test/in-container-init-test.sh
+run-shed-ubuntu:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:ubuntu bash
 
 init-container:
 	. in-container-init.sh

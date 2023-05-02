@@ -1,0 +1,7 @@
+code: D
+name: shed-D-development
+kubeconfig:
+  - context: kube-dev-1
+    namespace: ns-application
+  - context: kube-dev-1
+    namespace: ns-database
