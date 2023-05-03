@@ -9,7 +9,7 @@ fi
 
 test/generate-test-output.sh "$ACTUAL_DIRECTORY"
 
-diff $EXPECTED_DIRECTORY $ACTUAL_DIRECTORY
+diff -r $EXPECTED_DIRECTORY $ACTUAL_DIRECTORY
 
 RESULT=$?
 echo.blue "Actual Result in: $ACTUAL_DIRECTORY"
