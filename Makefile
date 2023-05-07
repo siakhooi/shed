@@ -35,8 +35,8 @@ test-ubuntu:
 run-shed-ubuntu:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:ubuntu bash
 
-init-container:
-	. in-container-init.sh
+init-test:
+	. test/in-container-init-test.sh
 
 run-test:
 	. test/run-tests.sh
