@@ -17,5 +17,3 @@ kubectl --context kind-kube-dev-1 create ns ns-application
 kubectl --context kind-kube-dev-1 create ns ns-database
 
 source /usr/lib/shed/shed-init
-
-/usr/lib/shed/shed-config-create-sample

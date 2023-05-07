@@ -71,3 +71,6 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 
 - <https://siakhooi.github.io/apt/>
 - <https://siakhooi.jfrog.io/ui/packages>
+
+### Tester Images
+- <https://hub.docker.com/r/siakhooi/shed-tester/tags>

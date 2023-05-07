@@ -1,8 +1,7 @@
 info:
 
 clean:
-	rm -rf target *.deb *.deb.*sum
-	sudo rm -rf test/actual-tests
+	rm -rf target *.deb *.deb.*sum test/actual-tests
 
 build:
 	./build.sh
@@ -26,22 +25,30 @@ terminalizer:
 build-debian:
 	cd test && docker build . -f Dockerfiles/Dockerfile_debian -t shed-tester:debian -t siakhooi/shed-tester:debian
 test-debian:
-	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:debian bash /working/test/in-container-init-test.sh
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash /working/test/in-container-init-test.sh
 run-shed-debian:
-	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:debian bash
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash
 
 build-ubuntu:
 	cd test && docker build . -f Dockerfiles/Dockerfile_ubuntu -t shed-tester:ubuntu -t siakhooi/shed-tester:ubuntu
 test-ubuntu:
-	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:ubuntu bash /working/test/in-container-init-test.sh
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:ubuntu bash /working/test/in-container-init-test.sh
 run-shed-ubuntu:
-	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock shed-tester:ubuntu bash
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:ubuntu bash
 
 init-test:
 	. test/in-container-init-test.sh
 
-run-test:
-	. test/run-tests.sh
+init-terminalizer:
+	. screenshots_src/in-container-setup.sh
+prepare-environments:
+	. /working/test/prepare-environments.sh
+teardown-environments:
+	. /working/test/teardown-environments.sh
+
+kill-kind-clusters:
+	docker kill $$(docker ps -a --filter label=io.x-k8s.kind.cluster --format='{{ .Names }}')
+	docker rm $$(docker ps -a --filter label=io.x-k8s.kind.cluster --format='{{ .Names }}')
 
 test-steps:
 # docker exec -it xxxxx bash
