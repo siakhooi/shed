@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt update -y && \
     apt upgrade -y && \
-    apt install -y wget curl gpg git bash-completion apt-transport-https && \
+    apt install -y wget curl gpg git bash-completion apt-transport-https make && \
     wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq && \
     curl -L -o /usr/bin/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x /usr/bin/kubectl && \
     curl -L -o /usr/bin/kind https://kind.sigs.k8s.io/dl/v0.18.0/kind-linux-amd64 && chmod +x /usr/bin/kind && \
