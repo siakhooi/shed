@@ -9,18 +9,19 @@ SOURCE=src
 mkdir "$TARGET"
 
 # Control File
-chmod +x $SOURCE/DEBIAN/post*
 cp -vr $SOURCE/DEBIAN $TARGET
+chmod 755 $TARGET/DEBIAN/post*
 
 # Binary Files
 mkdir -p $TARGET/usr/bin
-chmod +x $SOURCE/bin/*
 cp -vr $SOURCE/bin $TARGET/usr
+chmod 755 $TARGET/usr/bin/*
 
 # Lib Files
 mkdir -p $TARGET/usr/lib/shed
 find src/lib/init.d -type f -exec chmod +x -v {} \;
 cp -vr $SOURCE/lib/* $TARGET/usr/lib/shed
+chmod 755 $TARGET/usr/lib/shed/*
 
 # Share file
 mkdir -p $TARGET/usr/share/shed
