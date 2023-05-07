@@ -1,5 +1,7 @@
 info:
 
+prepare:
+	sudo apt update -y && sudo apt install -y shellcheck pandoc dpkg-dev
 clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
 
@@ -43,8 +45,10 @@ init-terminalizer:
 	. screenshots_src/in-container-setup.sh
 prepare-environments:
 	. /working/test/prepare-environments.sh
-teardown-environments:
-	. /working/test/teardown-environments.sh
+prepare-kind-clusters:
+	. /working/test/prepare-kind-clusters.sh
+teardown-kind-clusters:
+	. /working/test/teardown-kind-clusters.sh
 
 kill-kind-clusters:
 	docker kill $$(docker ps -a --filter label=io.x-k8s.kind.cluster --format='{{ .Names }}')
@@ -52,7 +56,6 @@ kill-kind-clusters:
 
 test-steps:
 # docker exec -it xxxxx bash
-	shed-config
 	shed-config-get
 	shed-config-edit
 	shed-value

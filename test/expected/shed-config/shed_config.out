@@ -1,0 +1,20 @@
+[36msheds[0m:
+  -[36m code[0m:[32m D[0m
+[32m    [0m[36mname[0m:[32m shed-D-development[0m
+[32m    [0m[36mkubeconfig[0m:
+      -[36m context[0m:[32m kube-dev-1[0m
+[32m        [0m[36mnamespace[0m:[32m ns-application[0m
+[32m      [0m-[36m context[0m:[32m kube-dev-1[0m
+[32m        [0m[36mnamespace[0m:[32m ns-database[0m
+[32m  [0m-[36m code[0m:[32m T[0m
+[32m    [0m[36mname[0m:[32m shed-T-testing[0m
+[32m    [0m[36mkubeconfig[0m:
+      -[36m context[0m:[32m kube-test-1[0m
+[32m      [0m-[36m context[0m:[32m kube-test-2[0m
+[32m      [0m-[36m context[0m:[32m kube-test-3[0m
+[32m  [0m-[36m code[0m:[32m P[0m
+[32m    [0m[36mname[0m:[32m shed-P-production[0m
+[32m    [0m[36mkubeconfig[0m:
+      -[36m context[0m:[32m kube-prod-1[0m
+[32m[0m[36mshed-init[0m:[36m[0m
+[36m  shed[0m:[32m P[0m
