@@ -6,7 +6,7 @@ clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
 
 build:
-	./build.sh
+	./scripts/build.sh
 
 test-man:
 	pandoc src/md/shed-kubectl-exec-sh.1.md -s -t man | man -l -
