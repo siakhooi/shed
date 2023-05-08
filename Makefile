@@ -6,6 +6,7 @@ clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
 
 build:
+	./scripts/shellcheck.sh
 	./scripts/build.sh
 
 test-man:

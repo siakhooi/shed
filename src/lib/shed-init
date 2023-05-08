@@ -24,4 +24,5 @@ if [[ -d $SHED_USER_INIT_DIRECTORY ]]; then
     done
 fi
 
+# shellcheck source=/dev/null
 source /usr/lib/shed/shed-init_shed-use
