@@ -7,7 +7,7 @@ if ! is-false "$load_kubectl_config"; then
     SHED_KUBECONFIG_PATH=$SHED_CONFIG_HOME/kubectl-config
 
     if [[ -d $SHED_KUBECONFIG_PATH ]]; then
-        if [ "$(ls -A $SHED_KUBECONFIG_PATH 2>/dev/null)" ]; then
+        if [ "$(ls -A "$SHED_KUBECONFIG_PATH" 2>/dev/null)" ]; then
             [[ -n $KUBECONFIG ]] || KUBECONFIG=$HOME/.kube/config
 
             for f in $(find "$SHED_KUBECONFIG_PATH" -type f | sort); do
