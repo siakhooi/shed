@@ -2,5 +2,3 @@ code: T
 name: shed-T-testing
 kubeconfig:
   - context: kube-test-1
-  - context: kube-test-2
-  - context: kube-test-3

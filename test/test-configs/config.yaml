@@ -1,0 +1,14 @@
+sheds:
+  - code: D
+    name: shed-D-development
+    kubeconfig:
+      - context: kube-dev-1
+        namespace: ns-application
+      - context: kube-dev-1
+        namespace: ns-database
+  - code: T
+    name: shed-T-testing
+    kubeconfig:
+      - context: kube-test-1
+shed-init:
+  shed: D

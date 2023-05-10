@@ -1,5 +1,5 @@
 KUBECONFIG=/root/.kube/config:/root/.shed/kubectl-config/kubeconfig-D:/root/.shed/kubectl-config/kubeconfig-T
-SHED_CODE=P
+SHED_CODE=D
 SHED_CONFIG_FILE=/root/.shed/config.yaml
 SHED_CONFIG_HOME=/root/.shed
 SHED_KUBECONFIG_NUMBER=0

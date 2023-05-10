@@ -1,4 +1,7 @@
-code: P
-name: shed-P-production
+code: D
+name: shed-D-development
 kubeconfig:
-  - context: kube-prod-1
+  - context: kube-dev-1
+    namespace: ns-application
+  - context: kube-dev-1
+    namespace: ns-database
