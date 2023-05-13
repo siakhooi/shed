@@ -4,7 +4,10 @@ clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
 init: prepare build
 prepare:
-	sudo apt update -y && sudo apt install -y shellcheck pandoc dpkg-dev
+	. scripts/prepare-environments-in-codespace.sh
+	. prepare-kind-clusters.sh
+#	source /usr/lib/shed/shed-init
+
 build:
 	./scripts/shellcheck.sh
 	./scripts/build.sh
