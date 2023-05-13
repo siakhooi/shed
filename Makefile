@@ -1,10 +1,10 @@
 info:
 
-prepare:
-	sudo apt update -y && sudo apt install -y shellcheck pandoc dpkg-dev
 clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
-
+init: prepare build
+prepare:
+	sudo apt update -y && sudo apt install -y shellcheck pandoc dpkg-dev
 build:
 	./scripts/shellcheck.sh
 	./scripts/build.sh
@@ -15,15 +15,10 @@ test-man:
 reinstall:
 	apt remove -y siakhooi-shed
 	apt install -y -f ./siakhooi-shed_*_amd64.deb
-generate-expected-outputs:
-	test/generate-test-output.sh test/expected/
 
 delete-tags:
 	git tag --delete 1.0.0
 	git push --delete origin 1.0.0
-
-terminalizer:
-	terminalizer render docs/terminalizer-shed.yml
 
 build-debian:
 	cd test && docker build . -f Dockerfiles/Dockerfile_debian -t shed-tester:debian -t siakhooi/shed-tester:debian
@@ -39,11 +34,7 @@ test-ubuntu:
 run-shed-ubuntu:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:ubuntu bash
 
-init-test:
-	. test/in-container-init-test.sh
-
-init-terminalizer:
-	. screenshots_src/in-container-setup.sh
+## prepare container environments
 prepare-environments:
 	. /working/test/prepare-environments.sh
 prepare-kind-clusters:
@@ -51,15 +42,28 @@ prepare-kind-clusters:
 teardown-kind-clusters:
 	. /working/test/teardown-kind-clusters.sh
 
+## test development
+run-test:
+	test/test-scripts/generate-test-output-shed-config-get.sh test/expected
+
+init-full-test:
+	. test/in-container-init-test.sh
+
+#	test/generate-test-output.sh test/expected/
+
+init-terminalizer:
+	. screenshots_src/in-container-setup.sh
+
+terminalizer:
+	terminalizer render docs/terminalizer-shed.yml
+
 kill-kind-clusters:
 	docker kill $$(docker ps -a --filter label=io.x-k8s.kind.cluster --format='{{ .Names }}')
 	docker rm $$(docker ps -a --filter label=io.x-k8s.kind.cluster --format='{{ .Names }}')
 
 test-steps:
 # docker exec -it xxxxx bash
-	shed-config-get
 	shed-config-edit
-	shed-value
 	shed-use
 	shed
 	shed-kubeconfig-use
