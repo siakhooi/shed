@@ -27,7 +27,7 @@ Features:
 
 Current Development Environment:
 
-- Shed is currently developed in wsl ubuntu and tested with Ubuntu and Debian images.
+- Shed is currently developed in WSL Ubuntu/Windows 10 Home/HP Pavilion Desktop and tested with official Ubuntu and Debian images from Docker Hub.
 
 ## Documentation
 
