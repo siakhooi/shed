@@ -23,6 +23,7 @@ Features:
 - Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md), `k-sh`[📚](docs/shed-kubectl-exec-sh.md), `k-bash`[📚](docs/shed-kubectl-exec-bash.md), `k-scale`[📚](docs/shed-kubectl-scale.md), `k-logs-f`[📚](docs/shed-kubectl-logs-follow.md).
 - Support `helm` with shortened alias, ie `h`[📚](docs/shed-helm.md).
 - Support `istioctl` with shortened alias, ie `i`[📚](docs/shed-istioctl.md).
+- Print out the actual command that is executing.
 
 Current Development Environment:
 
@@ -74,3 +75,32 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 
 ### Tester Images
 - <https://hub.docker.com/r/siakhooi/shed-tester/tags>
+
+## Badges
+![GitHub](https://img.shields.io/github/license/siakhooi/shed?logo=github)
+[![Code Style: Google](https://img.shields.io/badge/code%20style-google-blueviolet.svg)](https://github.com/google/gts)
+![GitHub last commit](https://img.shields.io/github/last-commit/siakhooi/shed?logo=github)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/siakhooi/shed?logo=github)
+![GitHub issues](https://img.shields.io/github/issues/siakhooi/shed?logo=github)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/siakhooi/shed?logo=github)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/siakhooi/shed?logo=github)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/siakhooi/shed?logo=github)
+![GitHub top language](https://img.shields.io/github/languages/top/siakhooi/shed?logo=github)
+![GitHub language count](https://img.shields.io/github/languages/count/siakhooi/shed?logo=github)
+![Lines of code](https://img.shields.io/tokei/lines/github/siakhooi/shed?logo=github)
+![GitHub repo size](https://img.shields.io/github/repo-size/siakhooi/shed?logo=github)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/siakhooi/shed?logo=github)
+
+![Workflow](https://img.shields.io/badge/Workflow-github-purple)
+![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-build-with-quality-checks.yml/badge.svg)
+![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-deployments.yml/badge.svg)
+![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-build-all-images.yaml/badge.svg)
+
+![Release](https://img.shields.io/badge/Release-github-purple)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/siakhooi/shed?label=GPR%20release&logo=github)
+![GitHub all releases](https://img.shields.io/github/downloads/siakhooi/shed/total?color=33cb56&logo=github)
+![GitHub Release Date](https://img.shields.io/github/release-date/siakhooi/shed?logo=github)
+
+[![Generic badge](https://img.shields.io/badge/Funding-BuyMeACoffee-33cb56.svg)](https://www.buymeacoffee.com/siakhooi)
+[![Generic badge](https://img.shields.io/badge/Funding-Ko%20Fi-33cb56.svg)](https://ko-fi.com/siakhooi)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=siakhooi.shed&left_color=grey&right_color=#33cb56)
