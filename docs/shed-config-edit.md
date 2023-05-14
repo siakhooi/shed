@@ -4,8 +4,10 @@ Edit shed config file using text editor defined in environment variable EDITOR, 
 
 ## SYNOPSIS
 
-**shed-config-edit**
-**shed config-edit**
+```bash
+shed-config-edit
+shed config-edit
+```
 
 ## DESCRIPTION
 

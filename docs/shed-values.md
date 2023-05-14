@@ -4,8 +4,10 @@ Print all config values of current shed.
 
 ## SYNOPSIS
 
-**shed-values**
-**shed values**
+```bash
+shed-values
+shed values
+```
 
 ## SCREENSHOTS
 

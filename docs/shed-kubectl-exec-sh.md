@@ -4,9 +4,11 @@ Run **sh** in kubernetes resource via **kubectl exec** with context and/or names
 
 ## SYNOPSIS
 
-**shed-kubectl-exec-sh** (pod | type/name) [container]\
-**shed kubectl-exec-sh** (pod | type/name) [container]\
-**k-sh** (pod | type/name) [container]
+```bash
+shed-kubectl-exec-sh (pod | type/name) [container]
+shed kubectl-exec-sh (pod | type/name) [container]
+k-sh (pod | type/name) [container]
+```
 
 ## EXAMPLES
 

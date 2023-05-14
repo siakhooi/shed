@@ -4,7 +4,9 @@ Set the environment to use **shedCode** as current Shed.
 
 ## SYNOPSIS
 
-**shed-use** shedCode
+```bash
+shed-use shedCode
+```
 
 ## SCREENSHOTS
 

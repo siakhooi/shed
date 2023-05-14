@@ -4,8 +4,10 @@ Print list of shed codes, configured in the _~/.shed/config.yaml_. Use by `shed-
 
 ## SYNOPSIS
 
-**shed-list-code**
-**shed list-code**
+```bash
+shed-list-code
+shed list-code
+```
 
 ## SCREENSHOTS
 

@@ -4,8 +4,10 @@ get value from shed config file, _~/.shed/config.yaml_.
 
 ## SYNOPSIS
 
-**shed-config-get** yamlPath
-**shed config-get** yamlPath
+```bash
+shed-config-get yamlPath
+shed config-get yamlPath
+```
 
 ## SCREENSHOTS
 

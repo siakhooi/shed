@@ -4,9 +4,11 @@ Run **kubectl logs** with follow flag (`-f`) and `--tail=0` in context and/or na
 
 ## SYNOPSIS
 
-**shed-kubectl-logs-follow** (pod | type/name) [container]\
-**shed kubectl-logs-follow** (pod | type/name) [container]\
-**k-logs-f** (pod | type/name) [container]
+```bash
+shed-kubectl-logs-follow (pod | type/name) [container]
+shed kubectl-logs-follow (pod | type/name) [container]
+k-logs-f (pod | type/name) [container]
+```
 
 ## EXAMPLES
 

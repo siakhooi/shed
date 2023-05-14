@@ -4,8 +4,10 @@ Print list of keys of Shed values. Use by `shed-value` for completion logic.
 
 ## SYNOPSIS
 
-**shed-value-key-list**\
-**shed value-key-list**
+```bash
+shed-value-key-list
+shed value-key-list
+```
 
 ## SCREENSHOTS
 

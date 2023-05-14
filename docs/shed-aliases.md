@@ -4,7 +4,9 @@ List aliases used by shed programs.
 
 ## SYNOPSIS
 
-**shed-aliases**
+```bash
+shed-aliases
+```
 
 ## EXAMPLES
 

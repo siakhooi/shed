@@ -4,8 +4,10 @@ Get the config value of current shed.
 
 ## SYNOPSIS
 
-**shed-value** yamlPath
-**shed value** yamlPath
+```bash
+shed-value yamlPath
+shed value yamlPath
+```
 
 ## SCREENSHOTS
 

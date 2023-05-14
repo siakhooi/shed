@@ -4,8 +4,10 @@ Print content of shed config file, ie: _~/.shed/config.yaml_.
 
 ## SYNOPSIS
 
-**shed-config**
-**shed config**
+```bash
+shed-config
+shed config
+```
 
 ## SCREENSHOTS
 

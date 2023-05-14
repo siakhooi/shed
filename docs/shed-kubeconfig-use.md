@@ -5,12 +5,14 @@ Optional by configuration (_.shed-kubeconfig-use.kubectl-switch-context_), **she
 
 ## SYNOPSIS
 
-**shed-kubeconfig-use** kubeconfig-number\
-**c0**\
-**c1**\
-**c2**\
-**c3**\
-**c4**
+```bash
+shed-kubeconfig-use kubeconfig-number
+c0
+c1
+c2
+c3
+c4
+```
 
 ## DESCRIPTION
 
