@@ -5,9 +5,9 @@ Run **kubectl scale** with the given resource and replicas in the context and/or
 ## SYNOPSIS
 
 ```bash
-shed-kubectl-scale  replicas resourceName
-shed kubectl-scale  replicas resourceName
-k-scale  replicas resourceName
+shed-kubectl-scale replicas resourceName
+shed kubectl-scale replicas resourceName
+k-scale replicas resourceName
 ```
 
 ## EXAMPLES
