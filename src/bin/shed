@@ -65,6 +65,18 @@ kubectl-logs-follow)
     shed-kubectl-logs-follow "$@"
     exit $?
     ;;
+kubectl-resources)
+    shed-kubectl-resources "$@"
+    exit $?
+    ;;
+kubectl-apply)
+    shed-kubectl-apply "$@"
+    exit $?
+    ;;
+kubectl-delete)
+    shed-kubectl-delete "$@"
+    exit $?
+    ;;
 helm)
     shed-helm "$@"
     exit $?

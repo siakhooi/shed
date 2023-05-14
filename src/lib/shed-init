@@ -2,6 +2,7 @@
 
 export SHED_CONFIG_HOME="${SHED_CONFIG_HOME:-$HOME/.shed}"
 export SHED_CONFIG_FILE=${SHED_CONFIG_HOME}/config.yaml
+export SHED_CONFIG_DIRECTORY_RESOURCES=$SHED_CONFIG_HOME/kubectl-resources
 
 [[ -d "$SHED_CONFIG_HOME" ]] || mkdir -p "$SHED_CONFIG_HOME"
 [[ -f "$SHED_CONFIG_FILE" ]] || /usr/lib/shed/shed-config-create-sample

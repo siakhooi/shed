@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $(basename "$0") kubectl-resource"
+  exit 0
+fi
+
+RESOURCE_DIRECTORY="$SHED_CONFIG_DIRECTORY_RESOURCES/$1"
+
+if [[ ! -d "$RESOURCE_DIRECTORY" ]]; then
+  echo "$1 not exists. ($RESOURCE_DIRECTORY)"
+  exit 1
+fi
+
+set -x
+shed-kubectl delete -f "$RESOURCE_DIRECTORY"
