@@ -24,6 +24,9 @@
 | `shed-use` shedCode                                       |                              | function | ✅      | [📚 Doc](shed-use.md)                 |
 | `shed-kubeconfig-use` kubeconfig-number                   | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅      | [📚 Doc](shed-kubeconfig-use.md)      |
 | `shed`                                                    |                              | bin      | ✅      | [📚 Doc](shed.md)                     |
+| `shed-kubectl-resources`                                  |                              | bin      | ❌      | ❌                                    |
+| `shed-kubectl-apply`                                      | `ka`                         | bin      | ❌      | ❌                                    |
+| `shed-kubectl-delete`                                     | `kd`                         | bin      | ❌      | ❌                                    |
 
 ## FILES AND DIRECTORIES
 
@@ -34,15 +37,17 @@
 | `~/.shed/init.d/shed-use/`            | directory | ❌      | [📚 Doc](directory-init.d-shed-use.md)            | user defined scripts that will be executed when shed is set by `shed-use`.                       |
 | `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌      | [📚 Doc](directory-init.d-shed-kubeconfig-use.md) | user defined scripts that will be executed when KubeConfig is set by `shed-kubeconfig-use`.      |
 | `~/.shed/kubectl-config`              | directory | ❌      | [📚 Doc](directory-kubectl-config.md)             | kubectl config files that will be added to environment variable `$KUBECONFIG` on by `shed-init`. |
+| `~/.shed/kubectl-resources`           | directory | ❌      | ❌                                                | kubectl resources for `shed-kubectl-apply` and `shed-kubectl-delete`.                            |
 
 ## ENVIRONMENT VARIABLES
 
-| Name                     | Description                                                                                         |
-| ------------------------ | --------------------------------------------------------------------------------------------------- |
-| `SHED_CONFIG_HOME`       | Home directory for shed config files, default to `$HOME/.shed`                                      |
-| `SHED_CONFIG_FILE`       | shed config file, default to `$SHED_CONFIG_HOME/config.yaml`                                        |
-| `SHED_CODE`              | the current Shed.                                                                                   |
-| `SHED_KUBECONFIG_NUMBER` | the current KubeConfig Number                                                                       |
-| `EDITOR`                 | Text editor to edit config file, see `shed-config-edit`, default to `vi`.                           |
-| `PS1`                    | shed-init will modified this shell prompt.                                                          |
-| `KUBECONFIG`             | shed-init will load all files in `~/.shed/kubectl-config` directory into this environment variable. |
+| Name                             | Description                                                                                         |
+| -------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `SHED_CONFIG_HOME`               | Home directory for shed config files, default to `$HOME/.shed`                                      |
+| `SHED_CONFIG_FILE`               | shed config file, default to `$SHED_CONFIG_HOME/config.yaml`                                        |
+| `SHED_CODE`                      | the current Shed.                                                                                   |
+| `SHED_KUBECONFIG_NUMBER`         | the current KubeConfig Number                                                                       |
+| `EDITOR`                         | Text editor to edit config file, see `shed-config-edit`, default to `vi`.                           |
+| `PS1`                            | shed-init will modified this shell prompt.                                                          |
+| `KUBECONFIG`                     | shed-init will load all files in `~/.shed/kubectl-config` directory into this environment variable. |
+| `SHED_CONFIG_DIRECTORY_RESOURCES`| kubectl resources for `shed-kubectl-apply` and `shed-kubectl-delete`.                               |

@@ -14,11 +14,11 @@ k-scale replicas resourceName
 
 ```bash
 $ shed-kubectl-scale 5 pod-abc
-kubectl --context kube-test-1 scale --replicas=5 pod-abc
++ kubectl --context kube-test-1 scale --replicas=5 pod-abc
 ...
 
 $ shed-kubectl-scale 5 sts/maria-database-abc
-kubectl --context kube-test-1 scale --replicas=5 sts/maria-database-abc
++ kubectl --context kube-test-1 scale --replicas=5 sts/maria-database-abc
 ...
 ```
 

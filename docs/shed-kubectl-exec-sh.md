@@ -14,15 +14,15 @@ k-sh (pod | type/name) [container]
 
 ```bash
 $ shed-use T; shed-kubectl-exec-sh pod/pod-abc
-kubectl --context kube-test-1 exec -it pod/pod-abc -- sh
++ kubectl --context kube-test-1 exec -it pod/pod-abc -- sh
 ...
 
 $ shed-use D; shed-kubectl-exec-sh pod/pod-abc
-kubectl --context kube-dev-1 --namespace ns-application exec -it pod/pod-abc -- sh
++ kubectl --context kube-dev-1 --namespace ns-application exec -it pod/pod-abc -- sh
 ...
 
 $ shed-kubectl-exec-sh pod/pod-abc container-1
-kubectl --context kube-dev-1 --namespace ns-application exec -it pod/pod-abc -c container-1 -- sh
++ kubectl --context kube-dev-1 --namespace ns-application exec -it pod/pod-abc -c container-1 -- sh
 ...
 ```
 

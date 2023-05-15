@@ -32,3 +32,6 @@ shed is a program that provides alternate way to run shed programs.
 | `shed`                                                    | `shed help`, `man shed`              |                              | (This doc)                            |
 | `shed-use` shedCode                                       |                                      |                              | [📚 Doc](shed-use.md)                 |
 | `shed-kubeconfig-use` kubeconfig-number                   |                                      | `c0`, `c1`, `c2`, `c3`, `c4` | [📚 Doc](shed-kubeconfig-use.md)      |
+| `shed-kubectl-resources`                                  | `shed kubectl-resources`             |                              | ❌                                    |
+| `shed-kubectl-apply`                                      | `shed kubectl-apply`                 | `ka`                         | ❌                                    |
+| `shed-kubectl-delete`                                     | `shed kubectl-delete`                | `kd`                         | ❌                                    |

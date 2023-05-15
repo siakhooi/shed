@@ -23,7 +23,9 @@ alias k='shed-kubectl'
 alias k-bash='shed-kubectl-exec-bash'
 alias k-logs-f='shed-kubectl-logs-follow'
 alias k-scale='shed-kubectl-scale'
-alias k-sh='shed-kubectl-exec-sh
+alias k-sh='shed-kubectl-exec-sh'
+alias ka='shed-kubectl-apply'
+alias kd='shed-kubectl-delete'
 ```
 
 ## SEE ALSO

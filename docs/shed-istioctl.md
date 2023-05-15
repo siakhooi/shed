@@ -19,11 +19,11 @@ i - alias to shed-istioctl
 
 ```bash
 $ shed-use T; shed-istioctl install
-istioctl --context kube-test-1 install
++ istioctl --context kube-test-1 install
 ...
 
 $ shed-use D; shed-istioctl install
-istioctl --context kube-dev-1 --namespace ns-application install
++ istioctl --context kube-dev-1 --namespace ns-application install
 ...
 ```
 
