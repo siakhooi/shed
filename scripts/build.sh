@@ -37,7 +37,7 @@ for file in $fileList; do
   pandoc $SOURCE/md/$file.md -s -t man | gzip -9 >$TARGET/usr/share/man/man5/$file.gz
 done
 
-dpkg-deb --build -Zxz $TARGET
+fakeroot dpkg-deb --build -Zxz $TARGET
 dpkg-name ${TARGET}.deb
 
 DEBFILE=$(ls ./*.deb)
