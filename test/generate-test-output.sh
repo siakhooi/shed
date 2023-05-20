@@ -16,6 +16,7 @@ mkdir -p "$OUTPUT_DIRECTORY"
 
 ./test/test-scripts/generate-test-output-shed-config-get.sh        "$OUTPUT_DIRECTORY/shed-config-get"
 ./test/test-scripts/generate-test-output-shed-value.sh             "$OUTPUT_DIRECTORY/shed-value"
+./test/test-scripts/generate-test-output-shed-kubectl-resources.sh "$OUTPUT_DIRECTORY/shed-kubectl-resources"
 
 ./test/test-scripts/generate-test-output-man1.sh "$OUTPUT_DIRECTORY/man1"
 ./test/test-scripts/generate-test-output-man5.sh "$OUTPUT_DIRECTORY/man5"

@@ -2,11 +2,9 @@ info:
 
 clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
-init: prepare build
+
 prepare:
 	. scripts/prepare-environments-in-codespace.sh
-	. prepare-kind-clusters.sh
-#	source /usr/lib/shed/shed-init
 
 build:
 	./scripts/shellcheck.sh
@@ -18,10 +16,6 @@ test-man:
 reinstall:
 	apt remove -y siakhooi-shed
 	apt install -y -f ./siakhooi-shed_*_amd64.deb
-
-delete-tags:
-	git tag --delete 1.0.0
-	git push --delete origin 1.0.0
 
 build-debian:
 	cd test && docker build . -f Dockerfiles/Dockerfile_debian -t shed-tester:debian -t siakhooi/shed-tester:debian
