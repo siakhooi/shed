@@ -32,4 +32,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-use(1), shed-kubeconfig-use(1), shed-helm(1), shed-istioctl(1), shed-kubectl-exec-sh(1), shed-kubectl-exec-bash(1), shed-kubectl-scale(1)
+shed-use(1), shed-kubeconfig-use(1), shed-helm(1), shed-istioctl(1), shed-kubectl-exec-sh(1), shed-kubectl-exec-bash(1), shed-kubectl-scale(1), shed-kubectl-resources(1)

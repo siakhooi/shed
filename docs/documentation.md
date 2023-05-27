@@ -24,7 +24,7 @@
 | `shed-use` shedCode                                       |                              | function | ✅       | [📚 Doc](shed-use.md)                 |
 | `shed-kubeconfig-use` kubeconfig-number                   | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅       | [📚 Doc](shed-kubeconfig-use.md)      |
 | `shed`                                                    |                              | bin      | ✅       | [📚 Doc](shed.md)                     |
-| `shed-kubectl-resources`                                  |                              | bin      | ❌       | [📚 Doc](shed-kubectl-resources.md)   |
+| `shed-kubectl-resources`                                  |                              | bin      | ✅       | [📚 Doc](shed-kubectl-resources.md)   |
 | `shed-kubectl-apply`                                      | `ka`                         | bin      | ❌       | ❌                                    |
 | `shed-kubectl-delete`                                     | `kd`                         | bin      | ❌       | ❌                                    |
 

@@ -31,7 +31,7 @@ BUGS
 
 SEE ALSO
        shed-use(1), shed-kubeconfig-use(1), shed-helm(1), shed-istioctl(1), shed-kubectl-exec-sh(1), shed-kubectl-ex-
-       ec-bash(1), shed-kubectl-scale(1)
+       ec-bash(1), shed-kubectl-scale(1), shed-kubectl-resources(1)
 
 AUTHORS
        Siak Hooi.

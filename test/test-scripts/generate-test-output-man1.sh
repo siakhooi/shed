@@ -27,6 +27,7 @@ ALL_MAN_PAGES_1=(
     shed-value-key-list
     shed-value
     shed-values
+    shed-kubectl-resources
     shed
 )
 
