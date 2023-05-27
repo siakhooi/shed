@@ -37,7 +37,7 @@
 | `~/.shed/init.d/shed-use/`            | directory | ❌       | [📚 Doc](directory-init.d-shed-use.md)            | user defined scripts that will be executed when shed is set by `shed-use`.                       |
 | `~/.shed/init.d/shed-kubeconfig-use/` | directory | ❌       | [📚 Doc](directory-init.d-shed-kubeconfig-use.md) | user defined scripts that will be executed when KubeConfig is set by `shed-kubeconfig-use`.      |
 | `~/.shed/kubectl-config`              | directory | ❌       | [📚 Doc](directory-kubectl-config.md)             | kubectl config files that will be added to environment variable `$KUBECONFIG` on by `shed-init`. |
-| `~/.shed/kubectl-resources`           | directory | ❌       | ❌                                                | kubectl resources for `shed-kubectl-apply` and `shed-kubectl-delete`.                            |
+| `~/.shed/kubectl-resources`           | directory | ❌       | [📚 Doc](directory-kubectl-resources.md)          | kubectl resources for `shed-kubectl-apply` and `shed-kubectl-delete`.                            |
 
 ## ENVIRONMENT VARIABLES
 

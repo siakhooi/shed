@@ -14,3 +14,7 @@ shed kubectl-resources
 $ shed-kubectl-resources
 pod-busybox-loop
 ```
+
+## SEE ALSO
+
+[~/.shed/kubectl-resources](directory-kubectl-resources.md)
