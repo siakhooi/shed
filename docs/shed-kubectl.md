@@ -18,4 +18,5 @@ k [kubectl arguments]
 ## SEE ALSO
 
 [shed-config](shed-config.md), [shed-use](shed-use.md), [shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-helm](shed-helm.md), [shed-istioctl](shed-istioctl.md)\
-[shed-kubectl-exec-sh](shed-kubectl-exec-sh.md), [shed-kubectl-exec-bash](shed-kubectl-exec-bash.md), [shed-kubectl-scale](shed-kubectl-scale.md)
+[shed-kubectl-exec-sh](shed-kubectl-exec-sh.md), [shed-kubectl-exec-bash](shed-kubectl-exec-bash.md), [shed-kubectl-scale](shed-kubectl-scale.md)\
+[shed-kubectl-resources](shed-kubectl-resources.md)

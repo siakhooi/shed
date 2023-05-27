@@ -12,8 +12,8 @@ shed is a program that provides alternate way to run shed programs.
 
 ## SYNOPSIS
 
-| command                                                   | alternate way                        | alias                        | Doc                                   |
-| --------------------------------------------------------- | ------------------------------------ | ---------------------------- | ------------------------------------- |
+| command                                                   | alternate way                        | alias                        | Doc                                  |
+| --------------------------------------------------------- | ------------------------------------ | ---------------------------- | ------------------------------------ |
 | `shed-list`                                               | `shed list`                          |                              | [📚 Doc](shed-list.md)                |
 | `shed-list-code`                                          | `shed list-code`                     |                              | [📚 Doc](shed-list-code.md)           |
 | `shed-env`                                                | `shed env`                           |                              | [📚 Doc](shed-env.md)                 |
@@ -29,9 +29,9 @@ shed is a program that provides alternate way to run shed programs.
 | `shed-kubectl-logs-follow` (pod \| type/name) [container] | `shed kubectl-logs-follow` [...]     | `k-logs-f` [...]             | [📚 Doc](shed-kubectl-logs-follow.md) |
 | `shed-helm` [helm arguments]                              | `shed helm` [helm arguments]         | `h` [helm arguments]         | [📚 Doc](shed-helm.md)                |
 | `shed-istioctl` [istioctl arguments]                      | `shed istioctl` [istioctl arguments] | `i` [istioctl arguments]     | [📚 Doc](shed-istioctl.md)            |
-| `shed`                                                    | `shed help`, `man shed`              |                              | (This doc)                            |
+| `shed`                                                    | `shed help`, `man shed`              |                              | (This doc)                           |
 | `shed-use` shedCode                                       |                                      |                              | [📚 Doc](shed-use.md)                 |
 | `shed-kubeconfig-use` kubeconfig-number                   |                                      | `c0`, `c1`, `c2`, `c3`, `c4` | [📚 Doc](shed-kubeconfig-use.md)      |
-| `shed-kubectl-resources`                                  | `shed kubectl-resources`             |                              | ❌                                    |
+| `shed-kubectl-resources`                                  | `shed kubectl-resources`             |                              | [📚 Doc](shed-kubectl-resources.md)   |
 | `shed-kubectl-apply`                                      | `shed kubectl-apply`                 | `ka`                         | ❌                                    |
 | `shed-kubectl-delete`                                     | `shed kubectl-delete`                | `kd`                         | ❌                                    |
