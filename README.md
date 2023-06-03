@@ -32,6 +32,7 @@ Current Development Environment:
 ## Documentation
 
 - [Documentation](docs/documentation.md)
+- [Features Changelog](Features-Changelog.md)
 
 ![shed-use-shed-kubectl](docs/shed-use-shed-kubectl.gif "shed-use-shed-kubectl")
 
