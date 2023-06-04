@@ -20,6 +20,7 @@ Print content of shed config file.
 \ \ \ \ \ \ \ \ \ kubeconfig:\
 \ \ \ \ \ \ \ \ \ \  - context: kube-dev-1\
 \ \ \ \ \ \ \ \ \ \ \ \  namespace: ns-application\
+\ \ \ \ \ \ \ \ \ \ \ \  prompt-name: dev-app\
 \ \ \ \ \ \ \ \ \ \  - context: kube-dev-1\
 \ \ \ \ \ \ \ \ \ \ \ \  namespace: ns-database\
 \ \ \ \ \ \ \ - code: T\

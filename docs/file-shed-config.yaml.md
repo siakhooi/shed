@@ -14,6 +14,7 @@ Shed config file is in yaml format, with following available options:
 | `  + kubeconfig[0..4]`       | array   |         | KubeConfigs, support up to 5 KubeConfig per Shed                                  |
 | `    + context`              | text    |         | kubectl context of KubeConfig                                                     |
 | `    + namespace`            | text    |         | optional, namespace of KubeConfig                                                 |
+| `    + prompt-name`          | text    |         | optional, name to be display in prompt                                            |
 | `shed-init`                  | object  |         |                                                                                   |
 | `  + shed`                   | text    |         | ShedCode to use when session started                                              |
 | `  + load-kubectl-config`    | boolean | `yes`   | update environment variable `KUBECONFIG` with files in `~/.shed/kubectl-config/`. |
@@ -29,6 +30,7 @@ sheds:
     kubeconfig:
       - context: kube-dev-1
         namespace: ns-application
+        prompt-name: dev-app
       - context: kube-dev-1
         namespace: ns-database
   - code: T

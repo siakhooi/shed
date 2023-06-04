@@ -4,6 +4,7 @@
 [32m    [0m[36mkubeconfig[0m:
       -[36m context[0m:[32m kube-dev-1[0m
 [32m        [0m[36mnamespace[0m:[32m ns-application[0m
+[32m        [0m[36mprompt-name[0m:[32m dev-app[0m
 [32m      [0m-[36m context[0m:[32m kube-dev-1[0m
 [32m        [0m[36mnamespace[0m:[32m ns-database[0m
 [32m  [0m-[36m code[0m:[32m T[0m

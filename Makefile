@@ -11,7 +11,8 @@ build:
 	./scripts/build.sh
 
 test-man:
-	pandoc src/md/shed-kubectl-exec-sh.1.md -s -t man | man -l -
+	pandoc src/md/shed-config.1.md -s -t man | man -l -
+#	pandoc src/md/shed-config.yaml.5.md -s -t man | man -l -
 
 reinstall:
 	apt remove -y siakhooi-shed

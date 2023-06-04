@@ -12,6 +12,7 @@ shed-config-get .sheds[0].code                    >>$OUTPUT_DIRECTORY/shed-confi
 shed-config-get .sheds[0].name                    >>$OUTPUT_DIRECTORY/shed-config-get.out 2>&1
 shed-config-get .sheds[0].kubeconfig[0].context   >>$OUTPUT_DIRECTORY/shed-config-get.out 2>&1
 shed-config-get .sheds[0].kubeconfig[0].namespace >>$OUTPUT_DIRECTORY/shed-config-get.out 2>&1
+shed-config-get .sheds[0].kubeconfig[0].prompt-name >>$OUTPUT_DIRECTORY/shed-config-get.out 2>&1
 shed-config-get .sheds[0].kubeconfig[1].context   >>$OUTPUT_DIRECTORY/shed-config-get.out 2>&1
 shed-config-get .sheds[0].kubeconfig[1].namespace >>$OUTPUT_DIRECTORY/shed-config-get.out 2>&1
 shed-config-get .sheds[1].code                    >>$OUTPUT_DIRECTORY/shed-config-get.out 2>&1
@@ -23,6 +24,7 @@ shed config-get .sheds[0].code                    >>$OUTPUT_DIRECTORY/shed_confi
 shed config-get .sheds[0].name                    >>$OUTPUT_DIRECTORY/shed_config-get.out 2>&1
 shed config-get .sheds[0].kubeconfig[0].context   >>$OUTPUT_DIRECTORY/shed_config-get.out 2>&1
 shed config-get .sheds[0].kubeconfig[0].namespace >>$OUTPUT_DIRECTORY/shed_config-get.out 2>&1
+shed config-get .sheds[0].kubeconfig[0].prompt-name >>$OUTPUT_DIRECTORY/shed_config-get.out 2>&1
 shed config-get .sheds[0].kubeconfig[1].context   >>$OUTPUT_DIRECTORY/shed_config-get.out 2>&1
 shed config-get .sheds[0].kubeconfig[1].namespace >>$OUTPUT_DIRECTORY/shed_config-get.out 2>&1
 shed config-get .sheds[1].code                    >>$OUTPUT_DIRECTORY/shed_config-get.out 2>&1

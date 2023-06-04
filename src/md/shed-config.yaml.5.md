@@ -14,6 +14,7 @@ sheds[]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # Array of Sheds\
 \  + kubeconfig[0..4]\ \ \ \ \ \ \ # Array of KubeConfigs, support up to 5 KubeConfigs per Shed\
 \ \ \  + context\ \ \ \ \ \ \ \ \ \ \ \ \ \ # kubectl context of KubeConfig\
 \ \ \  + namespace\ \ \ \ \ \ \ \ \ \ \ \ # optional, namespace of KubeConfig\
+\ \ \  + prompt-name\ \ \ \ \ \ \ \ \ \ # optional, name to be display in prompt\
 shed-init\
 \  + shed\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ # ShedCode to use when session started\
 \  + load-kubectl-config\ \ \ \ # update environment variable KUBECONFIG, default: yes\
@@ -34,6 +35,7 @@ sheds:\
 \ \ \ \ \ \ kubeconfig:\
 \ \ \ \ \ \ \  - context: kube-dev-1\
 \ \ \ \ \ \ \ \ \  namespace: ns-application\
+\ \ \ \ \ \ \ \ \  prompt-name: dev-app\
 \ \ \ \ \ \ \  - context: kube-dev-1\
 \ \ \ \ \ \ \ \ \  namespace: ns-database\
 \ \ \  - code: T\

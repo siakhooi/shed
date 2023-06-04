@@ -13,12 +13,17 @@ function shed-current-context() {
       local context namespace
       context=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].context")
       namespace=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].namespace")
+      promptname=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].prompt-name")
 
-      if [[ -n "$context" ]]; then
-        if [[ -n "$namespace" ]]; then
-          R="[$SHED_CODE/$context/$namespace]"
-        else
-          R="[$SHED_CODE/$context]"
+      if [[ -n "$promptname" ]]; then
+        R="[$SHED_CODE/$promptname]"
+      else
+        if [[ -n "$context" ]]; then
+          if [[ -n "$namespace" ]]; then
+            R="[$SHED_CODE/$context/$namespace]"
+          else
+            R="[$SHED_CODE/$context]"
+          fi
         fi
       fi
     else
