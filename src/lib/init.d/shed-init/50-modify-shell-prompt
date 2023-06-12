@@ -33,4 +33,4 @@ function shed-current-context() {
   echo.yellow -n "$R"
 }
 
-export PS1="\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\$(shed-current-context)\[\033[01;34m\]\w\[\033[00m\]\$(shed-show-git-branch)\$ "
+export PS1="\[\e[01;32m\]\u@\h\[\e[0m\]:\$(shed-current-context)\[\e[01;34m\]\w\[\e[0m\]\$(shed-show-git-branch)\$ "
