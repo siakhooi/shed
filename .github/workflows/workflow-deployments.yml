@@ -20,11 +20,6 @@ jobs:
     uses: ./.github/workflows/deploy-github-release-assets.yml
     secrets:
       TOKEN_TO_UPLOAD_ASSETS: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
-  jfrog:
-    needs: [test-ubuntu, test-debian]
-    uses: ./.github/workflows/publish-to-jfrog.yml
-    secrets:
-      JFROG_TOKEN: ${{ secrets.JFROG_TOKEN }}
   siakhooi-apt:
     needs: [test-ubuntu, test-debian]
     uses: ./.github/workflows/publish-to-siakhooi-apt.yml
