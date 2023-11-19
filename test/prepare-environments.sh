@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt install -y nano
+
 DEBFILE=$(find . -name '*.deb')
 apt install -y "$DEBFILE"
 echo 'source /usr/lib/shed/shed-init' >>~/.bashrc

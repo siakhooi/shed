@@ -10,4 +10,4 @@ if [ ! -f "$SHED_CONFIG_FILE" ]; then
     exit 2
 fi
 
-yq eval -C "$SHED_CONFIG_FILE"
+yq "$SHED_CONFIG_FILE"
