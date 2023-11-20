@@ -15,4 +15,4 @@ if [[ $# -ne 1 ]]; then
     exit 0
 fi
 
-yq eval "$1" "$SHED_CONFIG_FILE"| sed 's/^null$//'
+yq "$1" "$SHED_CONFIG_FILE" | sed 's/^null$//' | yq
