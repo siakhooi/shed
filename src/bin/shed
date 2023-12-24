@@ -45,6 +45,10 @@ values)
     shed-values "$@"
     exit $?
     ;;
+contexts)
+    shed-contexts "$@"
+    exit $?
+    ;;
 kubectl)
     shed-kubectl "$@"
     exit $?

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+columnHeaders='Context,Name,Kube Context,Namespace'
+
+shed-values | yq -py -oj | jq -r '.kubeconfig[]|[."prompt-name", .context, .namespace]|join(",")' | nl -s, -w1 -v0 | prefix 'c' | make-table "$columnHeaders"
