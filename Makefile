@@ -3,6 +3,13 @@ info:
 clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
 
+set-version:
+	scripts/set-version.sh
+git-commit-and-push:
+	scripts/git-commit-and-push.sh
+create-release:
+	scripts/create-release.sh
+
 prepare:
 	. scripts/prepare-environments-in-codespace.sh
 
