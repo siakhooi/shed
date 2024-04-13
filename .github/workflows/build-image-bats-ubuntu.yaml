@@ -1,4 +1,4 @@
-name: Build shed-bats-tester:ubuntu
+name: Build shed-tester:ubuntu-bats
 
 on: 
   workflow_dispatch:
@@ -25,4 +25,4 @@ jobs:
           context: ./tests
           file: ./tests/resources/Dockerfiles/Dockerfile_ubuntu
           push: true
-          tags: siakhooi/shed-bats-tester:ubuntu
+          tags: siakhooi/shed-tester:ubuntu-bats

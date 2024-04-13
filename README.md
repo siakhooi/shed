@@ -75,7 +75,6 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 
 ### Tester Images
 - <https://hub.docker.com/r/siakhooi/shed-tester/tags>
-- <https://hub.docker.com/r/siakhooi/shed-bats-tester/tags>
 
 ## Badges
 ![GitHub](https://img.shields.io/github/license/siakhooi/shed?logo=github)

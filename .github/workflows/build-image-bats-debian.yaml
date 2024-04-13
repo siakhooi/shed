@@ -1,4 +1,4 @@
-name: Build shed-bats-tester:debian
+name: Build shed-tester:debian-bats
 
 on: 
   workflow_dispatch:
@@ -25,4 +25,4 @@ jobs:
           context: ./tests
           file: ./tests/resources/Dockerfiles/Dockerfile_debian
           push: true
-          tags: siakhooi/shed-bats-tester:debian
+          tags: siakhooi/shed-tester:debian-bats

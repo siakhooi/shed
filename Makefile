@@ -35,9 +35,9 @@ reinstall:
 build-all-images: build-all-images-bats build-all-images-test
 build-all-images-bats: build-image-bats-debian build-image-bats-ubuntu
 build-image-bats-debian:
-	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_debian -t shed-bats-tester:debian -t siakhooi/shed-bats-tester:debian
+	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_debian -t shed-tester:debian-bats -t siakhooi/shed-tester:debian-bats
 build-image-bats-ubuntu:
-	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_ubuntu -t shed-bats-tester:ubuntu -t siakhooi/shed-bats-tester:ubuntu
+	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_ubuntu -t shed-tester:ubuntu-bats -t siakhooi/shed-tester:ubuntu-bats
 
 build-all-images-test: build-debian build-ubuntu
 build-debian:
