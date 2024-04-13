@@ -32,13 +32,21 @@ reinstall:
 	apt remove -y siakhooi-shed
 	apt install -y -f ./siakhooi-shed_*_amd64.deb
 
+build-all-images: build-all-images-bats build-all-images-test
+build-all-images-bats: build-image-bats-debian build-image-bats-ubuntu
+build-image-bats-debian:
+	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_debian -t shed-bats-tester:debian -t siakhooi/shed-bats-tester:debian
+build-image-bats-ubuntu:
+	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_ubuntu -t shed-bats-tester:ubuntu -t siakhooi/shed-bats-tester:ubuntu
+
+build-all-images-test: build-debian build-ubuntu
 build-debian:
 	cd test && docker build . -f Dockerfiles/Dockerfile_debian -t shed-tester:debian -t siakhooi/shed-tester:debian
-run-shed-debian:
-	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash
-
 build-ubuntu:
 	cd test && docker build . -f Dockerfiles/Dockerfile_ubuntu -t shed-tester:ubuntu -t siakhooi/shed-tester:ubuntu
+
+run-shed-debian:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash
 run-shed-ubuntu:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:ubuntu bash
 

@@ -11,3 +11,11 @@ jobs:
     uses: ./.github/workflows/build-image-ubuntu.yaml
     secrets:
       REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+  build-debian-bats-image:
+    uses: ./.github/workflows/build-image-bats-debian.yaml
+    secrets:
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
+  build-ubuntu-bats-image:
+    uses: ./.github/workflows/build-image-bats-ubuntu.yaml
+    secrets:
+      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
