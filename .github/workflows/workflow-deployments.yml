@@ -15,13 +15,19 @@ jobs:
   test-debian:
     needs: build
     uses: ./.github/workflows/test-with-debian.yml
+  bats-test-debian:
+    needs: build
+    uses: ./.github/workflows/test-with-bats-debian.yml
+  bats-test-ubuntu:
+    needs: build
+    uses: ./.github/workflows/test-with-bats-ubuntu.yml
   release-assets:
-    needs: [test-ubuntu, test-debian]
+    needs: [test-ubuntu, test-debian, bats-test-debian, bats-test-ubuntu]
     uses: ./.github/workflows/deploy-github-release-assets.yml
     secrets:
       TOKEN_TO_UPLOAD_ASSETS: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
   siakhooi-apt:
-    needs: [test-ubuntu, test-debian]
+    needs: [test-ubuntu, test-debian, bats-test-debian, bats-test-ubuntu]
     uses: ./.github/workflows/publish-to-siakhooi-apt.yml
     secrets:
       PUBLISH_TO_APT_GITHUB_TOKEN: ${{ secrets.PUBLISH_TO_APT_GITHUB_TOKEN }}

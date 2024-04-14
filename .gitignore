@@ -3,3 +3,4 @@ target
 temp
 *.deb.*sum
 test/actual-tests
+tests/bats-test-result*.log

@@ -45,6 +45,10 @@ build-debian:
 build-ubuntu:
 	cd test && docker build . -f Dockerfiles/Dockerfile_ubuntu -t shed-tester:ubuntu -t siakhooi/shed-tester:ubuntu
 
+docker-pull-bats-ubuntu:
+	docker pull siakhooi/shed-tester:ubuntu-bats
+docker-pull-bats-debian:
+	docker pull siakhooi/shed-tester:debian-bats
 run-shed-debian:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash
 run-shed-ubuntu:

@@ -15,7 +15,7 @@ RUN apt update -y && \
     chmod a+r /etc/apt/keyrings/docker.gpg && \
     (echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" >/etc/apt/sources.list.d/docker.list ) && \
     apt update -y && \
-    apt install -y helm docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin bats && \
+    apt install -y helm docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && \
     (cd /opt && curl -L https://istio.io/downloadIstio | sh - ) && \
     kubectl completion bash > /root/.kubectl-completion && \
     helm completion bash > /root/.helm-completion && \
@@ -29,6 +29,11 @@ RUN apt update -y && \
     git config --global user.name "Siak Hooi"  && \
     git config --global --add safe.directory /working && \
     (yes | unminimize) && \
+    apt install -y bats nano && \
     apt upgrade -y && \
+    git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-support.git /test_helper/bats-support && \
+    rm /test_helper/bats-support/.git && \
+    git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-assert.git /test_helper/bats-assert && \
+    rm test_helper/bats-assert/.git && \
     systemctl enable docker
 CMD ["/bin/bash"]

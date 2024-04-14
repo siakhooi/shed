@@ -1,0 +1,18 @@
+name: Bats Test-Debian
+
+on: workflow_call
+
+jobs:
+  bats-test-debian:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: deliverables
+          path: ./
+      - run: ./tests/bin/docker-run-bats-test-debian.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bats-test-result-debian
+          path: ./tests/bats-test-result-*.log
