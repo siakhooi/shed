@@ -5,14 +5,10 @@ on:
 
 jobs:
   test-ubuntu:
-    needs: build
     uses: ./.github/workflows/test-with-ubuntu.yml
   test-debian:
-    needs: build
     uses: ./.github/workflows/test-with-debian.yml
   bats-test-debian:
-    needs: build
     uses: ./.github/workflows/test-with-bats-debian.yml
   bats-test-ubuntu:
-    needs: build
     uses: ./.github/workflows/test-with-bats-ubuntu.yml
