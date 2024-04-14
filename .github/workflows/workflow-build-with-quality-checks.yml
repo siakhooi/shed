@@ -15,4 +15,4 @@ jobs:
     uses: ./.github/workflows/build-deb-file.yml
   test:
     needs: build
-    uses: .github/workflows/workflow-run-all-tests.yml
+    uses: ./.github/workflows/workflow-run-all-tests.yml
