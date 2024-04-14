@@ -11,7 +11,7 @@ jobs:
     uses: ./.github/workflows/build-deb-file.yml
   test:
     needs: build
-    uses: .github/workflows/workflow-run-all-tests.yml
+    uses: ./.github/workflows/workflow-run-all-tests.yml
   release-assets:
     needs: test
     uses: ./.github/workflows/deploy-github-release-assets.yml
