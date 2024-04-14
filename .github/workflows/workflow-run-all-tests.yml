@@ -1,7 +1,5 @@
 name: Run all tests
-on:
-  workflow_dispatch:
-  workflow_call:
+on: workflow_call
 
 jobs:
   test-ubuntu:

@@ -1,24 +1,12 @@
-name: Deployment
-on:
-  release:
-    types: [created]
+name: Deploy all artifacts
+on: workflow_call
 
 jobs:
-  quality:
-    uses: ./.github/workflows/quality-shellcheck.yml
-  build:
-    needs: quality
-    uses: ./.github/workflows/build-deb-file.yml
-  test:
-    needs: build
-    uses: ./.github/workflows/workflow-run-all-tests.yml
   release-assets:
-    needs: test
     uses: ./.github/workflows/deploy-github-release-assets.yml
     secrets:
       TOKEN_TO_UPLOAD_ASSETS: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
   siakhooi-apt:
-    needs: test
     uses: ./.github/workflows/publish-to-siakhooi-apt.yml
     secrets:
       PUBLISH_TO_APT_GITHUB_TOKEN: ${{ secrets.PUBLISH_TO_APT_GITHUB_TOKEN }}

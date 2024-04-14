@@ -1,4 +1,4 @@
-name: Build and Test on Push
+name: On New Code Changes
 on:
   push:
     branches:

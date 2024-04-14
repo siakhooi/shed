@@ -1,0 +1,11 @@
+name: On New Release
+on:
+  release:
+    types: [created]
+
+jobs:
+  quality-build-test:
+    uses: ./.github/workflows/workflow-build-with-quality-checks.yml
+  deploy-all:
+    needs: quality-build-test
+    uses: ./.github/workflows/workflow-deploy-all.yml
