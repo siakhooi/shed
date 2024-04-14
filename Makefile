@@ -2,7 +2,8 @@ info:
 
 clean:
 	rm -rf target *.deb *.deb.*sum test/actual-tests
-
+delete-clusters:
+	 kind delete clusters kube-test-1 kube-dev-1
 set-version:
 	scripts/set-version.sh
 git-commit-and-push:
@@ -55,6 +56,8 @@ docker-pull-bats-ubuntu:
 	docker pull siakhooi/shed-tester:ubuntu-bats
 docker-pull-bats-debian:
 	docker pull siakhooi/shed-tester:debian-bats
+docker-pull-kind:
+	docker pull kindest/node:v1.26.3
 run-shed-debian:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash
 run-shed-ubuntu:

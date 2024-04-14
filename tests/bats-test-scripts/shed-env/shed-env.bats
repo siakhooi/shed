@@ -1,26 +1,52 @@
 setup(){
     load '../common-setup'
     common_setup
-
-    outputExpected=$BATS_TEST_FILENAME.$BATS_TEST_DESCRIPTION.expected
 }
 @test "shed-env" {
     run shed-env
-    assert_output - <$outputExpected
+    cat_expected| assert_output -
 }
-@test "shed-env-to-T" {
+@test "shed env" {
+    run shed env
+    cat_expected "shed-env" | assert_output -
+}
+@test "shed-env xxx" {
+    run shed-env xxx
+    cat_expected "shed-env" | assert_output -
+}
+@test "shed env xxx" {
+    run shed env xxx
+    cat_expected "shed-env" | assert_output -
+}
+@test "shed-use T; shed-env" {
     shed-use T
     run shed-env
-    assert_output - <$outputExpected
+    cat_expected "shed-env-shed-use-T" | assert_output -
 }
-@test "shed-env-to-shed-kubeconfig-use-1" {
+@test "shed-use T; shed env" {
+    shed-use T
+    run shed env
+    cat_expected "shed-env-shed-use-T" | assert_output -
+}
+@test "shed-kubeconfig-use 1; shed-env" {
     shed-kubeconfig-use 1
     run shed-env
-    assert_output - <$outputExpected
+    cat_expected "shed-env-c1" | assert_output -
 }
-@test "shed-env-to-c1" {
+@test "shed-kubeconfig-use 1; shed env" {
+    shed-kubeconfig-use 1
+    run shed env
+    cat_expected "shed-env-c1" | assert_output -
+}
+@test "c1; shed-env" {
     skip "alias c1 not working in test environment"
     c1
     run shed-env
-    assert_output - <$outputExpected
+    cat_expected "shed-env-c1" | assert_output -
+}
+@test "c1; shed env" {
+    skip "alias c1 not working in test environment"
+    c1
+    run shed env
+    cat_expected "shed-env-c1" | assert_output -
 }
