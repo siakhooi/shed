@@ -1,4 +1,14 @@
 #!/bin/bash
 
+if [[ -z "$SHED_CONFIG_FILE" ]]; then
+    echo 'SHED_CONFIG_FILE is not set.' >&2
+    exit 1
+fi
+
+if [ ! -f "$SHED_CONFIG_FILE" ]; then
+    echo "SHED_CONFIG_FILE does not exist. (value: $SHED_CONFIG_FILE)" >&2
+    exit 2
+fi
+
 YQPATH='[[["Code", "Name"]] + [.sheds|.[]|[.code, .name]]]|.[] '
 yq eval -o=tsv "$YQPATH" "$SHED_CONFIG_FILE" | expand -t10

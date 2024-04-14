@@ -4,7 +4,8 @@ set -e
 TARGET=target
 SOURCE=src
 
-mkdir "$TARGET"
+mkdir -p "$TARGET"
+rm -rf "$TARGET"/*
 
 # Control File
 cp -vr $SOURCE/DEBIAN $TARGET

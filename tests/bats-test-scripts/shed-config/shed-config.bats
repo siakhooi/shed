@@ -12,6 +12,16 @@ setup(){
     assert_success
     cat_expected "shed-config" | assert_output -
 }
+@test "shed-config xxx" {
+    run shed-config xxx
+    assert_success
+    cat_expected "shed-config" | assert_output -
+}
+@test "shed config xxx" {
+    run shed config xxx
+    assert_success
+    cat_expected "shed-config" | assert_output -
+}
 @test "unset SHED_CONFIG_FILE; shed-config" {
     unset SHED_CONFIG_FILE
     run shed-config

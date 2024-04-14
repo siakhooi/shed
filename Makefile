@@ -11,6 +11,8 @@ git-commit-and-push:
 create-release:
 	scripts/create-release.sh
 
+clean-bats-logs:
+	rm tests/bats-test-result-*.log
 prepare:
 	. scripts/prepare-environments-in-codespace.sh
 build:
