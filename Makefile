@@ -12,7 +12,6 @@ create-release:
 
 prepare:
 	. scripts/prepare-environments-in-codespace.sh
-
 build:
 	./scripts/shellcheck.sh
 	./scripts/build.sh
@@ -21,6 +20,13 @@ test-debian:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash /working/test/in-container-init-test.sh
 test-ubuntu:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:ubuntu bash /working/test/in-container-init-test.sh
+
+run-bats-debian:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock \
+	-e "WORKSPACE=/working" \
+	-e "TEST_PLATFORM=debian" \
+	siakhooi/shed-tester:debian-bats \
+	bash
 
 ## troubleshooting
 
