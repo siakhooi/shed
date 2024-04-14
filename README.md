@@ -92,8 +92,8 @@ $ echo 'source /usr/lib/shed/shed-init' >> ~/.bashrc
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/siakhooi/shed?logo=github)
 
 ![Workflow](https://img.shields.io/badge/Workflow-github-purple)
-![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-build-with-quality-checks.yml/badge.svg)
-![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-deployments.yml/badge.svg)
+![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-new-code-changes.yml/badge.svg)
+![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-new-release.yml/badge.svg)
 ![workflow](https://github.com/siakhooi/shed/actions/workflows/workflow-build-all-images.yaml/badge.svg)
 
 ![Release](https://img.shields.io/badge/Release-github-purple)
