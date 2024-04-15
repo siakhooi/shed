@@ -1,5 +1,12 @@
 name: Deploy all artifacts
-on: workflow_call
+
+on:
+  workflow_call:
+    secrets:
+      TOKEN_TO_UPLOAD_ASSETS:
+        required: true
+      PUBLISH_TO_APT_GITHUB_TOKEN:
+        required: true
 
 jobs:
   release-assets:
