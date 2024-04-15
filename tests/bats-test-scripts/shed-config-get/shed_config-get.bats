@@ -46,3 +46,11 @@ setup(){
     run shed config-get .sheds[1].kubeconfig[0].context
     echo "kube-test-1" | assert_output -
 }
+@test "shed config-get .a.b.c.d" {
+    run shed config-get .a.b.c.d
+    assert_output ""
+}
+@test "shed config-get xxxxx" {
+    run shed config-get xxxxxx
+    cat_expected "invalid-input" |assert_output -
+}
