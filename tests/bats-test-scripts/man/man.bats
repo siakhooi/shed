@@ -77,3 +77,11 @@ run-man-test(){
 @test "man shed" {
     run-man-test 1 shed man-1-shed
 }
+@test "shed" {
+    run bash -c "MANWIDTH=120 PAGER=cat shed"
+    cat_expected "man-1-shed" | assert_output -
+}
+@test "shed help" {
+    run bash -c "MANWIDTH=120 PAGER=cat shed help"
+    cat_expected "man-1-shed" | assert_output -
+}
