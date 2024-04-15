@@ -1,0 +1,2 @@
++ kubectl --context kube-test-1 get po
+No resources found in default namespace.
