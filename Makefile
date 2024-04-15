@@ -10,6 +10,8 @@ git-commit-and-push:
 	scripts/git-commit-and-push.sh
 create-release:
 	scripts/create-release.sh
+delete-release:
+	gh release delete --cleanup-tag 1.14.0
 
 clean-bats-logs:
 	rm tests/bats-test-result-*.log

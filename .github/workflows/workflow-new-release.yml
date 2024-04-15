@@ -5,7 +5,7 @@ on:
 
 jobs:
   quality-build-test:
-    uses: ./.github/workflows/workflow-build-with-quality-checks.yml
+    uses: ./.github/workflows/workflow-new-code-changes.yml
   deploy-all:
     needs: quality-build-test
     uses: ./.github/workflows/workflow-deploy-all.yml
