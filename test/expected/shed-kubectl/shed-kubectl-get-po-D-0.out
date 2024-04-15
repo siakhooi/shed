@@ -1,2 +1,0 @@
-+ kubectl --context kube-dev-1 --namespace ns-application get po
-No resources found in ns-application namespace.

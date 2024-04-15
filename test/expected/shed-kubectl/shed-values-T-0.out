@@ -1,4 +1,0 @@
-code: T
-name: shed-T-testing
-kubeconfig:
-  - context: kube-test-1

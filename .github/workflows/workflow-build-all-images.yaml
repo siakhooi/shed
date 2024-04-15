@@ -3,14 +3,6 @@ name: Build all images
 on: workflow_dispatch
 
 jobs:
-  build-debian-image:
-    uses: ./.github/workflows/build-image-debian.yaml
-    secrets:
-      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
-  build-ubuntu-image:
-    uses: ./.github/workflows/build-image-ubuntu.yaml
-    secrets:
-      REGISTRY_PASSWORD_DOCKER: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
   build-debian-bats-image:
     uses: ./.github/workflows/build-image-bats-debian.yaml
     secrets:

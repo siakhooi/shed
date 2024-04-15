@@ -1,2 +1,0 @@
-+ kubectl --context kube-dev-1 --namespace ns-database get po
-No resources found in ns-database namespace.

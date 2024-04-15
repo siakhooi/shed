@@ -2,10 +2,6 @@ name: Run all tests
 on: workflow_call
 
 jobs:
-  test-ubuntu:
-    uses: ./.github/workflows/test-with-ubuntu.yml
-  test-debian:
-    uses: ./.github/workflows/test-with-debian.yml
   bats-test-debian:
     uses: ./.github/workflows/test-with-bats-debian.yml
   bats-test-ubuntu:
