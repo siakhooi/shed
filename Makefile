@@ -1,7 +1,7 @@
 info:
 
 clean:
-	rm -rf target *.deb *.deb.*sum test/actual-tests
+	rm -rf target *.deb *.deb.*sum
 delete-clusters:
 	 kind delete clusters kube-test-1 kube-dev-1
 set-version:
