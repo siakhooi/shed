@@ -9,6 +9,10 @@ MODULE=$1
 shift
 
 case $MODULE in
+version)
+    shed-version "$@"
+    exit $?
+    ;;
 config)
     shed-config "$@"
     exit $?

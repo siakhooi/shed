@@ -19,10 +19,7 @@ build:
 	./scripts/shellcheck.sh
 	./scripts/build.sh
 
-test-debian:
-	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash /working/test/in-container-init-test.sh
-test-ubuntu:
-	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:ubuntu bash /working/test/in-container-init-test.sh
+prepare-bats: docker-pull-bats-debian docker-pull-kind docker-pull-bats-ubuntu
 
 run-bats-debian:
 	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock \
@@ -30,6 +27,20 @@ run-bats-debian:
 	-e "TEST_PLATFORM=debian" \
 	siakhooi/shed-tester:debian-bats \
 	bash
+
+#	tests/bin/prepare-environments.sh
+#	tests/bin/prepare-kind-clusters.sh
+#	tests/bin/bats-test-run.sh
+#	tests/bin/teardown-kind-clusters.sh
+
+bats-debian:
+	tests/bin/docker-run-bats-test-debian.sh
+bats-ubuntu:
+	tests/bin/docker-run-bats-test-ubuntu.sh
+test-debian:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:debian bash /working/test/in-container-init-test.sh
+test-ubuntu:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock siakhooi/shed-tester:ubuntu bash /working/test/in-container-init-test.sh
 
 ## troubleshooting
 

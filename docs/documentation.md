@@ -28,6 +28,7 @@
 | `shed-kubectl-resources`                                  |                              | bin      | ✅       | [📚 Doc](shed-kubectl-resources.md)   |
 | `shed-kubectl-apply`                                      | `ka`                         | bin      | ❌       | ❌                                    |
 | `shed-kubectl-delete`                                     | `kd`                         | bin      | ❌       | ❌                                    |
+| `shed-version`                                            |                              | bin      | ❌       | ❌                                    |
 
 ## FILES AND DIRECTORIES
 
