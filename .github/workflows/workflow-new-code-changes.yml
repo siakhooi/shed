@@ -1,12 +1,12 @@
 name: On New Code Changes
 on:
+  workflow_call:
   push:
     branches:
       - "*"
   pull_request:
     branches:
       - main
-  workflow_call
 
 jobs:
   quality:
