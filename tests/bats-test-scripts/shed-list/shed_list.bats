@@ -2,25 +2,25 @@ setup(){
     load '../common-setup'
     common_setup
 }
-@test "shed-config" {
-    run shed-config
+@test "shed list" {
+    run shed list
     assert_success
-    cat_expected "shed-config" | assert_output -
+    cat_expected "shed-list" | assert_output -
 }
-@test "shed-config xxx" {
-    run shed-config xxx
+@test "shed list xxx" {
+    run shed list xxx
     assert_success
-    cat_expected "shed-config" | assert_output -
+    cat_expected "shed-list" | assert_output -
 }
-@test "unset SHED_CONFIG_FILE; shed-config" {
+@test "unset SHED_CONFIG_FILE; shed list" {
     unset SHED_CONFIG_FILE
-    run shed-config
+    run shed list
     assert_failure 1
     cat_expected "shed-config-file-not-set" | assert_output -
 }
-@test "SHED_CONFIG_FILE=/xxx; shed-config" {
+@test "SHED_CONFIG_FILE=/xxx; shed list" {
     SHED_CONFIG_FILE=/xxx
-    run shed-config
+    run shed list
     assert_failure 2
     cat_expected "shed-config-file-not-found" | assert_output -
 }
