@@ -13,4 +13,9 @@ cat <<___EOF___
 .kubeconfig[2].namespace
 .kubeconfig[3].namespace
 .kubeconfig[4].namespace
+.kubeconfig[0].prompt-name
+.kubeconfig[1].prompt-name
+.kubeconfig[2].prompt-name
+.kubeconfig[3].prompt-name
+.kubeconfig[4].prompt-name
 ___EOF___
