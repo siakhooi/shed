@@ -17,7 +17,7 @@ clean-bats-logs:
 	rm tests/bats-test-result-*.log
 prepare:
 	. scripts/prepare-environments-in-codespace.sh
-build:
+build: clean
 	./scripts/shellcheck.sh
 	./scripts/build.sh
 
