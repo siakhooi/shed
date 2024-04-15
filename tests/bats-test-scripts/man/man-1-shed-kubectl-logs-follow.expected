@@ -1,0 +1,38 @@
+SHED-KUBECTL-LOGS-FOLLOW(1)                         Shed Commands                         SHED-KUBECTL-LOGS-FOLLOW(1)
+
+NAME
+       shed-kubectl-logs-follow - run kubectl logs with context and/or namespace from current KubeConfig.
+       k-logs-f - alias to shed-kubectl-logs-follow
+
+SYNOPSIS
+       shed-kubectl-logs-follow (pod | type/name) [container]
+       shed kubectl-logs-follow (pod | type/name) [container]
+       k-logs-f (pod | type/name) [container]
+
+DESCRIPTION
+       Run kubectl logs with follow flag (-f) and --tail=0 in context and/or namespace from current KubeConfig.
+
+EXAMPLES
+       shed-kubectl-logs-follow pod/pod-abc
+              kubectl --context kube-test-1 logs -f --tail=0 pod/pod-abc
+
+       shed-kubectl-logs-follow pod/pod-abc container-1
+              kubectl --context kube-dev-1 --namespace ns-application logs -f --tail=0 pod/pod-abc -c container-1
+
+ENVIRONMENT VARIABLES
+       KUBECONFIG
+              contains paths to all KubeConfig files in ~/.shed/kubectl-config
+
+LICENSE
+       MIT
+
+BUGS
+       Report bugs at https://github.com/siakhooi/shed/issues.
+
+SEE ALSO
+       shed-kubeconfig-use(1), shed-kubectl(1)
+
+AUTHORS
+       Siak Hooi.
+
+Siak Hooi DevUtils 1.1.0                              April 2023                          SHED-KUBECTL-LOGS-FOLLOW(1)
