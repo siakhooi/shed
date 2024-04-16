@@ -73,6 +73,10 @@ kubectl-logs-follow)
     shed-kubectl-logs-follow "$@"
     exit $?
     ;;
+kubectl-secret-decode)
+    shed-kubectl-secret-decode "$@"
+    exit $?
+    ;;
 kubectl-resources)
     shed-kubectl-resources "$@"
     exit $?

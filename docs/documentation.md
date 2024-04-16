@@ -29,6 +29,7 @@
 | `shed-kubectl-apply`                                      | `ka`                         | bin      | ❌       | ❌                                    |
 | `shed-kubectl-delete`                                     | `kd`                         | bin      | ❌       | ❌                                    |
 | `shed-version`                                            |                              | bin      | ❌       | ❌                                    |
+| `shed-kubectl-secret-decode`                              | `k-secret-decode`            | bin      | ❌       | ❌                                    |
 
 ## FILES AND DIRECTORIES
 
