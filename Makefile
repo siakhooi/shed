@@ -30,10 +30,13 @@ run-bats-debian:
 	siakhooi/shed-tester:debian-bats \
 	bash
 
-#	tests/bin/prepare-environments.sh
-#	tests/bin/prepare-kind-clusters.sh
+in-docker-setup:
+	tests/bin/prepare-environments.sh
+	tests/bin/prepare-kind-clusters.sh
+
 #	tests/bin/bats-test-run.sh
-#	tests/bin/teardown-kind-clusters.sh
+in-docker-teardown:
+	tests/bin/teardown-kind-clusters.sh
 
 bats-debian:
 	tests/bin/docker-run-bats-test-debian.sh

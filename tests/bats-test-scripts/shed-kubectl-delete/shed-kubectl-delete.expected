@@ -1,0 +1,3 @@
++ shed-kubectl delete -f /root/.shed/kubectl-resources/pod-busybox-loop
++ kubectl --context kube-dev-1 --namespace ns-application delete -f /root/.shed/kubectl-resources/pod-busybox-loop
+pod "busybox-looping" deleted
