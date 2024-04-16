@@ -50,8 +50,7 @@ reinstall:
 	apt remove -y siakhooi-shed
 	apt install -y -f ./siakhooi-shed_*_amd64.deb
 
-build-all-images: build-all-images-bats
-build-all-images-bats: build-image-bats-debian build-image-bats-ubuntu
+build-all-images: build-image-bats-debian build-image-bats-ubuntu
 build-image-bats-debian:
 	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_debian -t shed-tester:debian-bats -t siakhooi/shed-tester:debian-bats
 build-image-bats-ubuntu:
@@ -62,7 +61,7 @@ docker-pull-bats-ubuntu:
 docker-pull-bats-debian:
 	docker pull siakhooi/shed-tester:debian-bats
 docker-pull-kind:
-	docker pull kindest/node:v1.26.3
+	docker pull kindest/node:v1.29.2
 
 init-terminalizer:
 	. screenshots_src/in-container-setup.sh

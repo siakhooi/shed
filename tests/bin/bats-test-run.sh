@@ -14,4 +14,6 @@ cd tests
 BATS_HELPER=../../../../test_helper
 export BATS_HELPER
 
+set -e
+set -o pipefail
 bats -r -T $testPath | tee bats-test-result-${TEST_RUN_NUMBER}.log 2>&1
