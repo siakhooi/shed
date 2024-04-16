@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+testPath=bats-test-scripts
+if [[ $# -eq 1 ]]; then
+   testPath=$testPath/$1
+fi
+
 SOURCE_BIN=$(pwd)/src/bin
 export SOURCE_BIN
 
@@ -9,4 +14,4 @@ cd tests
 BATS_HELPER=../../../../test_helper
 export BATS_HELPER
 
-bats -r -T bats-test-scripts | tee bats-test-result-${TEST_RUN_NUMBER}.log 2>&1
+bats -r -T $testPath | tee bats-test-result-${TEST_RUN_NUMBER}.log 2>&1
