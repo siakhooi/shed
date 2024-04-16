@@ -1,0 +1,2 @@
++ helm --kube-context kube-dev-1 --namespace ns-application list
+NAME	NAMESPACE	REVISION	UPDATED	STATUS	CHART	APP VERSION
