@@ -1,0 +1,11 @@
++ istioctl --context kube-dev-1 --namespace ns-application profile list
+Istio configuration profiles:
+    ambient
+    default
+    demo
+    empty
+    external
+    minimal
+    openshift
+    preview
+    remote
