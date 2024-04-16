@@ -1,14 +1,9 @@
 #!/bin/bash
 
-if [[ -z "$SHED_CONFIG_FILE" ]]; then
-    echo 'SHED_CONFIG_FILE is not set.' >&2
-    exit 1
-fi
-
-if [ ! -f "$SHED_CONFIG_FILE" ]; then
-    echo "SHED_CONFIG_FILE does not exist. (value: $SHED_CONFIG_FILE)" >&2
-    exit 2
-fi
+# shellcheck source=/dev/null
+source /usr/lib/shed/shed-common-functions
+_shed_check_variable_if_set_shed_config_file
+_shed_check_file_if_exists_shed_config_file
 
 YQPATH='.sheds[].code'
 yq eval "$YQPATH" "$SHED_CONFIG_FILE"

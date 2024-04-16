@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if [[ -z "$SHED_CONFIG_FILE" ]]; then
-    echo 'SHED_CONFIG_FILE is not set.' >&2
-    exit 1
-fi
+# shellcheck source=/dev/null
+source /usr/lib/shed/shed-common-functions
+_shed_check_variable_if_set_shed_config_file
 
 [[ -f "$SHED_CONFIG_FILE" ]] || /usr/lib/shed/shed-config-create-sample
 

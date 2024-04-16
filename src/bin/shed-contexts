@@ -1,19 +1,11 @@
 #!/bin/bash
 
-if [[ -z "$SHED_CONFIG_FILE" ]]; then
-    echo 'SHED_CONFIG_FILE is not set.' >&2
-    exit 1
-fi
+# shellcheck source=/dev/null
+source /usr/lib/shed/shed-common-functions
+_shed_check_variable_if_set_shed_config_file
+_shed_check_file_if_exists_shed_config_file
+_shed_check_variable_if_set_shed_code
 
-if [ ! -f "$SHED_CONFIG_FILE" ]; then
-    echo "SHED_CONFIG_FILE does not exist. (value: $SHED_CONFIG_FILE)" >&2
-    exit 2
-fi
-
-if [[ -z "$SHED_CODE" ]]; then
-    echo 'SHED_CODE is not set.' >&2
-    exit 3
-fi
 columnHeaders='Context,Name,Kube Context,Namespace'
 
 shed-values | yq -py -oj | jq -r '.kubeconfig[]|[."prompt-name", .context, .namespace]|join(",")' | nl -s, -w1 -v0 | prefix 'c' | make-table "$columnHeaders"
