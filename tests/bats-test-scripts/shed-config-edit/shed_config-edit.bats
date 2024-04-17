@@ -10,3 +10,7 @@ setup(){
     run bash -c 'EDITOR=cat shed config-edit'
     cat_expected "shed-config-edit-cat" | assert_output -
 }
+@test "EDITOR=xxx shed config-edit" {
+    run -127 bash -c 'EDITOR=xxx shed config-edit'
+    cat_expected "shed-config-edit-xxx" | assert_output -
+}
