@@ -12,9 +12,9 @@ setup(){
     assert_failure 1
     cat_expected "shed-kubectl-delete-resource-not-exists" | assert_output -
 }
-@test "shed-kubectl-delete pod-busybox-loop" {
-    shed kubectl-apply pod-busybox-loop
-    run shed-kubectl-delete pod-busybox-loop
+@test "shed-kubectl-delete hello-world" {
+    shed kubectl-apply hello-world
+    run shed-kubectl-delete hello-world
     assert_success
     cat_expected "shed-kubectl-delete" | assert_output -
 }

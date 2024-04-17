@@ -7,11 +7,11 @@ setup(){
     assert_failure 1
     cat_expected "shed-kubectl-exec-sh-xxx" | assert_output -
 }
-@test "shed-kubectl-apply pod-busybox-loop; k-sh pod-busybox-loop" {
+@test "shed-kubectl-apply hello-world; k-sh hello-world" {
     skip 'Unable to use a TTY - input is not a terminal or the right kind of file'
-    shed-kubectl-apply pod-busybox-loop
-    run bash -ic "echo 'exit' |k-sh busybox-looping "
+    shed-kubectl-apply hello-world
+    run bash -ic "echo 'exit' |k-sh say-hello "
     assert_success
     cat_expected "shed-kubectl-exec-sh" | assert_output -
-    shed-kubectl-delete pod-busybox-loop
+    shed-kubectl-delete hello-world
 }

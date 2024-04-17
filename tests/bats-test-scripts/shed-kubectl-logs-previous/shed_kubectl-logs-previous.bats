@@ -17,19 +17,19 @@ setup(){
     assert_failure 1
     cat_expected "shed-kubectl-logs-previous-xxx" | assert_output -
 }
-@test "shed-kubectl-apply pod-busybox-loop; shed kubectl-logs-previous pod-busybox-loop" {
+@test "shed-kubectl-apply hello-world; shed kubectl-logs-previous hello-world" {
     skip 'Unable to use a TTY - input is not a terminal or the right kind of file'
-    shed-kubectl-apply pod-busybox-loop
-    run bash -ic "echo 'exit' |shed kubectl-logs-previous busybox-looping "
+    shed-kubectl-apply hello-world
+    run bash -ic "echo 'exit' |shed kubectl-logs-previous say-hello "
     assert_success
     cat_expected "shed-kubectl-logs-previous" | assert_output -
-    shed-kubectl-delete pod-busybox-loop
+    shed-kubectl-delete hello-world
 }
-@test "shed-kubectl-apply pod-busybox-loop; shed kubectl-logs-previous pod-busybox-loop busybox-1" {
+@test "shed-kubectl-apply hello-world; shed kubectl-logs-previous hello-world busybox-1" {
     skip 'Unable to use a TTY - input is not a terminal or the right kind of file'
-    shed-kubectl-apply pod-busybox-loop
-    run bash -ic "echo 'exit' |shed kubectl-logs-previous busybox-looping busybox-1"
+    shed-kubectl-apply hello-world
+    run bash -ic "echo 'exit' |shed kubectl-logs-previous say-hello busybox-1"
     assert_success
     cat_expected "shed-kubectl-logs-previous-container" | assert_output -
-    shed-kubectl-delete pod-busybox-loop
+    shed-kubectl-delete hello-world
 }

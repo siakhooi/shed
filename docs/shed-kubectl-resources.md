@@ -12,7 +12,7 @@ shed kubectl-resources
 ## EXAMPLES
 ```bash
 $ shed-kubectl-resources
-pod-busybox-loop
+hello-world
 ```
 
 ## SEE ALSO

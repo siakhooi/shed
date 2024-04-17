@@ -14,7 +14,7 @@ Print list of resources available for **shed-kubectl-apply** and **shed-kubectl-
 
 # EXAMPLES
 **shed-kubectl-resources**\
-\ \ \ \  pod-busybox-loop
+\ \ \ \  hello-world
 
 # LICENSE
 MIT

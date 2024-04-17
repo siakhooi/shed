@@ -12,9 +12,9 @@ setup(){
     assert_failure 1
     cat_expected "shed-kubectl-apply-resource-not-exists" | assert_output -
 }
-@test "ka pod-busybox-loop" {
-    run bash -i -c 'ka pod-busybox-loop'
+@test "ka hello-world" {
+    run bash -i -c 'ka hello-world'
     assert_success
     cat_expected "shed-kubectl-apply" | assert_output -
-    shed-kubectl-delete pod-busybox-loop
+    shed-kubectl-delete hello-world
 }

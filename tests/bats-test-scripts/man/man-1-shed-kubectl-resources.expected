@@ -12,7 +12,7 @@ DESCRIPTION
 
 EXAMPLES
        shed-kubectl-resources
-            pod-busybox-loop
+            hello-world
 
 LICENSE
        MIT
