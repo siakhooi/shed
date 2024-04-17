@@ -31,6 +31,12 @@ run-bats-debian:
 	-e "TEST_PLATFORM=debian" \
 	siakhooi/shed-tester:debian-bats \
 	bash
+run-bats-ubuntu:
+	docker run -it --network host --rm -w /working -v $$(pwd):/working -v /var/run/docker.sock:/var/run/docker.sock \
+	-e "WORKSPACE=/working" \
+	-e "TEST_PLATFORM=ubuntu" \
+	siakhooi/shed-tester:ubuntu-bats \
+	bash
 
 in-docker-setup:
 	tests/bin/prepare-environments.sh
@@ -59,6 +65,7 @@ build-all-images: build-image-bats-debian build-image-bats-ubuntu
 build-image-bats-debian:
 	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_debian -t shed-tester:debian-bats -t siakhooi/shed-tester:debian-bats
 build-image-bats-ubuntu:
+	docker rmi siakhooi/shed-tester:ubuntu-bats shed-tester:ubuntu-bats 
 	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_ubuntu -t shed-tester:ubuntu-bats -t siakhooi/shed-tester:ubuntu-bats
 
 docker-pull-bats-ubuntu:
