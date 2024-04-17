@@ -1,0 +1,1 @@
++ kubectl --context kube-dev-1 --namespace ns-application logs -f --tail=0 busybox-looping -c busybox-1

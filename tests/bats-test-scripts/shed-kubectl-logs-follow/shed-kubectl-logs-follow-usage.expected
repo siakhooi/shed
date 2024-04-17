@@ -1,0 +1,1 @@
+Usage: shed-kubectl-logs-follow (pod | type/name) [container]
