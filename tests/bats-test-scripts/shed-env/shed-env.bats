@@ -4,7 +4,7 @@ setup(){
 }
 @test "shed-env" {
     run shed-env
-    cat_expected| assert_output -e -
+    cat_expected "shed-env" | assert_output -e -
 }
 @test "shed-env xxx" {
     run shed-env xxx
@@ -21,7 +21,10 @@ setup(){
     cat_expected "shed-env-c1" | assert_output -e -
 }
 @test "c1; shed-env" {
-    skip 'bugs in KUBECONFIG setting'
-    run bash -i -c 'c1; shed-env'
+    run bash -ic 'c1; shed-env'
     cat_expected "shed-env-c1" | assert_output -e -
+}
+@test "bash -ic 'bash -ic shed-env'" {
+    run bash -ic 'bash -ic shed-env'
+    cat_expected "shed-env" | assert_output -e -
 }

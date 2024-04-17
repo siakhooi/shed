@@ -1,5 +1,7 @@
 info:
 
+init-codespace: prepare build prepare-bats
+
 clean:
 	rm -rf target *.deb *.deb.*sum
 delete-clusters:
