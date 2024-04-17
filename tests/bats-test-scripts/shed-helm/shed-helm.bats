@@ -11,7 +11,6 @@ setup(){
     cat_expected "shed-helm-list" | assert_output -
 }
 @test "h list" {
-    skip "alias h not working in test environment"
-    run h list
+    run bash -i -c 'h list'
     cat_expected "shed-helm-list" | assert_output -
 }

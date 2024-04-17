@@ -11,7 +11,6 @@ setup(){
     cat_expected "shed-istioctl-profile-list" | assert_output -
 }
 @test "i profile list" {
-    skip "alias i not working in test environment"
-    run i profile list
+    run bash -i -c 'i profile list'
     cat_expected "shed-istioctl-profile-list" | assert_output -
 }

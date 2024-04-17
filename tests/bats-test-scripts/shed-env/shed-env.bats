@@ -21,8 +21,7 @@ setup(){
     cat_expected "shed-env-c1" | assert_output -e -
 }
 @test "c1; shed-env" {
-    skip "alias c1 not working in test environment"
-    c1
-    run shed-env
+    skip 'bugs in KUBECONFIG setting'
+    run bash -i -c 'c1; shed-env'
     cat_expected "shed-env-c1" | assert_output -e -
 }

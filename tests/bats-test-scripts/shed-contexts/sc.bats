@@ -3,42 +3,32 @@ setup(){
     common_setup
 }
 @test "sc" {
-    skip "alias sc is not working in testing environment"
-    run sc
+    run bash -i -c 'sc'
     assert_success
     cat_expected "shed-contexts" | assert_output -
 }
 @test "sc xxx" {
-    skip "alias sc is not working in testing environment"
-    run sc xxx
+    run bash -i -c 'sc xxx'
     assert_success
     cat_expected "shed-contexts" | assert_output -
 }
 @test "unset SHED_CONFIG_FILE; sc" {
-    skip "alias sc is not working in testing environment"
-    unset SHED_CONFIG_FILE
-    run sc
+    run bash -i -c 'unset SHED_CONFIG_FILE; sc'
     assert_failure 1
     cat_expected "shed-config-file-not-set" | assert_output -
 }
 @test "SHED_CONFIG_FILE=/xxx; sc" {
-    skip "alias sc is not working in testing environment"
-    SHED_CONFIG_FILE=/xxx
-    run sc
+    run bash -i -c 'SHED_CONFIG_FILE=/xxx; sc'
     assert_failure 2
     cat_expected "shed-config-file-not-found" | assert_output -
 }
 @test "unset SHED_CODE; sc" {
-    skip "alias sc is not working in testing environment"
-    unset SHED_CODE
-    run sc
+    run bash -i -c 'unset SHED_CODE; sc'
     assert_failure 3
     cat_expected "shed-code-not-set" | assert_output -
 }
 @test "SHED_CODE=NE; sc" {
-    skip "alias sc is not working in testing environment"
-    SHED_CODE=NE
-    run sc
+    run bash -i -c 'SHED_CODE=NE; sc'
     assert_success
     cat_expected "shed-code-invalid" | assert_output -
 }
