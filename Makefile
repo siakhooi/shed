@@ -13,7 +13,7 @@ git-commit-and-push:
 create-release:
 	scripts/create-release.sh
 delete-release:
-	gh release delete --cleanup-tag 1.14.0
+	gh release delete --cleanup-tag 1.17.1
 
 clean-bats-logs:
 	rm tests/bats-test-result-*.log

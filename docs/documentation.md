@@ -19,6 +19,7 @@
 | `shed-kubectl-exec-bash` (pod \| type/name) [container]   | `k-bash`                     | bin      | ✅       | [📚 Doc](shed-kubectl-exec-bash.md)   |
 | `shed-kubectl-scale` replicas resourceName                | `k-scale`                    | bin      | ✅       | [📚 Doc](shed-kubectl-scale.md)       |
 | `shed-kubectl-logs-follow` (pod \| type/name) [container] | `k-logs-f`                   | bin      | ✅       | [📚 Doc](shed-kubectl-logs-follow.md) |
+| `shed-kubectl-logs-previous` (pod \| type/name) [container] | `k-logs-p`                 | bin      | ❌     | [📚 Doc](shed-kubectl-logs-previous.md) |
 | `shed-helm` [helm arguments]                              | `h`                          | bin      | ✅       | [📚 Doc](shed-helm.md)                |
 | `shed-istioctl` [istioctl arguments]                      | `i`                          | bin      | ✅       | [📚 Doc](shed-istioctl.md)            |
 | `shed-use` shedCode                                       |                              | function | ✅       | [📚 Doc](shed-use.md)                 |
