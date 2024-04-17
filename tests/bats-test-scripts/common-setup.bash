@@ -12,7 +12,7 @@ cat_expected(){
 
     if [[ -z $description ]]; then
       short_name=$BATS_TEST_FILENAME.expected
-      long_name=$(dirname $BATS_TEST_FILENAME)/$BATS_TEST_DESCRIPTION.expected
+      long_name=$BATS_TEST_DIRNAME/$BATS_TEST_DESCRIPTION.expected
       if [[ -f $long_name ]]; then
         cat $long_name
       elif [[ -f $short_name ]]; then
@@ -22,8 +22,8 @@ cat_expected(){
         exit 1
       fi
     else
-      custom_name1=$(dirname $BATS_TEST_FILENAME)/$description
-      custom_name2=$(dirname $BATS_TEST_FILENAME)/$description.expected
+      custom_name1=$BATS_TEST_DIRNAME/$description
+      custom_name2=$BATS_TEST_DIRNAME/$description.expected
       if [[ -f $custom_name1 ]]; then
         cat $custom_name1
       elif [[ -f $custom_name2 ]]; then
