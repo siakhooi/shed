@@ -1,0 +1,3 @@
++ kubectl --context kube-dev-1 --namespace ns-application exec -it busybox-looping -- sh
+/ # 
+/ # exit
