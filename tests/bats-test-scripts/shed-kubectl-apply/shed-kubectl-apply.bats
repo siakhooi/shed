@@ -17,4 +17,5 @@ setup(){
     assert_success
     cat_expected "shed-kubectl-apply" | assert_output -
     shed-kubectl-delete hello-world
+    shed-kubectl wait --for delete pod --selector=app=hello-world --timeout 60s
 }
