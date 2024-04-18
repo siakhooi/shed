@@ -7,6 +7,11 @@ setup(){
     assert_success
     cat_expected "shed-kubectl-delete-usage" | assert_output -
 }
+@test "shed-kubectl-delete xxx yyy" {
+    run shed-kubectl-delete xxx yyy
+    assert_success
+    cat_expected "shed-kubectl-delete-usage" | assert_output -
+}
 @test "shed-kubectl-delete xxx" {
     run shed-kubectl-delete xxx
     assert_failure 1

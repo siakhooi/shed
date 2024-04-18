@@ -7,6 +7,11 @@ setup(){
     assert_success
     cat_expected "shed-kubectl-delete-usage" | assert_output -
 }
+@test "kd xxx yyy" {
+    run bash -i -c 'kd xxx yyy'
+    assert_success
+    cat_expected "shed-kubectl-delete-usage" | assert_output -
+}
 @test "kd xxx" {
     run bash -i -c 'kd xxx'
     assert_failure 1
