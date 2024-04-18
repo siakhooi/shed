@@ -16,11 +16,11 @@ setup(){
     unset SHED_CONFIG_FILE
     run shed config
     assert_failure 1
-    cat_expected "shed-config-file-not-set" | assert_output -
+    cat_expected "file-not-set" | assert_output -
 }
 @test "SHED_CONFIG_FILE=/xxx; shed config" {
     SHED_CONFIG_FILE=/xxx
     run shed config
     assert_failure 2
-    cat_expected "shed-config-file-not-found" | assert_output -
+    cat_expected "file-not-found" | assert_output -
 }

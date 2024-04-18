@@ -5,17 +5,17 @@ setup(){
 @test "shed kubectl-logs-previous" {
     run shed kubectl-logs-previous
     assert_success
-    cat_expected "shed-kubectl-logs-previous-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }
 @test "shed kubectl-logs-previous xxx yyy zzz" {
     run shed kubectl-logs-previous xxx yyy zzz
     assert_success
-    cat_expected "shed-kubectl-logs-previous-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }
 @test "shed kubectl-logs-previous xxx" {
     run shed kubectl-logs-previous xxx
     assert_failure 1
-    cat_expected "shed-kubectl-logs-previous-xxx" | assert_output -
+    cat_expected "invalid-pod-xxx" | assert_output -
 }
 @test "shed-kubectl-apply hello-world; shed kubectl-logs-previous hello-world" {
     skip 'Unable to use a TTY - input is not a terminal or the right kind of file'

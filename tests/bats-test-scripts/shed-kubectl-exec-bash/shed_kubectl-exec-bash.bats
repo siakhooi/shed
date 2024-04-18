@@ -15,7 +15,7 @@ setup(){
 @test "shed kubectl-exec-bash xxx" {
     run shed kubectl-exec-bash xxx
     assert_failure 1
-    cat_expected "shed-kubectl-exec-bash-xxx" | assert_output -
+    cat_expected "invalid-pod-xxx" | assert_output -
 }
 @test "shed-kubectl-apply hello-world; shed kubectl-exec-bash hello-world" {
     skip 'Unable to use a TTY - input is not a terminal or the right kind of file'

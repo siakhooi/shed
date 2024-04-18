@@ -5,17 +5,17 @@ setup(){
 @test "ka" {
     run bash -i -c 'ka'
     assert_success
-    cat_expected "shed-kubectl-apply-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }
 @test "ka xxx yyy" {
     run bash -i -c 'ka xxx yyy'
     assert_success
-    cat_expected "shed-kubectl-apply-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }
 @test "ka xxx" {
     run bash -i -c 'ka xxx'
     assert_failure 1
-    cat_expected "shed-kubectl-apply-resource-not-exists" | assert_output -
+    cat_expected "resource-not-exists" | assert_output -
 }
 @test "ka hello-world" {
     run bash -i -c 'ka hello-world'

@@ -8,9 +8,9 @@ setup(){
 }
 @test "shed-use" {
     run shed-use
-    cat_expected "shed-code-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }
 @test "shed-use xxx yyy" {
     run shed-use xxx yyy
-    cat_expected "shed-code-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }

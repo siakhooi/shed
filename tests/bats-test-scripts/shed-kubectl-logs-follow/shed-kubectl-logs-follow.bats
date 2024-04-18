@@ -5,17 +5,17 @@ setup(){
 @test "shed-kubectl-logs-follow" {
     run shed-kubectl-logs-follow
     assert_success
-    cat_expected "shed-kubectl-logs-follow-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }
 @test "shed-kubectl-logs-follow xxx yyy zzz" {
     run shed-kubectl-logs-follow xxx yyy zzz
     assert_success
-    cat_expected "shed-kubectl-logs-follow-usage" | assert_output -
+    cat_expected "usage" | assert_output -
 }
 @test "shed-kubectl-logs-follow xxx" {
     run shed-kubectl-logs-follow xxx
     assert_failure 1
-    cat_expected "shed-kubectl-logs-follow-xxx" | assert_output -
+    cat_expected "invalid-pod-xxx" | assert_output -
 }
 @test "shed-kubectl-apply hello-world; shed-kubectl-logs-follow hello-world" {
     skip 'Unable to use a TTY - input is not a terminal or the right kind of file'
