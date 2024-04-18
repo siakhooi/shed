@@ -4,6 +4,12 @@ setup(){
 
     
 }
+save-man(){
+    section=$1
+    page_name=$2
+    expected_output=$3
+    run bash -c "MANWIDTH=120 man -s $section --pager=cat $page_name> $BATS_TEST_DIRNAME/${expected_output}.expected.new" 
+}
 run-man-test(){
     section=$1
     page_name=$2
@@ -47,6 +53,9 @@ run-man-test(){
 @test "man shed-kubectl-logs-follow" {
     run-man-test 1 shed-kubectl-logs-follow man-1-shed-kubectl-logs-follow
 }
+@test "man shed-kubectl-logs-previous" {
+    run-man-test 1 shed-kubectl-logs-previous man-1-shed-kubectl-logs-previous
+}
 @test "man shed-kubectl-scale" {
     run-man-test 1 shed-kubectl-scale man-1-shed-kubectl-scale
 }
@@ -75,6 +84,7 @@ run-man-test(){
     run-man-test 1 shed-kubectl-resources man-1-shed-kubectl-resources
 }
 @test "man shed" {
+    save-man 1 shed man-1-shed
     run-man-test 1 shed man-1-shed
 }
 @test "shed" {

@@ -23,6 +23,7 @@ List aliases used by shed programs.
 \ \ \ \  alias k='shed-kubectl'\
 \ \ \ \  alias k-bash='shed-kubectl-exec-bash'\
 \ \ \ \  alias k-logs-f='shed-kubectl-logs-follow'\
+\ \ \ \  alias k-logs-p='shed-kubectl-logs-previous'\
 \ \ \ \  alias k-scale='shed-kubectl-scale'\
 \ \ \ \  alias k-sh='shed-kubectl-exec-sh'
 
