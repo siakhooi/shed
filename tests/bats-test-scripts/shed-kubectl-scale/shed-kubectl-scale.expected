@@ -1,0 +1,2 @@
++ kubectl --context kube-dev-1 --namespace ns-application scale --replicas=2 deployments/hello-world-scalable
+deployment.apps/hello-world-scalable scaled

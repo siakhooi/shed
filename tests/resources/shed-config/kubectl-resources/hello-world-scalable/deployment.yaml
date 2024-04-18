@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-scalable
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-scalable
+  template:
+    metadata:
+      labels:
+        app: hello-world-scalable
+    spec:
+      containers:
+      - image: busybox
+        imagePullPolicy: IfNotPresent
+        name: say-hello
+        command:
+          - bin/sh
+          - -c
+          - "while true; do echo 'Hello World!' ; sleep 2; done"
+        resources:
+          limits:
+            cpu: 300m
+            memory: 256Mi
+          requests:
+            cpu: 100m
+            memory: 128Mi
