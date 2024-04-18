@@ -7,6 +7,11 @@ setup(){
     assert_success
     cat_expected "shed-kubectl-apply-usage" | assert_output -
 }
+@test "shed kubectl-apply xxx yyy" {
+    run shed kubectl-apply xxx yyy
+    assert_success
+    cat_expected "shed-kubectl-apply-usage" | assert_output -
+}
 @test "shed kubectl-apply xxx" {
     run shed kubectl-apply xxx
     assert_failure 1
