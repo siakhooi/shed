@@ -2,6 +2,16 @@ setup(){
     load '../common-setup'
     common_setup
 }
+@test "k-sh" {
+    run bash -ic 'k-sh'
+    assert_success
+    cat_expected "usage" | assert_output -
+}
+@test "k-sh xxx yyy zzz" {
+    run bash -ic 'k-sh xxx yyy zzz'
+    assert_success
+    cat_expected "usage" | assert_output -
+}
 @test "k-sh xxx" {
     run bash -ic 'k-sh xxx'
     assert_failure 1

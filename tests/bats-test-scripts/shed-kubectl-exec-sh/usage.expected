@@ -1,0 +1,1 @@
+Usage: shed-kubectl-exec-sh (pod | type/name) [container]
