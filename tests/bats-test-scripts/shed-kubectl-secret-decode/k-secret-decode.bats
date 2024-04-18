@@ -5,7 +5,7 @@ setup(){
 @test "k-secret-decode" {
     run bash -i -c 'k-secret-decode'
     assert_success
-    cat_expected "shed-kubectl-secret-decode-usage" | assert_output -e -
+    cat_expected "shed-kubectl-secret-decode-usage" | assert_output -
 }
 @test "k-secret-decode xxx" {
     run bash -i -c 'k-secret-decode xxx'

@@ -1,1 +1,1 @@
-Usage: (shed-kubectl-delete|shed kubectl-delete|kd) kubectl-resource
+Usage: shed-kubectl-delete kubectl-resource

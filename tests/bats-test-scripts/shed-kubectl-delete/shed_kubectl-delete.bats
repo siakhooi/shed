@@ -5,7 +5,7 @@ setup(){
 @test "shed kubectl-delete" {
     run shed kubectl-delete
     assert_success
-    cat_expected "shed-kubectl-delete-usage" | assert_output -e -
+    cat_expected "shed-kubectl-delete-usage" | assert_output -
 }
 @test "shed kubectl-delete xxx" {
     run shed kubectl-delete xxx

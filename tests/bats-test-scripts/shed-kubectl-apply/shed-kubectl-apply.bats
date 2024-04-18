@@ -5,7 +5,7 @@ setup(){
 @test "shed-kubectl-apply" {
     run shed-kubectl-apply
     assert_success
-    cat_expected "shed-kubectl-apply-usage" | assert_output -e -
+    cat_expected "shed-kubectl-apply-usage" | assert_output -
 }
 @test "shed-kubectl-apply xxx" {
     run shed-kubectl-apply xxx

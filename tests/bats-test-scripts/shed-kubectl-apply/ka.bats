@@ -5,7 +5,7 @@ setup(){
 @test "ka" {
     run bash -i -c 'ka'
     assert_success
-    cat_expected "shed-kubectl-apply-usage" | assert_output -e -
+    cat_expected "shed-kubectl-apply-usage" | assert_output -
 }
 @test "ka xxx" {
     run bash -i -c 'ka xxx'

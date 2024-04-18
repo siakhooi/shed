@@ -5,7 +5,7 @@ setup(){
 @test "shed-kubectl-secret-decode" {
     run shed-kubectl-secret-decode
     assert_success
-    cat_expected "shed-kubectl-secret-decode-usage" | assert_output -e -
+    cat_expected "shed-kubectl-secret-decode-usage" | assert_output -
 }
 @test "shed-kubectl-secret-decode xxx" {
     run shed-kubectl-secret-decode xxx
