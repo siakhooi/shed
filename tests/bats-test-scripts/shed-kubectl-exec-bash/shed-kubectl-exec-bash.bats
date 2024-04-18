@@ -2,6 +2,16 @@ setup(){
     load '../common-setup'
     common_setup
 }
+@test "shed-kubectl-exec-bash" {
+    run shed-kubectl-exec-bash
+    assert_success
+    cat_expected "usage" | assert_output -
+}
+@test "shed-kubectl-exec-bash xxx yyy zzz" {
+    run shed-kubectl-exec-bash xxx yyy zzz
+    assert_success
+    cat_expected "usage" | assert_output -
+}
 @test "shed-kubectl-exec-bash xxx" {
     run shed-kubectl-exec-bash xxx
     assert_failure 1
