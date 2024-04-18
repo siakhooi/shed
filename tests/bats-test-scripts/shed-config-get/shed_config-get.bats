@@ -2,6 +2,14 @@ setup(){
     load '../common-setup'
     common_setup
 }
+@test "shed config-get" {
+    run shed config-get
+    cat_expected "usage" |assert_output -
+}
+@test "shed config-get .xxx .yyy" {
+    run shed config-get xxx yyy
+    cat_expected "usage" |assert_output -
+}
 @test "shed config-get .shed-init.shed" {
     run shed config-get .shed-init.shed
     echo "D" | assert_output -
