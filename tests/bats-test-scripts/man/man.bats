@@ -1,8 +1,6 @@
 setup(){
     load '../common-setup'
     common_setup
-
-    
 }
 save-man(){
     section=$1
@@ -84,7 +82,6 @@ run-man-test(){
     run-man-test 1 shed-kubectl-resources man-1-shed-kubectl-resources
 }
 @test "man shed" {
-    save-man 1 shed man-1-shed
     run-man-test 1 shed man-1-shed
 }
 @test "shed" {
