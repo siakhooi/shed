@@ -1,21 +1,23 @@
-% SHED-VALUE(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
+% SHED-CONTEXTS(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
 % Siak Hooi
-% March 2023
+% April 2024
 
 # NAME
-shed-values - print all config values of current shed.
+shed-contexts - list all contexts of current shed.\
+sc - alias to shed-contexts
 
 # SYNOPSIS
-**shed-values**\
-**shed values**
+**shed-context**\
+**sc**
 
 # DESCRIPTION
-print all config values of current shed.
+List all contexts of current shed.
 
 # EXAMPLES
-**shed-values**\
-\ \ \  code: P\
-\ \ \  name: shed-P-production
+**shed-contexts**\
+\ \ \ \  Context \ Name \ \ \ \ Kube Context \ Namespace\
+\ \ \ \  c0 \ \ \ \ \ \ dev-app \ kube-dev-1 \ \ \ ns-application\
+\ \ \ \  c1 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kube-dev-1 \ \ \ ns-database
 
 # FILES
 ~/.shed/config.yaml
@@ -38,6 +40,7 @@ SHED_CODE
 **3**
 : Environment variable SHED_CODE is not set, use **shed-use** to set a shedCode.
 
+
 # LICENSE
 MIT
 
@@ -45,4 +48,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-use(1), shed-value(1), shed-config(1), shed-config.yaml(5), shed-value-key-list(1), shed-contexts(1)
+shed-use(1), shed-values(1), shed-config(1), shed-config.yaml(5)

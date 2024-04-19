@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export SHED_VERSION=1.19.0
+export SHED_VERSION=1.20.0
 export SHED_CONFIG_HOME="${SHED_CONFIG_HOME:-$HOME/.shed}"
 export SHED_CONFIG_FILE=${SHED_CONFIG_HOME}/config.yaml
 export SHED_CONFIG_DIRECTORY_RESOURCES=$SHED_CONFIG_HOME/kubectl-resources

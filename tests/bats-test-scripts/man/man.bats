@@ -21,6 +21,9 @@ run-man-test(){
 @test "man shed-aliases" {
     run-man-test 1 shed-aliases
 }
+@test "man shed-contexts" {
+    run-man-test 1 shed-contexts
+}
 @test "man shed-config-edit" {
     run-man-test 1 shed-config-edit
 }
