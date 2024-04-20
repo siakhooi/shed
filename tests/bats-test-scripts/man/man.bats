@@ -60,6 +60,9 @@ run-man-test(){
 @test "man shed-kubectl-scale" {
     run-man-test 1 shed-kubectl-scale
 }
+@test "man shed-kubectl-apply" {
+    run-man-test 1 shed-kubectl-apply
+}
 @test "man shed-kubectl" {
     run-man-test 1 shed-kubectl
 }

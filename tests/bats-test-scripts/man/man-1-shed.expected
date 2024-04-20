@@ -10,6 +10,7 @@ SYNOPSIS
        shed config
        shed config-edit
        shed config-get yamlPath
+       shed kubectl-apply kubectl-resource
        shed help
        shed value yamlPath
        shed value-key-list
@@ -29,6 +30,7 @@ SYNOPSIS
        shed-config
        shed-config-edit
        shed-config-get yamlPath
+       shed-kubectl-apply kubectl-resource
        shed-value yamlPath
        shed-value-key-list
        shed-values
@@ -52,6 +54,7 @@ SYNOPSIS
        k [kubectl arguments]
        h [helm arguments]
        i [istioctl arguments]
+       ka kubectl-resource
        k-sh (pod | type/name) [container]
        k-bash (pod | type/name) [container]
        k-scale replicas resourceName
@@ -118,6 +121,7 @@ SEE ALSO
        shed-use(1), shed-kubeconfig-use(1), shed-kubectl(1), shed-helm(1), shed-isioctl(1)
        shed-kubectl-exec-sh(1),shed-kubectl-exec-bash(1),shed-kubectl-scale(1)
        shed-kubectl-logs-follow(1),shed-kubectl-logs-previous(1)
+       shed-kubectl-apply(1)
 
 AUTHORS
        Siak Hooi.
