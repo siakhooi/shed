@@ -7,7 +7,8 @@ shed-contexts - list all contexts of current shed.\
 sc - alias to shed-contexts
 
 # SYNOPSIS
-**shed-context**\
+**shed-contexts**\
+**shed contexts**\
 **sc**
 
 # DESCRIPTION

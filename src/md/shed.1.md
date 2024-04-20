@@ -12,6 +12,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed config**\
 **shed config-edit**\
 **shed config-get** yamlPath\
+**shed contexts**\
 **shed kubectl-apply** kubectl-resource\
 **shed help**\
 **shed value** yamlPath\
@@ -22,6 +23,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed kubectl-exec-bash**  (pod \| type/name) [container]\
 **shed kubectl-scale**  replicas resourceName\
 **shed kubectl-logs-follow** (pod \| type/name) [container]\
+**shed kubectl-logs-previous** (pod \| type/name) [container]\
 **shed helm** [helm arguments]\
 **shed istioctl** [istioctl arguments]\
 \ \
@@ -32,6 +34,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed-config**\
 **shed-config-edit**\
 **shed-config-get** yamlPath\
+**shed-contexts**\
 **shed-kubectl-apply** kubectl-resource\
 **shed-value** yamlPath\
 **shed-value-key-list**\
@@ -53,6 +56,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **c2**\
 **c3**\
 **c4**\
+**sc**\
 **k**  [kubectl arguments]\
 **h**  [helm arguments]\
 **i** [istioctl arguments]\
@@ -122,7 +126,7 @@ Report bugs at https://github.com/siakhooi/shed/issues.
 # SEE ALSO
 shed-env(1), shed-aliases(1)\
 shed-list(1), shed-list-code(1)\
-shed-config(1), shed-config-edit(1), shed-config-get(1), shed-config.yaml(5)\
+shed-config(1), shed-config-edit(1), shed-config-get(1), shed-config.yaml(5)\, shed-contexts(1)\
 shed-value(1), shed-values(1), shed-value-key-list(1)\
 shed-use(1), shed-kubeconfig-use(1), shed-kubectl(1), shed-helm(1), shed-isioctl(1)\
 shed-kubectl-exec-sh(1),shed-kubectl-exec-bash(1),shed-kubectl-scale(1)\
