@@ -21,6 +21,8 @@ List aliases used by shed programs.
 \ \ \ \  alias h='shed-helm'\
 \ \ \ \  alias i='shed-istioctl'\
 \ \ \ \  alias k='shed-kubectl'\
+\ \ \ \  alias ka='shed-kubectl-apply'\
+\ \ \ \  alias kd='shed-kubectl-delete'\
 \ \ \ \  alias k-bash='shed-kubectl-exec-bash'\
 \ \ \ \  alias k-logs-f='shed-kubectl-logs-follow'\
 \ \ \ \  alias k-logs-p='shed-kubectl-logs-previous'\

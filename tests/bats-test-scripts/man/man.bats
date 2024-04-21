@@ -63,6 +63,9 @@ run-man-test(){
 @test "man shed-kubectl-apply" {
     run-man-test 1 shed-kubectl-apply
 }
+@test "man shed-kubectl-delete" {
+    run-man-test 1 shed-kubectl-delete
+}
 @test "man shed-kubectl" {
     run-man-test 1 shed-kubectl
 }

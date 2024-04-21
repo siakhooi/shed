@@ -23,4 +23,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-kubectl(1), shed-kubectl-apply(1)
+shed-kubectl(1), shed-kubectl-apply(1), shed-kubectl-delete(1)

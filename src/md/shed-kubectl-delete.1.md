@@ -1,0 +1,39 @@
+% SHED-KUBECTL-DELETE(1) Siak Hooi DevUtils 1.1.0 | Shed Commands
+% Siak Hooi
+% April 2024
+
+# NAME
+shed-kubectl-delete - delete the resources based on resource located in directory set in \
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ environment variable SHED_CONFIG_DIRECTORY_RESOURCES.\
+kd - alias to shed-kubectl-delete
+
+# SYNOPSIS
+**shed-kubectl-delete** kubectl-resource\
+**shed kubectl-delete** kubectl-resource\
+**kd** kubectl-resource
+
+# DESCRIPTION
+Delete the resources based on resource located in directory set in environment variable\
+SHED_CONFIG_DIRECTORY_RESOURCES.
+
+# EXAMPLES
+**shed-kubectl-delete** hello-world\
+\ \ \ \  + kubectl --context kube-dev-1 delete -f /home/user1/.shed/kubectl-resources/hello-world\
+\ \ \ \  pod/hello-world deleted
+
+# FILES
+~/.shed/kubectl-resources
+: directory contains the resources
+
+# ENVIRONMENT VARIABLES
+SHED_CONFIG_DIRECTORY_RESOURCES
+:  kubectl resources for **shed-kubectl-delete** and **shed-kubectl-delete**.
+
+# LICENSE
+MIT
+
+# BUGS
+Report bugs at https://github.com/siakhooi/shed/issues.
+
+# SEE ALSO
+shed-kubectl-resources(1),shed-kubectl-apply(1)
