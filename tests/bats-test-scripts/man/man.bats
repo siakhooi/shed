@@ -87,6 +87,9 @@ run-man-test(){
 @test "man shed-values" {
     run-man-test 1 shed-values
 }
+@test "man shed-version" {
+    run-man-test 1 shed-version
+}
 @test "man shed-kubectl-resources" {
     run-man-test 1 shed-kubectl-resources
 }

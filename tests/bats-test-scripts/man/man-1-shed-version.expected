@@ -1,0 +1,29 @@
+SHED-VERSION(1)                                     Shed Commands                                     SHED-VERSION(1)
+
+NAME
+       shed-version - print the current version of Shed.
+
+SYNOPSIS
+       shed-version
+       shed version
+
+DESCRIPTION
+       Print the current version of Shed.
+
+EXAMPLES
+       shed-version
+            shed version: 1.23.0
+
+LICENSE
+       MIT
+
+BUGS
+       Report bugs at https://github.com/siakhooi/shed/issues.
+
+SEE ALSO
+       shed(1)
+
+AUTHORS
+       Siak Hooi.
+
+Siak Hooi DevUtils 1.1.0                              April 2024                                      SHED-VERSION(1)
