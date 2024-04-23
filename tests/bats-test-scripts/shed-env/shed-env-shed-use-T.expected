@@ -4,4 +4,3 @@ SHED_CONFIG_DIRECTORY_RESOURCES=/root/.shed/kubectl-resources
 SHED_CONFIG_FILE=/root/.shed/config.yaml
 SHED_CONFIG_HOME=/root/.shed
 SHED_KUBECONFIG_NUMBER=0
-SHED_VERSION=.*
