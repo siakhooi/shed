@@ -38,7 +38,9 @@ run-bats-ubuntu:
 	siakhooi/shed-tester:ubuntu-bats \
 	bash
 
-in-docker-setup:
+deploy-in-docker:
+	tests/bin/prepare-environments.sh
+in-docker-setup: 
 	tests/bin/prepare-environments.sh
 	tests/bin/prepare-kind-clusters.sh
 
