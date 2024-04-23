@@ -4,74 +4,73 @@ NAME
        shed is a collection of several bash scripts to manage Kubernetes clusters.
 
 SYNOPSIS
-       shed list
-       shed list-code
-       shed env
        shed config
        shed config-edit
        shed config-get yamlPath
        shed contexts
+       shed env
+       shed helm [helm arguments]
+       shed help
+       shed istioctl [istioctl arguments]
+       shed kubectl [kubectl arguments]
        shed kubectl-apply kubectl-resource
        shed kubectl-delete kubectl-resource
-       shed help
+       shed kubectl-exec-bash (pod | type/name) [container]
+       shed kubectl-exec-sh (pod | type/name) [container]
+       shed kubectl-logs-follow (pod | type/name) [container]
+       shed kubectl-logs-previous (pod | type/name) [container]
+       shed kubectl-scale replicas resourceName
+       shed kubectl-secret-decode secretName
+       shed list
+       shed list-code
        shed value yamlPath
        shed value-key-list
        shed values
        shed version
-       shed kubectl [kubectl arguments]
-       shed kubectl-exec-sh (pod | type/name) [container]
-       shed kubectl-exec-bash (pod | type/name) [container]
-       shed kubectl-scale replicas resourceName
-       shed kubectl-logs-follow (pod | type/name) [container]
-       shed kubectl-logs-previous (pod | type/name) [container]
-       shed kubectl-secret-decode secretName
-       shed helm [helm arguments]
-       shed istioctl [istioctl arguments]
 
-       shed-list
-       shed-list-code
-       shed-env
        shed-aliases
        shed-config
        shed-config-edit
        shed-config-get yamlPath
        shed-contexts
+       shed-env
+       shed-helm [helm arguments]
+       shed-istioctl [istioctl arguments]
+       shed-kubectl [kubectl arguments]
        shed-kubectl-apply kubectl-resource
        shed-kubectl-delete kubectl-resource
+       shed-kubectl-exec-bash (pod | type/name) [container]
+       shed-kubectl-exec-sh (pod | type/name) [container]
+       shed-kubectl-logs-follow (pod | type/name) [container]
+       shed-kubectl-logs-previous (pod | type/name) [container]
+       shed-kubectl-scale replicas resourceName
+       shed-kubectl-secret-decode secretName
+       shed-list
+       shed-list-code
        shed-value yamlPath
        shed-value-key-list
        shed-values
        shed-version
-       shed-kubectl [kubectl arguments]
-       shed-kubectl-exec-sh (pod | type/name) [container]
-       shed-kubectl-exec-bash (pod | type/name) [container]
-       shed-kubectl-scale replicas resourceName
-       shed-kubectl-logs-follow (pod | type/name) [container]
-       shed-kubectl-logs-previous (pod | type/name) [container]
-       shed-kubectl-secret-decode secretName
-       shed-helm [helm arguments]
-       shed-istioctl [istioctl arguments]
-
-       shed-use shedCode
-       shed-kubeconfig-use kubeconfig-number
 
        c0
        c1
        c2
        c3
        c4
-       sc
-       k [kubectl arguments]
        h [helm arguments]
        i [istioctl arguments]
-       ka kubectl-resource
-       ka kubectl-delete
-       k-sh (pod | type/name) [container]
+       k [kubectl arguments]
        k-bash (pod | type/name) [container]
-       k-scale replicas resourceName
        k-logs-f (pod | type/name) [container]
        k-logs-p (pod | type/name) [container]
+       k-scale replicas resourceName
        k-secret-decode secretName
+       k-sh (pod | type/name) [container]
+       ka kubectl-delete
+       ka kubectl-resource
+       sc
+       shed-kubeconfig-use kubeconfig-number
+       shed-use shedCode
 
 DESCRIPTION
        shed  programs use environment variable to control which clusters to used.  This allow user to connect to dif-
