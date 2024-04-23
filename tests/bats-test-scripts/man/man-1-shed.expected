@@ -24,6 +24,7 @@ SYNOPSIS
        shed kubectl-scale replicas resourceName
        shed kubectl-logs-follow (pod | type/name) [container]
        shed kubectl-logs-previous (pod | type/name) [container]
+       shed kubectl-secret-decode secretName
        shed helm [helm arguments]
        shed istioctl [istioctl arguments]
 
@@ -47,6 +48,7 @@ SYNOPSIS
        shed-kubectl-scale replicas resourceName
        shed-kubectl-logs-follow (pod | type/name) [container]
        shed-kubectl-logs-previous (pod | type/name) [container]
+       shed-kubectl-secret-decode secretName
        shed-helm [helm arguments]
        shed-istioctl [istioctl arguments]
 
@@ -69,6 +71,7 @@ SYNOPSIS
        k-scale replicas resourceName
        k-logs-f (pod | type/name) [container]
        k-logs-p (pod | type/name) [container]
+       k-secret-decode secretName
 
 DESCRIPTION
        shed  programs use environment variable to control which clusters to used.  This allow user to connect to dif-
@@ -131,6 +134,7 @@ SEE ALSO
        shed-kubectl-exec-sh(1),shed-kubectl-exec-bash(1),shed-kubectl-scale(1)
        shed-kubectl-logs-follow(1),shed-kubectl-logs-previous(1)
        shed-kubectl-resources(1),shed-kubectl-apply(1),shed-kubectl-delete(1)
+       shed-kubectl-secret-decode(1)
 
 AUTHORS
        Siak Hooi.

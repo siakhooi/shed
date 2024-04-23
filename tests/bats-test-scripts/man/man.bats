@@ -57,6 +57,9 @@ run-man-test(){
 @test "man shed-kubectl-logs-previous" {
     run-man-test 1 shed-kubectl-logs-previous
 }
+@test "man shed-kubectl-secret-decode" {
+    run-man-test 1 shed-kubectl-secret-decode
+}
 @test "man shed-kubectl-scale" {
     run-man-test 1 shed-kubectl-scale
 }

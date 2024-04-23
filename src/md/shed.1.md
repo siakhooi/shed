@@ -26,6 +26,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed kubectl-scale**  replicas resourceName\
 **shed kubectl-logs-follow** (pod \| type/name) [container]\
 **shed kubectl-logs-previous** (pod \| type/name) [container]\
+**shed kubectl-secret-decode** secretName\
 **shed helm** [helm arguments]\
 **shed istioctl** [istioctl arguments]\
 \ \
@@ -49,6 +50,7 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **shed-kubectl-scale**  replicas resourceName\
 **shed-kubectl-logs-follow** (pod \| type/name) [container]\
 **shed-kubectl-logs-previous** (pod \| type/name) [container]\
+**shed-kubectl-secret-decode** secretName\
 **shed-helm** [helm arguments]\
 **shed-istioctl** [istioctl arguments]\
 \ \
@@ -70,7 +72,8 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **k-bash** (pod \| type/name) [container]\
 **k-scale** replicas resourceName\
 **k-logs-f** (pod \| type/name) [container]\
-**k-logs-p** (pod \| type/name) [container]
+**k-logs-p** (pod \| type/name) [container]\
+**k-secret-decode** secretName
 
 
 # DESCRIPTION
@@ -136,4 +139,5 @@ shed-value(1), shed-values(1), shed-value-key-list(1), shed-version(1)\
 shed-use(1), shed-kubeconfig-use(1), shed-kubectl(1), shed-helm(1), shed-isioctl(1)\
 shed-kubectl-exec-sh(1),shed-kubectl-exec-bash(1),shed-kubectl-scale(1)\
 shed-kubectl-logs-follow(1),shed-kubectl-logs-previous(1)\
-shed-kubectl-resources(1),shed-kubectl-apply(1),shed-kubectl-delete(1)
+shed-kubectl-resources(1),shed-kubectl-apply(1),shed-kubectl-delete(1)\
+shed-kubectl-secret-decode(1)
