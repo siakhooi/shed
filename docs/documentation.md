@@ -29,7 +29,7 @@
 | `shed-kubectl-resources`                                    |                              | bin      | ✅       | [📚 Doc](shed-kubectl-resources.md)     |
 | `shed-kubectl-apply`                                        | `ka`                         | bin      | ✅       | ❌                                      |
 | `shed-kubectl-delete`                                       | `kd`                         | bin      | ✅       | ❌                                      |
-| `shed-version`                                              |                              | bin      | ✅       | ❌                                      |
+| `shed-version`                                              |                              | bin      | ✅       | [📚 Doc](shed-version.md)               |
 | `shed-kubectl-secret-decode`                                | `k-secret-decode`            | bin      | ✅       | ❌                                      |
 
 ## FILES AND DIRECTORIES
