@@ -15,4 +15,4 @@ shed values
 
 ## SEE ALSO
 
-[shed-value](shed-value.md), [shed-config](shed-config.md)
+[shed-value](shed-value.md), [shed-config](shed-config.md), [shed-config.yaml](file-shed-config.yaml.md), [shed-value-key-list](shed-value-key-list.md), [shed-contexts](shed-contexts.md)
