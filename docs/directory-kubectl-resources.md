@@ -12,4 +12,4 @@ User defined kubectl resources that will be executed by `shed-kubectl-apply` and
 
 ## SEE ALSO
 
-[shed-kubectl-resources](shed-kubectl-resources.md)
+[shed-kubectl-resources](shed-kubectl-resources.md), [shed-kubectl-apply](shed-kubectl-apply.md)

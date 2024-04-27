@@ -1,4 +1,4 @@
-# shed-list
+# shed-kubectl-resources
 
 Print list of resources available for `shed-kubectl-apply` and `shed-kubectl-delete`.
 
@@ -17,4 +17,4 @@ hello-world
 
 ## SEE ALSO
 
-[~/.shed/kubectl-resources](directory-kubectl-resources.md)
+[shed-kubectl-apply](shed-kubectl-apply.md), [~/.shed/kubectl-resources](directory-kubectl-resources.md)
