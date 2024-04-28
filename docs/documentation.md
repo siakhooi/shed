@@ -28,7 +28,7 @@
 | `shed`                                                      |                              | bin      | ✅       | [📚 Doc](shed.md)                       |
 | `shed-kubectl-resources`                                    |                              | bin      | ✅       | [📚 Doc](shed-kubectl-resources.md)     |
 | `shed-kubectl-apply`                                        | `ka`                         | bin      | ✅       | [📚 Doc](shed-kubectl-apply.md)         |
-| `shed-kubectl-delete`                                       | `kd`                         | bin      | ✅       | ❌                                      |
+| `shed-kubectl-delete`                                       | `kd`                         | bin      | ✅       | [📚 Doc](shed-kubectl-delete.md)        |
 | `shed-version`                                              |                              | bin      | ✅       | [📚 Doc](shed-version.md)               |
 | `shed-kubectl-secret-decode`                                | `k-secret-decode`            | bin      | ✅       | ❌                                      |
 

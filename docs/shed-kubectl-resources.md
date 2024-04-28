@@ -17,4 +17,4 @@ hello-world
 
 ## SEE ALSO
 
-[shed-kubectl-apply](shed-kubectl-apply.md), [~/.shed/kubectl-resources](directory-kubectl-resources.md)
+[shed-kubectl-apply](shed-kubectl-apply.md), [shed-kubectl-delete](shed-kubectl-delete.md), [~/.shed/kubectl-resources](directory-kubectl-resources.md)
