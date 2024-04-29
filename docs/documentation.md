@@ -27,10 +27,10 @@
 | `shed-kubeconfig-use` kubeconfig-number                     | `c0`, `c1`, `c2`, `c3`, `c4` | function | ✅       | [📚 Doc](shed-kubeconfig-use.md)        |
 | `shed`                                                      |                              | bin      | ✅       | [📚 Doc](shed.md)                       |
 | `shed-kubectl-resources`                                    |                              | bin      | ✅       | [📚 Doc](shed-kubectl-resources.md)     |
-| `shed-kubectl-apply`                                        | `ka`                         | bin      | ✅       | [📚 Doc](shed-kubectl-apply.md)         |
-| `shed-kubectl-delete`                                       | `kd`                         | bin      | ✅       | [📚 Doc](shed-kubectl-delete.md)        |
+| `shed-kubectl-apply` kubectl-resource                       | `ka`                         | bin      | ✅       | [📚 Doc](shed-kubectl-apply.md)         |
+| `shed-kubectl-delete` kubectl-resource                      | `kd`                         | bin      | ✅       | [📚 Doc](shed-kubectl-delete.md)        |
 | `shed-version`                                              |                              | bin      | ✅       | [📚 Doc](shed-version.md)               |
-| `shed-kubectl-secret-decode`                                | `k-secret-decode`            | bin      | ✅       | ❌                                      |
+| `shed-kubectl-secret-decode` secretName                     | `k-secret-decode`            | bin      | ✅       | [📚 Doc](shed-kubectl-secret-decode.md) |
 
 ## FILES AND DIRECTORIES
 

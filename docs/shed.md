@@ -34,6 +34,7 @@ shed is a program that provides alternate way to run shed programs.
 | `shed-kubeconfig-use` kubeconfig-number                   |                                      | `c0`, `c1`, `c2`, `c3`, `c4` | [📚 Doc](shed-kubeconfig-use.md)      |
 | `shed-contexts`                                           | `shed contexts`                      | `sc`                         | [📚 Doc](shed-contexts.md)            |
 | `shed-kubectl-resources`                                  | `shed kubectl-resources`             |                              | [📚 Doc](shed-kubectl-resources.md)   |
-| `shed-kubectl-apply`                                      | `shed kubectl-apply`                 | `ka`                         | [📚 Doc](shed-kubectl-apply.md)       |
-| `shed-kubectl-delete`                                     | `shed kubectl-delete`                | `kd`                         | [📚 Doc](shed-kubectl-delete.md)      |
+| `shed-kubectl-apply` kubectl-resource                     | `shed kubectl-apply` [...]           | `ka` [...]                   | [📚 Doc](shed-kubectl-apply.md)       |
+| `shed-kubectl-delete` kubectl-resource                    | `shed kubectl-delete` [...]          | `kd` [...]                   | [📚 Doc](shed-kubectl-delete.md)      |
 | `shed-version`                                            | `shed version`                       |                              | [📚 Doc](shed-version.md)             |
+| `shed-kubectl-secret-decode` secretName                   | `shed-kubectl-secret-decode` [...]   | `k-secret-decode` [...]      | [📚 Doc](shed-kubectl-secret-decode.md) |
