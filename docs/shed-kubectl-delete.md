@@ -20,4 +20,6 @@ pod/hello-world deleted
 
 ## SEE ALSO
 
-[shed-kubectl-apply](shed-kubectl-apply.md), [shed-kubectl-resources](shed-kubectl-resources.md), [~/.shed/kubectl-resources](directory-kubectl-resources.md)
+- [shed-kubectl-apply](shed-kubectl-apply.md)
+- [shed-kubectl-resources](shed-kubectl-resources.md)
+- [~/.shed/kubectl-resources](directory-kubectl-resources.md)

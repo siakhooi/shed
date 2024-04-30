@@ -30,4 +30,4 @@ alias kd='shed-kubectl-delete'
 
 ## SEE ALSO
 
-[shed-env](shed-env.md)
+- [shed-env](shed-env.md)

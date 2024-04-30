@@ -24,4 +24,4 @@ value
 
 ## SEE ALSO
 
-[shed-kubectl](shed-kubectl.md)
+- [shed-kubectl](shed-kubectl.md)

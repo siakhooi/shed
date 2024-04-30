@@ -24,4 +24,5 @@ $ shed-kubectl-scale 5 sts/maria-database-abc
 
 ## SEE ALSO
 
-[shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-kubectl](shed-kubectl.md)
+- [shed-kubeconfig-use](shed-kubeconfig-use.md)
+- [shed-kubectl](shed-kubectl.md)

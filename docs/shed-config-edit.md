@@ -29,4 +29,6 @@ export EDITOR=nano
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-config-get](shed-config-get.md), [~/.shed/config.yaml](file-shed-config.yaml.md)
+- [shed-config](shed-config.md)
+- [shed-config-get](shed-config-get.md)
+- [~/.shed/config.yaml](file-shed-config.yaml.md)

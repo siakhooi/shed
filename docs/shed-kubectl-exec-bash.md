@@ -32,4 +32,6 @@ $ shed-kubectl-exec-bash pod/pod-abc container-1
 
 ## SEE ALSO
 
-[shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-kubectl](shed-kubectl.md), [shed-kubectl-exec-sh](shed-kubectl-exec-sh.md)
+- [shed-kubeconfig-use](shed-kubeconfig-use.md)
+- [shed-kubectl](shed-kubectl.md)
+- [shed-kubectl-exec-sh](shed-kubectl-exec-sh.md)

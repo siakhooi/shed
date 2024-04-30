@@ -15,4 +15,4 @@ shed env
 
 ## SEE ALSO
 
-[shed-config](shed-config.md)
+- [shed-config](shed-config.md)

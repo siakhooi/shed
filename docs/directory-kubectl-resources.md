@@ -12,4 +12,6 @@ User defined kubectl resources that will be executed by `shed-kubectl-apply` and
 
 ## SEE ALSO
 
-[shed-kubectl-resources](shed-kubectl-resources.md), [shed-kubectl-apply](shed-kubectl-apply.md), [shed-kubectl-delete](shed-kubectl-delete.md)
+- [shed-kubectl-resources](shed-kubectl-resources.md)
+- [shed-kubectl-apply](shed-kubectl-apply.md)
+- [shed-kubectl-delete](shed-kubectl-delete.md)

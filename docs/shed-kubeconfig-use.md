@@ -29,4 +29,8 @@ c4 - alias for **shed-kubeconfig-use 4**
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-use](shed-use.md), [shed-kubectl](shed-kubectl.md), [shed-helm](shed-helm.md), [shed-istioctl](shed-istioctl.md)
+- [shed-config](shed-config.md)
+- [shed-use](shed-use.md)
+- [shed-kubectl](shed-kubectl.md)
+- [shed-helm](shed-helm.md)
+- [shed-istioctl](shed-istioctl.md)

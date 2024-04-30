@@ -15,4 +15,7 @@ shed value-key-list
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-values](shed-values.md), [shed-value](shed-value.md), [shed](shed.md)
+- [shed-config](shed-config.md)
+- [shed-values](shed-values.md)
+- [shed-value](shed-value.md)
+- [shed](shed.md)

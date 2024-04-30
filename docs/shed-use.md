@@ -14,4 +14,9 @@ shed-use shedCode
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-list-code](shed-list-code.md), [shed-kubeconfig-use](shed-kubeconfig-use.md), [shed-kubectl](shed-kubectl.md), [shed-helm](shed-helm.md), [shed-istioctl](shed-istioctl.md)
+- [shed-config](shed-config.md)
+- [shed-list-code](shed-list-code.md)
+- [shed-kubeconfig-use](shed-kubeconfig-use.md)
+- [shed-kubectl](shed-kubectl.md)
+- [shed-helm](shed-helm.md)
+- [shed-istioctl](shed-istioctl.md)

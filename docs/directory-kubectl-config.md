@@ -10,4 +10,4 @@ This behaviour can be turned of by set `.shed-init.load-kubectl-config` to `no` 
 
 ## SEE ALSO
 
-[~/.shed/config.yaml](file-shed-config.yaml.md)
+- [~/.shed/config.yaml](file-shed-config.yaml.md)

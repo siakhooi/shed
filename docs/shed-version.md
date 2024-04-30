@@ -11,4 +11,4 @@ shed version
 
 ## SEE ALSO
 
-[shed](shed.md)
+- [shed](shed.md)

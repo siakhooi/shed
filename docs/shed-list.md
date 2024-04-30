@@ -15,4 +15,5 @@ shed list
 
 ## SEE ALSO
 
-[shed-config](shed-config.md), [shed-list-code](shed-list-code.md)
+- [shed-config](shed-config.md)
+- [shed-list-code](shed-list-code.md)
