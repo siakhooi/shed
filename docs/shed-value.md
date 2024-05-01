@@ -15,5 +15,5 @@ shed value yamlPath
 
 ## SEE ALSO
 
-- [shed-values](shed-values.md)
 - [shed-config](shed-config.md)
+- [shed-values](shed-values.md)

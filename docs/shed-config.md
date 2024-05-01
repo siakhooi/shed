@@ -15,8 +15,8 @@ shed config
 
 ## SEE ALSO
 
+- [~/.shed/config.yaml](file-shed-config.yaml.md)
 - [shed-config-edit](shed-config-edit.md)
 - [shed-config-get](shed-config-get.md)
-- [shed-values](shed-values.md)
 - [shed-value](shed-value.md)
-- [~/.shed/config.yaml](file-shed-config.yaml.md)
+- [shed-values](shed-values.md)

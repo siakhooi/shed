@@ -16,5 +16,5 @@ You can add in scripts to extend the functionally of Shed, for example:
 ## SEE ALSO
 
 - [~/.shed/config.yaml](file-shed-config.yaml.md)
-- [~/.shed/init.d/shed-use](directory-init.d-shed-use.md)
 - [~/.shed/init.d/shed-kubeconfig-use](directory-init.d-shed-kubeconfig-use.md)
+- [~/.shed/init.d/shed-use](directory-init.d-shed-use.md)

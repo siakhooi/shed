@@ -30,7 +30,7 @@ $ shed-use D; shed-istioctl install
 ## SEE ALSO
 
 - [shed-config](shed-config.md)
-- [shed-use](shed-use.md)
+- [shed-helm](shed-helm.md)
 - [shed-kubeconfig-use](shed-kubeconfig-use.md)
 - [shed-kubectl](shed-kubectl.md)
-- [shed-helm](shed-helm.md)
+- [shed-use](shed-use.md)

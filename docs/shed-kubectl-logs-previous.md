@@ -24,6 +24,6 @@ $ shed-use D; shed-kubectl-logs-previous pod/pod-abc container-1
 
 ## SEE ALSO
 
-- [shed-kubectl-logs-follow](shed-kubectl-logs-follow.md)
 - [shed-kubeconfig-use](shed-kubeconfig-use.md)
 - [shed-kubectl](shed-kubectl.md)
+- [shed-kubectl-logs-follow](shed-kubectl-logs-follow.md)
