@@ -1,6 +1,6 @@
 name: Build shed-tester:ubuntu-bats
 
-on: 
+on:
   workflow_dispatch:
   workflow_call:
       secrets:
@@ -20,7 +20,7 @@ jobs:
           username: ${{ env.REGISTRY_USERNAME_DOCKER }}
           password: ${{ secrets.REGISTRY_PASSWORD_DOCKER }}
       - uses: docker/setup-buildx-action@v3
-      - uses: docker/build-push-action@v5
+      - uses: docker/build-push-action@v6
         with:
           context: ./tests
           file: ./tests/resources/Dockerfiles/Dockerfile_ubuntu
