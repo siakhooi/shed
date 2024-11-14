@@ -4,11 +4,11 @@ alias ka='shed-kubectl-apply'
 alias kd='shed-kubectl-delete'
 
 shed-completions-with-shed-kubectl-resources() {
-    local cur choices
-    COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    choices=$(shed-kubectl-resources)
-    mapfile -t COMPREPLY < <(compgen -W "${choices}" -- "${cur}")
+  local cur choices
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  choices=$(shed-kubectl-resources)
+  mapfile -t COMPREPLY < <(compgen -W "${choices}" -- "${cur}")
 }
 
 complete -F shed-completions-with-shed-kubectl-resources shed-kubectl-apply

@@ -10,19 +10,19 @@ export SHED_CONFIG_DIRECTORY_RESOURCES=$SHED_CONFIG_HOME/kubectl-resources
 SHED_SYSTEM_INIT_DIRECTORY=/usr/lib/shed/init.d/shed-init
 
 if [[ -d $SHED_SYSTEM_INIT_DIRECTORY ]]; then
-    for f1 in $(find "$SHED_SYSTEM_INIT_DIRECTORY" -type f | sort); do
-        # shellcheck source=/dev/null
-        source "$f1"
-    done
+  for f1 in $(find "$SHED_SYSTEM_INIT_DIRECTORY" -type f | sort); do
+    # shellcheck source=/dev/null
+    source "$f1"
+  done
 fi
 
 SHED_USER_INIT_DIRECTORY=$SHED_CONFIG_HOME/init.d/shed-init
 
 if [[ -d $SHED_USER_INIT_DIRECTORY ]]; then
-    for f1 in $(find "$SHED_USER_INIT_DIRECTORY" -type f | sort); do
-        # shellcheck source=/dev/null
-        source "$f1"
-    done
+  for f1 in $(find "$SHED_USER_INIT_DIRECTORY" -type f | sort); do
+    # shellcheck source=/dev/null
+    source "$f1"
+  done
 fi
 
 # shellcheck source=/dev/null

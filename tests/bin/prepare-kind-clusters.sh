@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KIND_NODE_IMAGE=kindest/node:v1.29.2
+readonly KIND_NODE_IMAGE=kindest/node:v1.29.2
 
 set -e
 docker pull $KIND_NODE_IMAGE

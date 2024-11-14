@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
-TARGET=target
-SOURCE=src
+readonly TARGET=target
+readonly SOURCE=src
 
 mkdir -p "$TARGET"
-rm -rf "$TARGET"/*
+rm -rf "${TARGET:?}"/*
 
 # Control File
 cp -vr $SOURCE/DEBIAN $TARGET
@@ -30,12 +30,12 @@ cp -vr $SOURCE/share/* $TARGET/usr/share/shed
 mkdir -p $TARGET/usr/share/man/man1/
 fileList=$(cd $SOURCE/md && find *.1.md | sed 's/.md//')
 for file in $fileList; do
-  pandoc $SOURCE/md/$file.md -s -t man | gzip -9 >$TARGET/usr/share/man/man1/$file.gz
+  pandoc $SOURCE/md/"$file.md" -s -t man | gzip -9 >$TARGET/usr/share/man/man1/"$file.gz"
 done
 mkdir -p $TARGET/usr/share/man/man5/
 fileList=$(cd $SOURCE/md && find *.5.md | sed 's/.md//')
 for file in $fileList; do
-  pandoc $SOURCE/md/$file.md -s -t man | gzip -9 >$TARGET/usr/share/man/man5/$file.gz
+  pandoc $SOURCE/md/"$file.md" -s -t man | gzip -9 >$TARGET/usr/share/man/man5/"$file.gz"
 done
 
 fakeroot dpkg-deb --build -Zxz $TARGET
@@ -43,7 +43,7 @@ dpkg-name ${TARGET}.deb
 
 DEBFILE=$(ls ./*.deb)
 
-sha256sum "$DEBFILE" >$DEBFILE.sha256sum
-sha512sum "$DEBFILE" >$DEBFILE.sha512sum
+sha256sum "$DEBFILE" >"$DEBFILE.sha256sum"
+sha512sum "$DEBFILE" >"$DEBFILE.sha512sum"
 
 dpkg --contents "$DEBFILE"

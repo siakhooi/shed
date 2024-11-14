@@ -3,14 +3,14 @@
 OPTIONS=()
 
 if [[ -n $SHED_CODE ]] && [[ -n $SHED_KUBECONFIG_NUMBER ]]; then
-    context=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].context")
-    namespace=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].namespace")
+  context=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].context")
+  namespace=$(shed-value ".kubeconfig[$SHED_KUBECONFIG_NUMBER].namespace")
 
-    if [[ -z $namespace ]]; then
-        OPTIONS=(--context "$context")
-    else
-        OPTIONS=(--context "$context" --namespace "$namespace")
-    fi
+  if [[ -z $namespace ]]; then
+    OPTIONS=(--context "$context")
+  else
+    OPTIONS=(--context "$context" --namespace "$namespace")
+  fi
 fi
 
 set -x

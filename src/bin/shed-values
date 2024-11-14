@@ -6,5 +6,5 @@ _shed_check_variable_if_set_shed_config_file
 _shed_check_file_if_exists_shed_config_file
 _shed_check_variable_if_set_shed_code
 
-YQ='.sheds.[]|select(.code == "'$SHED_CODE'" )'
+readonly YQ='.sheds.[]|select(.code == "'$SHED_CODE'" )'
 yq "$YQ" "$SHED_CONFIG_FILE"

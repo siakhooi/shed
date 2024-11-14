@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ $# -eq 0 ]]; then
-    man shed
-    exit $?
+  man shed
+  exit $?
 fi
 
 MODULE=$1
@@ -10,100 +10,101 @@ shift
 
 case $MODULE in
 version)
-    shed-version "$@"
-    exit $?
-    ;;
+  shed-version "$@"
+  exit $?
+  ;;
 config)
-    shed-config "$@"
-    exit $?
-    ;;
+  shed-config "$@"
+  exit $?
+  ;;
 config-get)
-    shed-config-get "$@"
-    exit $?
-    ;;
+  shed-config-get "$@"
+  exit $?
+  ;;
 config-edit)
-    shed-config-edit "$@"
-    exit $?
-    ;;
+  shed-config-edit "$@"
+  exit $?
+  ;;
 env)
-    shed-env "$@"
-    exit $?
-    ;;
+  shed-env "$@"
+  exit $?
+  ;;
 list)
-    shed-list "$@"
-    exit $?
-    ;;
+  shed-list "$@"
+  exit $?
+  ;;
 list-code)
-    shed-list-code "$@"
-    exit $?
-    ;;
+  shed-list-code "$@"
+  exit $?
+  ;;
 value)
-    shed-value "$@"
-    exit $?
-    ;;
+  shed-value "$@"
+  exit $?
+  ;;
 value-key-list)
-    shed-value-key-list "$@"
-    exit $?
-    ;;
+  shed-value-key-list "$@"
+  exit $?
+  ;;
 values)
-    shed-values "$@"
-    exit $?
-    ;;
+  shed-values "$@"
+  exit $?
+  ;;
 contexts)
-    shed-contexts "$@"
-    exit $?
-    ;;
+  shed-contexts "$@"
+  exit $?
+  ;;
 kubectl)
-    shed-kubectl "$@"
-    exit $?
-    ;;
+  shed-kubectl "$@"
+  exit $?
+  ;;
 kubectl-exec-bash)
-    shed-kubectl-exec-bash "$@"
-    exit $?
-    ;;
+  shed-kubectl-exec-bash "$@"
+  exit $?
+  ;;
 kubectl-exec-sh)
-    shed-kubectl-exec-sh "$@"
-    exit $?
-    ;;
+  shed-kubectl-exec-sh "$@"
+  exit $?
+  ;;
 kubectl-scale)
-    shed-kubectl-scale "$@"
-    exit $?
-    ;;
+  shed-kubectl-scale "$@"
+  exit $?
+  ;;
 kubectl-logs-follow)
-    shed-kubectl-logs-follow "$@"
-    exit $?
-    ;;
+  shed-kubectl-logs-follow "$@"
+  exit $?
+  ;;
 kubectl-logs-previous)
-    shed-kubectl-logs-previous "$@"
-    exit $?
-    ;;
+  shed-kubectl-logs-previous "$@"
+  exit $?
+  ;;
 kubectl-secret-decode)
-    shed-kubectl-secret-decode "$@"
-    exit $?
-    ;;
+  shed-kubectl-secret-decode "$@"
+  exit $?
+  ;;
 kubectl-resources)
-    shed-kubectl-resources "$@"
-    exit $?
-    ;;
+  shed-kubectl-resources "$@"
+  exit $?
+  ;;
 kubectl-apply)
-    shed-kubectl-apply "$@"
-    exit $?
-    ;;
+  shed-kubectl-apply "$@"
+  exit $?
+  ;;
 kubectl-delete)
-    shed-kubectl-delete "$@"
-    exit $?
-    ;;
+  shed-kubectl-delete "$@"
+  exit $?
+  ;;
 helm)
-    shed-helm "$@"
-    exit $?
-    ;;
+  shed-helm "$@"
+  exit $?
+  ;;
 istioctl)
-    shed-istioctl "$@"
-    exit $?
-    ;;
+  shed-istioctl "$@"
+  exit $?
+  ;;
 help)
-    man shed
-    exit $?
+  man shed
+  exit $?
+  ;;
 esac
 
 echo "Unsupported module: $MODULE" >&2

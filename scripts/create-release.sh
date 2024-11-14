@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
+# shellcheck disable=SC1091
 . ./release.env
 
 RELEASE_NOTE="$RELEASE_TITLE"

@@ -2,7 +2,7 @@
 
 set -e
 
-[[ -n $$WORKSPACE ]] && cd $WORKSPACE
+[[ -n $WORKSPACE ]] && cd "$WORKSPACE"
 
 PATH="$( ls -d /opt/istio*/bin ):$PATH"
 export PATH

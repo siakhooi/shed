@@ -7,8 +7,8 @@ _shed_check_file_if_exists_shed_config_file
 _shed_check_variable_if_set_shed_code
 
 if [[ $# -ne 1 ]]; then
-    echo "Usage: $(basename "$0") yamlPath"
-    exit 0
+  echo "Usage: $(basename "$0") yamlPath"
+  exit 0
 fi
 
 FIELDNAME=$1
