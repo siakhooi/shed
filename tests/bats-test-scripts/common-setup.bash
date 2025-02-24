@@ -5,6 +5,7 @@ common_setup(){
 
     PATH="$SOURCE_BIN:$PATH"
 
+    # shellcheck disable=SC1091
     source /usr/lib/shed/shed-init
 }
 cat_expected(){
@@ -15,9 +16,9 @@ cat_expected(){
       short_name=$BATS_TEST_FILENAME.expected
       long_name=$BATS_TEST_DIRNAME/$BATS_TEST_DESCRIPTION.expected
       if [[ -f $long_name ]]; then
-        cat $long_name
+        cat "$long_name"
       elif [[ -f $short_name ]]; then
-        cat $short_name
+        cat "$short_name"
       else
         echo "Unable to find expected file ($short_name, $long_name) !" >&2
         exit 1
@@ -26,9 +27,9 @@ cat_expected(){
       custom_name1=$BATS_TEST_DIRNAME/$description
       custom_name2=$BATS_TEST_DIRNAME/$description.expected
       if [[ -f $custom_name1 ]]; then
-        cat $custom_name1
+        cat "$custom_name1"
       elif [[ -f $custom_name2 ]]; then
-        cat $custom_name2
+        cat "$custom_name2"
       else
         echo "Unable to find expected file ($custom_name1, $custom_name2) !" >&2
         exit 1

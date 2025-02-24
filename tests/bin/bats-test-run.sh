@@ -14,7 +14,9 @@ cd tests
 BATS_HELPER=../../../../test_helper
 export BATS_HELPER
 
-[[ $HOSTNAME = codespaces-* ]] && batsOpt=-p
-set -e
+batsOpt=()
+[[ $HOSTNAME = codespaces-* ]] && batsOpt+=(-p)
+set -ex
 set -o pipefail
-bats -r -T "$batsOpt" "$testPath" | tee "bats-test-result-${TEST_RUN_NUMBER}.log" 2>&1
+bats --version
+bats -r -T "${batsOpt[@]}" "$testPath" | tee "bats-test-result-${TEST_RUN_NUMBER}.log" 2>&1

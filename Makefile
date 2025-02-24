@@ -23,6 +23,9 @@ build: clean
 	./scripts/shellcheck.sh
 	./scripts/build.sh
 
+wf-build-all-images:
+	gh workflow run 'Build all images'
+
 prepare-bats: docker-pull-bats-debian docker-pull-kind docker-pull-bats-ubuntu
 
 run-bats-debian:
@@ -40,7 +43,7 @@ run-bats-ubuntu:
 
 deploy-in-docker:
 	tests/bin/prepare-environments.sh
-in-docker-setup: 
+in-docker-setup:
 	tests/bin/prepare-environments.sh
 	tests/bin/prepare-kind-clusters.sh
 
@@ -67,8 +70,11 @@ build-all-images: build-image-bats-debian build-image-bats-ubuntu
 build-image-bats-debian:
 	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_debian -t shed-tester:debian-bats -t siakhooi/shed-tester:debian-bats
 build-image-bats-ubuntu:
-	docker rmi siakhooi/shed-tester:ubuntu-bats shed-tester:ubuntu-bats 
+#	docker rmi siakhooi/shed-tester:ubuntu-bats shed-tester:ubuntu-bats
 	cd tests && docker build . -f resources/Dockerfiles/Dockerfile_ubuntu -t shed-tester:ubuntu-bats -t siakhooi/shed-tester:ubuntu-bats
+
+docker-images:
+	docker images siakhooi/shed-tester
 
 docker-pull-bats-ubuntu:
 	docker pull siakhooi/shed-tester:ubuntu-bats
