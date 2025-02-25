@@ -11,4 +11,4 @@ jobs:
     uses: ./.github/workflows/workflow-deploy-all.yml
     secrets:
       TOKEN_TO_UPLOAD_ASSETS: ${{ secrets.TOKEN_TO_UPLOAD_ASSETS }}
-      PUBLISH_TO_APT_GITHUB_TOKEN: ${{ secrets.PUBLISH_TO_APT_GITHUB_TOKEN }}
+      PUBLISH_TO_GITHUB_REPO_TOKEN: ${{ secrets.PUBLISH_TO_GITHUB_REPO_TOKEN }}

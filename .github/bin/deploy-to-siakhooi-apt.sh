@@ -8,7 +8,7 @@ DEBIAN_PACKAGE_FILE=$(basename "$PATH_TO_FILE")
 TMPDIR=$(mktemp -d)
 
 readonly TARGETPATH=docs/pool/main/binary-amd64
-readonly TARGETURL=https://${PUBLISH_TO_APT_GITHUB_TOKEN}@github.com/siakhooi/apt.git
+readonly TARGETURL=https://${PUBLISH_TO_GITHUB_REPO_TOKEN}@github.com/siakhooi/apt.git
 readonly TARGETBRANCH=main
 readonly TARGETDIR=apt
 readonly TARGET_GIT_EMAIL=shed@siakhooi.github.io
