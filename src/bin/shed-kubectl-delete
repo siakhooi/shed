@@ -5,7 +5,7 @@ if [[ $# -ne 1 ]]; then
   exit 0
 fi
 
-RESOURCE_DIRECTORY="$SHED_CONFIG_DIRECTORY_RESOURCES/$1"
+readonly RESOURCE_DIRECTORY="$SHED_CONFIG_DIRECTORY_RESOURCES/$1"
 
 if [[ ! -d "$RESOURCE_DIRECTORY" ]]; then
   echo "$1 not exists. ($RESOURCE_DIRECTORY)"

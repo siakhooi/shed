@@ -5,7 +5,7 @@ if [[ $# -ne 2 ]]; then
   exit 0
 fi
 
-REPLICAS=$1
-RESOURCE=$2
+readonly REPLICAS=$1
+readonly RESOURCE=$2
 
 shed-kubectl scale --replicas="$REPLICAS"  "$RESOURCE"

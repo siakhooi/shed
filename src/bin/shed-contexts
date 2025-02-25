@@ -6,6 +6,6 @@ _shed_check_variable_if_set_shed_config_file
 _shed_check_file_if_exists_shed_config_file
 _shed_check_variable_if_set_shed_code
 
-columnHeaders='Context,Name,Kube Context,Namespace'
+readonly columnHeaders='Context,Name,Kube Context,Namespace'
 
 shed-values | yq -py -oj | jq -r '.kubeconfig[]|[."prompt-name", .context, .namespace]|join(",")' | nl -s, -w1 -v0 | prefix 'c' | make-table "$columnHeaders"

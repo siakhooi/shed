@@ -11,7 +11,7 @@ if [[ $# -ne 1 ]]; then
   exit 0
 fi
 
-FIELDNAME=$1
+readonly FIELDNAME=$1
 
-YQ='.sheds.[]|select(.code == "'${SHED_CODE}'" )|'$FIELDNAME
+readonly YQ='.sheds.[]|select(.code == "'${SHED_CODE}'" )|'$FIELDNAME
 yq "$YQ" "$SHED_CONFIG_FILE" | sed 's/^null$//'

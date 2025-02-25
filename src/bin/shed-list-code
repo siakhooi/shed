@@ -5,5 +5,5 @@ source /usr/lib/shed/shed-common-functions
 _shed_check_variable_if_set_shed_config_file
 _shed_check_file_if_exists_shed_config_file
 
-YQPATH='.sheds[].code'
+readonly YQPATH='.sheds[].code'
 yq eval "$YQPATH" "$SHED_CONFIG_FILE"

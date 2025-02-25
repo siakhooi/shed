@@ -3,7 +3,7 @@ info:
 init-codespace: prepare build prepare-bats
 
 clean:
-	rm -rf target *.deb *.deb.*sum
+	rm -rf target *.deb *.deb.*sum tests/bats-test-result-*.log
 delete-clusters:
 	 kind delete clusters kube-test-1 kube-dev-1
 set-version:
