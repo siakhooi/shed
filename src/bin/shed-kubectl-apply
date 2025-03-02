@@ -12,5 +12,16 @@ if [[ ! -d "$RESOURCE_DIRECTORY" ]]; then
   exit 1
 fi
 
-set -x
-shed-kubectl apply -f "$RESOURCE_DIRECTORY"
+readonly kustomizationFile="$RESOURCE_DIRECTORY/kustomization.yaml"
+
+if [[ -f $kustomizationFile ]]; then
+  (
+    set -x
+    shed-kubectl apply -k "$RESOURCE_DIRECTORY"
+  )
+else
+  (
+    set -x
+    shed-kubectl apply -f "$RESOURCE_DIRECTORY"
+  )
+fi

@@ -22,3 +22,23 @@ setup(){
     run bash -i -c 'shed-use D; c4'
     cat_expected "kubeconfig-number-not-setup" | assert_output -e -
 }
+@test "c5" {
+    run bash -i -c 'shed-use D; c5'
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "c6" {
+    run bash -i -c 'shed-use D; c6'
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "c7" {
+    run bash -i -c 'shed-use D; c7'
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "c8" {
+    run bash -i -c 'shed-use D; c8'
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "c9" {
+    run bash -i -c 'shed-use D; c9'
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}

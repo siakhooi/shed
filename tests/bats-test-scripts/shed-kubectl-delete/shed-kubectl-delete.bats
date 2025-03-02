@@ -24,3 +24,10 @@ setup(){
     cat_expected "shed-kubectl-delete" | assert_output -
     shed-kubectl wait --for delete pod --selector=app=hello-world --timeout 60s
 }
+@test "shed-kubectl-delete hello-world-kustomize" {
+    shed kubectl-apply hello-world-kustomize
+    run shed-kubectl-delete hello-world-kustomize
+    assert_success
+    cat_expected "shed-kubectl-delete-kustomize" | assert_output -
+    shed-kubectl wait --for delete pod --selector=app=hello-world-kustomize --timeout 60s
+}

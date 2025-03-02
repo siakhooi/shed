@@ -1,0 +1,3 @@
++ shed-kubectl apply -k /root/.shed/kubectl-resources/hello-world-kustomize
++ kubectl --context kube-dev-1 --namespace ns-application apply -k /root/.shed/kubectl-resources/hello-world-kustomize
+pod/hello-world created

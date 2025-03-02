@@ -24,3 +24,10 @@ setup(){
     shed-kubectl-delete hello-world
     shed-kubectl wait --for delete pod --selector=app=hello-world --timeout 60s
 }
+@test "ka hello-world-kustomize" {
+    run bash -i -c 'ka hello-world-kustomize'
+    assert_success
+    cat_expected "shed-kubectl-apply-kustomize" | assert_output -
+    shed-kubectl-delete hello-world-kustomize
+    shed-kubectl wait --for delete pod --selector=app=hello-world-kustomize --timeout 60s
+}
