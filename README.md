@@ -12,7 +12,7 @@ KubeConfig: a combination or a kubectl context and/or namespace.
 
 Features:
 
-- Supports up to 5 KubeConfig per shed[📚](docs/file-shed-config.yaml.md).
+- Supports up to 10 KubeConfig per shed[📚](docs/file-shed-config.yaml.md).
 - Able to work with different Shed[📚](docs/shed-use.md) and/or KubeConfig[📚](docs/shed-kubeconfig-use.md) in different shell sessions.
 - Auto include kubectl config file into `KUBECONFIG` environment on start up [📚](docs/directory-kubectl-config.md).
 - Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.

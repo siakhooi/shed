@@ -4,6 +4,12 @@ set -e
 # shellcheck disable=SC1091
 . ./release.env
 
-git commit -m "$RELEASE_TITLE"
+if [ -z "$ISSUE_TO_CLOSE" ]; then
+  GIT_MESSAGE="$RELEASE_TITLE"
+else
+  GIT_MESSAGE="$RELEASE_TITLE, Close $ISSUE_TO_CLOSE"
+fi
+
+git commit -m "$GIT_MESSAGE"
 
 git push

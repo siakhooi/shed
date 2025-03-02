@@ -12,6 +12,11 @@ c1
 c2
 c3
 c4
+c5
+c6
+c7
+c8
+c9
 ```
 
 ## DESCRIPTION
@@ -21,7 +26,13 @@ c0 - alias for **shed-kubeconfig-use 0**\
 c1 - alias for **shed-kubeconfig-use 1**\
 c2 - alias for **shed-kubeconfig-use 2**\
 c3 - alias for **shed-kubeconfig-use 3**\
-c4 - alias for **shed-kubeconfig-use 4**
+c4 - alias for **shed-kubeconfig-use 4**\
+c5 - alias for **shed-kubeconfig-use 5**\
+c6 - alias for **shed-kubeconfig-use 6**\
+c7 - alias for **shed-kubeconfig-use 7**\
+c8 - alias for **shed-kubeconfig-use 8**\
+c9 - alias for **shed-kubeconfig-use 9**
+
 
 ## SCREENSHOTS
 

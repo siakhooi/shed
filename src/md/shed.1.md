@@ -59,6 +59,11 @@ shed is a collection of several bash scripts to manage Kubernetes clusters.
 **c2**\
 **c3**\
 **c4**\
+**c5**\
+**c6**\
+**c7**\
+**c8**\
+**c9**\
 **h**  [helm arguments]\
 **i** [istioctl arguments]\
 **k**  [kubectl arguments]\

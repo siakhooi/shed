@@ -30,7 +30,37 @@ setup(){
 @test "shed-kubeconfig-use 5" {
     shed-use D
     run shed-kubeconfig-use 5
-    cat_expected "invalid-kubeconfig-number" | assert_output -
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "shed-kubeconfig-use 6" {
+    shed-use D
+    run shed-kubeconfig-use 6
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "shed-kubeconfig-use 7" {
+    shed-use D
+    run shed-kubeconfig-use 7
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "shed-kubeconfig-use 8" {
+    shed-use D
+    run shed-kubeconfig-use 8
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "shed-kubeconfig-use 9" {
+    shed-use D
+    run shed-kubeconfig-use 9
+    cat_expected "kubeconfig-number-not-setup" | assert_output -e -
+}
+@test "shed-kubeconfig-use 10" {
+    shed-use D
+    run shed-kubeconfig-use 10
+    cat_expected "invalid-kubeconfig-number" | assert_output -e -
+}
+@test "shed-kubeconfig-use A" {
+    shed-use D
+    run shed-kubeconfig-use A
+    cat_expected "invalid-kubeconfig-number" | assert_output -e -
 }
 @test "shed-kubeconfig-use" {
     shed-use D
