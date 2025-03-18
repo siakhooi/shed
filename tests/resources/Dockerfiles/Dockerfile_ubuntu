@@ -17,14 +17,10 @@ RUN apt update -y && \
     (echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" >/etc/apt/sources.list.d/docker.list ) && \
     apt update -y && \
     apt install -y helm docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && \
-    (cd /opt && curl -L https://istio.io/downloadIstio | sh - ) && \
     kubectl completion bash > /root/.kubectl-completion && \
     helm completion bash > /root/.helm-completion && \
-    $( ls /opt/istio*/bin/istioctl ) completion bash > /root/.istioctl-completion && \
     echo "source ~/.kubectl-completion" >> ~/.bashrc && \
     echo "source ~/.helm-completion" >> ~/.bashrc && \
-    echo "source ~/.istioctl-completion" >> ~/.bashrc && \
-    echo "PATH=$( ls -d /opt/istio*/bin ):\$PATH" >>~/.bashrc && \
     echo "source /etc/bash_completion" >> ~/.bashrc && \
     git config --global user.email "siakhooi@gmail.com" && \
     git config --global user.name "Siak Hooi"  && \

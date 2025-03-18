@@ -19,7 +19,6 @@ k [kubectl arguments]
 
 - [shed-config](shed-config.md)
 - [shed-helm](shed-helm.md)
-- [shed-istioctl](shed-istioctl.md)
 - [shed-kubeconfig-use](shed-kubeconfig-use.md)
 - [shed-kubectl-apply](shed-kubectl-apply.md)
 - [shed-kubectl-delete](shed-kubectl-delete.md)

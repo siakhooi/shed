@@ -21,7 +21,6 @@ shed is a program that provides alternate way to run shed programs.
 | `shed-contexts`                                             | `shed contexts`                      | `sc`                         | [📚 Doc](shed-contexts.md)              |
 | `shed-env`                                                  | `shed env`                           |                              | [📚 Doc](shed-env.md)                   |
 | `shed-helm` [helm arguments]                                | `shed helm` [helm arguments]         | `h` [helm arguments]         | [📚 Doc](shed-helm.md)                  |
-| `shed-istioctl` [istioctl arguments]                        | `shed istioctl` [istioctl arguments] | `i` [istioctl arguments]     | [📚 Doc](shed-istioctl.md)              |
 | `shed-kubeconfig-use` kubeconfig-number                     |                                      | `c0` - `c9`                  | [📚 Doc](shed-kubeconfig-use.md)        |
 | `shed-kubectl` [kubectl arguments]                          | `shed kubectl` [kubectl arguments]   | `k` [kubectl arguments]      | [📚 Doc](shed-kubectl.md)               |
 | `shed-kubectl-apply` kubectl-resource                       | `shed kubectl-apply` [...]           | `ka` [...]                   | [📚 Doc](shed-kubectl-apply.md)         |

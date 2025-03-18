@@ -24,7 +24,6 @@ List aliases used by shed programs.
 \ \ \ \  alias c8='shed-kubeconfig-use 8'\
 \ \ \ \  alias c9='shed-kubeconfig-use 9'\
 \ \ \ \  alias h='shed-helm'\
-\ \ \ \  alias i='shed-istioctl'\
 \ \ \ \  alias k-bash='shed-kubectl-exec-bash'\
 \ \ \ \  alias k-logs-f='shed-kubectl-logs-follow'\
 \ \ \ \  alias k-logs-p='shed-kubectl-logs-previous'\

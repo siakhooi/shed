@@ -42,6 +42,5 @@ c9 - alias for **shed-kubeconfig-use 9**
 
 - [shed-config](shed-config.md)
 - [shed-helm](shed-helm.md)
-- [shed-istioctl](shed-istioctl.md)
 - [shed-kubectl](shed-kubectl.md)
 - [shed-use](shed-use.md)

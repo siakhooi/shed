@@ -30,7 +30,7 @@ delete-release:
 #
 # Full Test
 #
-in-docker-teardown:
+bats-teardown:
 	tests/bin/teardown-kind-clusters.sh
 
 bats-debian:
@@ -124,11 +124,8 @@ test-steps:
 	c4
 	shed-kubectl
 	shed-helm
-	shed-istioctl
 	k
 	h
-	i
 
 	completion kubectl, k, shed-kubectl
 	completion helm, h, shed-helm
-	completion istioctl, i, shed-istioctl

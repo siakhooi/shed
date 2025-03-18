@@ -22,7 +22,6 @@ Features:
   - shed-kubeconfig-use [📚](docs/directory-init.d-shed-kubeconfig-use.md) - when switch to different KubeConfig using commands `shed-kubeconfig-use` [📚](docs/shed-kubeconfig-use.md), `c0`, `c1`, `c2`, `c3`, `c4`.
 - Support `kubectl` with shortened alias, ie `k`[📚](docs/shed-kubectl.md), `k-sh`[📚](docs/shed-kubectl-exec-sh.md), `k-bash`[📚](docs/shed-kubectl-exec-bash.md), `k-scale`[📚](docs/shed-kubectl-scale.md), `k-logs-f`[📚](docs/shed-kubectl-logs-follow.md), `k-logs-p`[📚](docs/shed-kubectl-logs-previous.md), `ka`[📚](docs/shed-kubectl-apply.md), `kd`[📚](docs/shed-kubectl-delete.md), `k-secret-decode`[📚](docs/shed-kubectl-secret-decode.md).
 - Support `helm` with shortened alias, ie `h`[📚](docs/shed-helm.md).
-- Support `istioctl` with shortened alias, ie `i`[📚](docs/shed-istioctl.md).
 - Print out the actual command that is executing.
 
 Current Development Environment:
@@ -43,7 +42,6 @@ Current Development Environment:
 - yq <https://github.com/mikefarah/yq>
 - kubectl <https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/>
 - helm <https://helm.sh/docs/intro/install/> - optional.
-- istioctl <https://istio.io/latest/docs/setup/getting-started/> - optional.
 
 ### Installation
 

@@ -97,10 +97,6 @@ helm)
   shed-helm "$@"
   exit $?
   ;;
-istioctl)
-  shed-istioctl "$@"
-  exit $?
-  ;;
 help)
   man shed
   exit $?

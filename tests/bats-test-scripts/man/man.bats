@@ -6,7 +6,7 @@ save-man(){
     section=$1
     page_name=$2
     expected_output="man-${section}-${page_name}"
-    run bash -c "MANWIDTH=120 man -s $section --pager=cat $page_name> $BATS_TEST_DIRNAME/${expected_output}.expected.new" 
+    run bash -c "MANWIDTH=120 man -s $section --pager=cat $page_name> $BATS_TEST_DIRNAME/${expected_output}.expected.new"
 }
 run-man-test(){
     section=$1
@@ -38,9 +38,6 @@ run-man-test(){
 }
 @test "man shed-helm" {
     run-man-test 1 shed-helm
-}
-@test "man shed-istioctl" {
-    run-man-test 1 shed-istioctl
 }
 @test "man shed-kubeconfig-use" {
     run-man-test 1 shed-kubeconfig-use

@@ -12,7 +12,6 @@
 | `shed-contexts`                                             | `sc`              | bin      | ✅       | [📚 Doc](shed-contexts.md)              |
 | `shed-env`                                                  |                   | bin      | ✅       | [📚 Doc](shed-env.md)                   |
 | `shed-helm` [helm arguments]                                | `h`               | bin      | ✅       | [📚 Doc](shed-helm.md)                  |
-| `shed-istioctl` [istioctl arguments]                        | `i`               | bin      | ✅       | [📚 Doc](shed-istioctl.md)              |
 | `shed-kubeconfig-use` kubeconfig-number                     | `c0` - `c9`       | function | ✅       | [📚 Doc](shed-kubeconfig-use.md)        |
 | `shed-kubectl` [kubectl arguments]                          | `k`               | bin      | ✅       | [📚 Doc](shed-kubectl.md)               |
 | `shed-kubectl-apply` kubectl-resource                       | `ka`              | bin      | ✅       | [📚 Doc](shed-kubectl-apply.md)         |

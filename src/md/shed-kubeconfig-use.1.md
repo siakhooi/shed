@@ -61,4 +61,4 @@ MIT
 Report bugs at https://github.com/siakhooi/shed/issues.
 
 # SEE ALSO
-shed-config(1), shed-config-edit(1), shed-config.yaml(5), shed-use(1), shed-kubectl(1), shed-helm(1), shed-istioctl(1)
+shed-config(1), shed-config-edit(1), shed-config.yaml(5), shed-use(1), shed-kubectl(1), shed-helm(1)

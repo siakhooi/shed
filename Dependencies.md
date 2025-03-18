@@ -21,5 +21,4 @@
 | yq       | yq       |
 | kubectl  | kubectl  |
 | helm     | helm     |
-| istioctl | istioctl |
 | jq       | jq       |

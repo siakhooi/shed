@@ -12,10 +12,6 @@ command -v helm >/dev/null
 if [[ $? -eq 1 ]]; then
   echo "[1;31mWarning: helm not found![0m if you want to use helm feature, please install at [1;31mhttps://helm.sh/docs/intro/install/[0m." >&2
 fi
-command -v istioctl >/dev/null
-if [[ $? -eq 1 ]]; then
-  echo "[1;31mWarning: istioctl not found![0m if you want to use istioctl feature, please install at [1;31mhttps://istio.io/latest/docs/setup/getting-started/[0m." >&2
-fi
 
 cat <<___EOF___
 
