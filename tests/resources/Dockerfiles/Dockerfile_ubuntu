@@ -32,5 +32,7 @@ RUN apt update -y && \
     rm /test_helper/bats-support/.git && \
     git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-assert.git /test_helper/bats-assert && \
     rm test_helper/bats-assert/.git && \
+    git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-file.git /test_helper/bats-file && \
+    rm test_helper/bats-file/.git && \
     systemctl enable docker
 CMD ["/bin/bash"]
