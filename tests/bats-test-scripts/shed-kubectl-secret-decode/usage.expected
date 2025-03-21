@@ -1,1 +1,2 @@
-Usage: shed-kubectl-secret-decode secretName
+Usage: shed-kubectl-secret-decode [-h] [-f] secretName
+  -f  create local file structure

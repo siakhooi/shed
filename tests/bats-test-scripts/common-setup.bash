@@ -1,6 +1,7 @@
 common_setup(){
     load "$BATS_HELPER/bats-support/load"
     load "$BATS_HELPER/bats-assert/load"
+    load "$BATS_HELPER/bats-file/load"
     bats_require_minimum_version 1.5.0
 
     PATH="$SOURCE_BIN:$PATH"

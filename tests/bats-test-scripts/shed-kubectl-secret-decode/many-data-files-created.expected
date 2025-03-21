@@ -1,0 +1,4 @@
++ kubectl --context kube-dev-1 --namespace ns-application get secrets/many-data -o yaml
+many-data/key1 created.
+many-data/superPassword created.
+many-data/superUserName created.
