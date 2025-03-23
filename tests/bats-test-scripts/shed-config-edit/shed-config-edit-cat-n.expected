@@ -1,0 +1,15 @@
+     1	sheds:
+     2	  - code: D
+     3	    name: shed-D-development
+     4	    kubeconfig:
+     5	      - context: kube-dev-1
+     6	        namespace: ns-application
+     7	        prompt-name: dev-app
+     8	      - context: kube-dev-1
+     9	        namespace: ns-database
+    10	  - code: T
+    11	    name: shed-T-testing
+    12	    kubeconfig:
+    13	      - context: kube-test-1
+    14	shed-init:
+    15	  shed: D

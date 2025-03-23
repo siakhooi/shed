@@ -6,4 +6,4 @@ _shed_check_variable_if_set_shed_config_file
 
 [[ -f "$SHED_CONFIG_FILE" ]] || /usr/lib/shed/shed-config-create-sample
 
-"${EDITOR:-vi}" "$SHED_CONFIG_FILE"
+${EDITOR:-vi} "$SHED_CONFIG_FILE"
