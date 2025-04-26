@@ -15,13 +15,7 @@ fi
 readonly kustomizationFile="$RESOURCE_DIRECTORY/kustomization.yaml"
 
 if [[ -f $kustomizationFile ]]; then
-  (
-    set -x
-    shed-kubectl delete -k "$RESOURCE_DIRECTORY"
-  )
+  shed-kubectl delete -k "$RESOURCE_DIRECTORY"
 else
-  (
-    set -x
-    shed-kubectl delete -f "$RESOURCE_DIRECTORY"
-  )
+  shed-kubectl delete -f "$RESOURCE_DIRECTORY"
 fi

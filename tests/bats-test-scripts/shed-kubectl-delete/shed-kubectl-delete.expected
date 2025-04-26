@@ -1,3 +1,2 @@
-+ shed-kubectl delete -f /root/.shed/kubectl-resources/hello-world
 + kubectl --context kube-dev-1 --namespace ns-application delete -f /root/.shed/kubectl-resources/hello-world
 pod "hello-world" deleted

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -ex
+apt update -y
+
 DEBFILE=$(find . -name '*.deb')
 apt remove -y siakhooi-shed
 apt install -y "$DEBFILE"

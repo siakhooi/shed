@@ -15,13 +15,7 @@ fi
 readonly kustomizationFile="$RESOURCE_DIRECTORY/kustomization.yaml"
 
 if [[ -f $kustomizationFile ]]; then
-  (
-    set -x
-    shed-kubectl apply -k "$RESOURCE_DIRECTORY"
-  )
+  shed-kubectl apply -k "$RESOURCE_DIRECTORY"
 else
-  (
-    set -x
-    shed-kubectl apply -f "$RESOURCE_DIRECTORY"
-  )
+  shed-kubectl apply -f "$RESOURCE_DIRECTORY"
 fi

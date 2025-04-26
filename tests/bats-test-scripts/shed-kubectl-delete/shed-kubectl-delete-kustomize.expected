@@ -1,3 +1,2 @@
-+ shed-kubectl delete -k /root/.shed/kubectl-resources/hello-world-kustomize
 + kubectl --context kube-dev-1 --namespace ns-application delete -k /root/.shed/kubectl-resources/hello-world-kustomize
 pod "hello-world" deleted
