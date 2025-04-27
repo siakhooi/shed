@@ -25,6 +25,9 @@ shed-use D; **shed-helm** list
 KUBECONFIG
 : contains paths to all kube config files in *~/.shed/kubectl-config*
 
+SHED_BASH_DEBUG_MODE_OFF
+: when set to **Y**, turn off **set -x**
+
 # LICENSE
 MIT
 

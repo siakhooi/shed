@@ -3,7 +3,7 @@
 ## COMMANDS
 
 | Command                                                     | Alias             | Type     | Manpage | Docs                                   |
-| ----------------------------------------------------------- | ------------------| -------- | ------- | -------------------------------------- |
+| ----------------------------------------------------------- | ----------------- | -------- | ------- | -------------------------------------- |
 | `shed`                                                      |                   | bin      | ✅       | [📚 Doc](shed.md)                       |
 | `shed-aliases`                                              |                   | alias    | ✅       | [📚 Doc](shed-aliases.md)               |
 | `shed-config`                                               |                   | bin      | ✅       | [📚 Doc](shed-config.md)                |
@@ -54,3 +54,4 @@
 | `PS1`                             | shed-init will modified this shell prompt.                                                          |
 | `KUBECONFIG`                      | shed-init will load all files in `~/.shed/kubectl-config` directory into this environment variable. |
 | `SHED_CONFIG_DIRECTORY_RESOURCES` | kubectl resources for `shed-kubectl-apply` and `shed-kubectl-delete`.                               |
+| `SHED_BASH_DEBUG_MODE_OFF`        | when set to `Y` turn of `set -x` for `shed-kubectl` and `shed-helm`                                 |

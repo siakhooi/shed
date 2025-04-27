@@ -19,6 +19,10 @@ h - alias to shed-helm
 
 ![shed-helm](shed-helm.gif "shed-helm")
 
+## ENVIRONMENT VARIABLES
+
+- `SHED_BASH_DEBUG_MODE_OFF` - when set to 'Y', turn off `set -x`
+
 ## SEE ALSO
 
 - [shed-config](shed-config.md)

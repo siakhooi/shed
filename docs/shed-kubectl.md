@@ -15,6 +15,10 @@ k [kubectl arguments]
 ![shed-use-shed-kubectl](shed-use-shed-kubectl.gif "shed-use-shed-kubectl")
 ![shed-kubeconfig-use-shed-kubectl](shed-kubeconfig-use-shed-kubectl.gif "shed-kubeconfig-use-shed-kubectl")
 
+## ENVIRONMENT VARIABLES
+
+- `SHED_BASH_DEBUG_MODE_OFF` - when set to 'Y', turn off `set -x`
+
 ## SEE ALSO
 
 - [shed-config](shed-config.md)

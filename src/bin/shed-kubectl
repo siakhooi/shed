@@ -13,5 +13,5 @@ if [[ -n $SHED_CODE ]] && [[ -n $SHED_KUBECONFIG_NUMBER ]]; then
   fi
 fi
 
-set -x
+[[ $SHED_BASH_DEBUG_MODE_OFF == "Y" ]] || set -x
 kubectl "${OPTIONS[@]}" "$@"

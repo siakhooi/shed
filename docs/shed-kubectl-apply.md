@@ -21,5 +21,6 @@ pod/hello-world created
 ## SEE ALSO
 
 - [~/.shed/kubectl-resources](directory-kubectl-resources.md)
+- [shed-kubectl](shed-kubectl.md)
 - [shed-kubectl-delete](shed-kubectl-delete.md)
 - [shed-kubectl-resources](shed-kubectl-resources.md)
