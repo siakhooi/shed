@@ -2,37 +2,37 @@ FROM debian:latest
 
 ARG KIND_VERSION=v0.19.0
 
-RUN apt update -y && \
-    apt upgrade -y && \
-    apt install -y wget curl gpg git bash-completion apt-transport-https make && \
-    wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq && \
-    curl -L -o /usr/bin/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x /usr/bin/kubectl && \
-    curl -L -o /usr/bin/kind https://kind.sigs.k8s.io/dl/${KIND_VERSION}/kind-linux-amd64 && chmod +x /usr/bin/kind && \
-    (curl https://baltocdn.com/helm/signing.asc | gpg --dearmor > /usr/share/keyrings/helm.gpg ) && \
-    (echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" > /etc/apt/sources.list.d/helm-stable-debian.list) && \
-    wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list && \
-    wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg && \
-    install -m 0755 -d /etc/apt/keyrings && \
-    (curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg ) && \
-    chmod a+r /etc/apt/keyrings/docker.gpg && \
-    (echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" >/etc/apt/sources.list.d/docker.list ) && \
-    apt update -y && \
-    apt install -y helm docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin && \
-    kubectl completion bash > /root/.kubectl-completion && \
-    helm completion bash > /root/.helm-completion && \
-    echo "source ~/.kubectl-completion" >> ~/.bashrc && \
-    echo "source ~/.helm-completion" >> ~/.bashrc && \
-    echo "source /etc/bash_completion" >> ~/.bashrc && \
-    git config --global user.email "siakhooi@gmail.com" && \
-    git config --global user.name "Siak Hooi"  && \
-    git config --global --add safe.directory /working && \
-    apt install -y bats nano && \
-    apt upgrade -y && \
-    git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-support.git /test_helper/bats-support && \
-    rm /test_helper/bats-support/.git && \
-    git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-assert.git /test_helper/bats-assert && \
-    rm test_helper/bats-assert/.git && \
-    git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-file.git /test_helper/bats-file && \
-    rm test_helper/bats-file/.git && \
-    systemctl enable docker
+RUN apt update -y
+RUN apt upgrade -y
+RUN apt install -y wget curl gpg git bash-completion apt-transport-https make
+RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq
+RUN curl -L -o /usr/bin/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x /usr/bin/kubectl
+RUN curl -L -o /usr/bin/kind https://kind.sigs.k8s.io/dl/${KIND_VERSION}/kind-linux-amd64 && chmod +x /usr/bin/kind
+RUN curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey | gpg --dearmor > /usr/share/keyrings/helm.gpg
+RUN echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main" > /etc/apt/sources.list.d/helm-stable-debian.list
+RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list
+RUN wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg
+RUN install -m 0755 -d /etc/apt/keyrings
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+RUN chmod a+r /etc/apt/keyrings/docker.gpg
+RUN echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" >/etc/apt/sources.list.d/docker.list
+RUN apt update -y
+RUN apt install -y helm docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+RUN kubectl completion bash > /root/.kubectl-completion
+RUN helm completion bash > /root/.helm-completion
+RUN echo "source ~/.kubectl-completion" >> ~/.bashrc
+RUN echo "source ~/.helm-completion" >> ~/.bashrc
+RUN echo "source /etc/bash_completion" >> ~/.bashrc
+RUN git config --global user.email "siakhooi@gmail.com"
+RUN git config --global user.name "Siak Hooi"
+RUN git config --global --add safe.directory /working
+RUN apt install -y bats nano
+RUN apt upgrade -y
+RUN git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-support.git /test_helper/bats-support
+RUN rm /test_helper/bats-support/.git
+RUN git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-assert.git /test_helper/bats-assert
+RUN rm test_helper/bats-assert/.git
+RUN git clone --separate-git-dir=$(mktemp -u) https://github.com/bats-core/bats-file.git /test_helper/bats-file
+RUN rm test_helper/bats-file/.git
+RUN systemctl enable docker
 CMD ["/bin/bash"]
