@@ -1,11 +1,5 @@
 #!/bin/bash
 
-function shed-show-git-branch() {
-  local R
-  R=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
-  echo.green -n "$R"
-}
-
 function shed-current-context() {
   local R=""
   if [[ -n "$SHED_CODE" ]]; then
@@ -33,4 +27,4 @@ function shed-current-context() {
   echo.yellow -n "$R"
 }
 
-export PS1="\[\e[01;32m\]\u@\h\[\e[0m\]:\$(shed-current-context)\[\e[01;34m\]\w\[\e[0m\]\$(shed-show-git-branch)\$ "
+export PS1="\[\e[01;32m\]\u@\h\[\e[0m\]:\$(shed-current-context)\[\e[01;34m\]\w\[\e[0m\]\$ "

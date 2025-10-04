@@ -15,7 +15,7 @@ Features:
 - Supports up to 10 KubeConfig per shed[📚](docs/file-shed-config.yaml.md).
 - Able to work with different Shed[📚](docs/shed-use.md) and/or KubeConfig[📚](docs/shed-kubeconfig-use.md) in different shell sessions.
 - Auto include kubectl config file into `KUBECONFIG` environment on start up [📚](docs/directory-kubectl-config.md).
-- Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on.
+- Modified shell prompt for better visibility of which Shed/KubeConfig the shell session is working on. (function: `shed-current-context`)
 - Hooks to extends shed functionalities on:
   - shed-init [📚](docs/directory-init.d-shed-init.md) - when the shell session started.
   - shed-use [📚](docs/directory-init.d-shed-use.md)- when switch to different Shed using command `shed-use`[📚](docs/shed-use.md).
