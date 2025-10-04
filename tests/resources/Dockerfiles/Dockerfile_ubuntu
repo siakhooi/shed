@@ -1,14 +1,16 @@
-FROM ubuntu:latest
+FROM ubuntu:noble-20250415.1
+# https://hub.docker.com/_/ubuntu/tags?name=noble
 ARG KIND_VERSION=v0.19.0
+ARG KUBECTL_VERSION=v1.32.3
+ARG HELM_VERSION=v3.17.3
 
 RUN apt update -y
 RUN apt upgrade -y
 RUN apt install -y wget curl gpg git bash-completion apt-transport-https make
 RUN wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq
-RUN curl -L -o /usr/bin/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x /usr/bin/kubectl
+RUN curl -L -o /usr/bin/kubectl "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl" && chmod +x /usr/bin/kubectl
 RUN curl -L -o /usr/bin/kind https://kind.sigs.k8s.io/dl/${KIND_VERSION}/kind-linux-amd64 && chmod +x /usr/bin/kind
-RUN curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey | gpg --dearmor > /usr/share/keyrings/helm.gpg
-RUN echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main" > /etc/apt/sources.list.d/helm-stable-debian.list
+RUN curl -L -o /tmp/helm.tar.gz https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz  &&  tar -xf /tmp/helm.tar.gz -C /usr/bin --strip-components=1 linux-amd64/helm
 RUN wget https://siakhooi.github.io/apt/siakhooi-apt.list -O /etc/apt/sources.list.d/siakhooi-apt.list
 RUN wget https://siakhooi.github.io/apt/siakhooi-apt.gpg  -O /usr/share/keyrings/siakhooi-apt.gpg
 RUN install -m 0755 -d /etc/apt/keyrings
@@ -16,7 +18,7 @@ RUN (curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o 
 RUN chmod a+r /etc/apt/keyrings/docker.gpg
 RUN (echo "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" >/etc/apt/sources.list.d/docker.list )
 RUN apt update -y
-RUN apt install -y helm docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+RUN apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 RUN kubectl completion bash > /root/.kubectl-completion
 RUN helm completion bash > /root/.helm-completion
 RUN echo "source ~/.kubectl-completion" >> ~/.bashrc

@@ -16,17 +16,15 @@ clean-bats-logs:
 
 set-version:
 	scripts/set-version.sh
-build: clean
+build:
 	./scripts/shellcheck.sh
 	./scripts/build.sh
-git-commit-and-push:
+commit:
 	scripts/git-commit-and-push.sh
-create-release:
+release:
 	scripts/create-release.sh
 
-delete-release:
-	gh release delete --cleanup-tag 1.17.1
-
+all: clean set-version build
 #
 # Full Test
 #

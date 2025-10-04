@@ -2,7 +2,8 @@ name: Run all tests
 on: workflow_call
 
 jobs:
-  bats-test-debian:
-    uses: ./.github/workflows/test-with-bats-debian.yml
+  # disable due to bash: initialize_job_control: no job control in background: Bad file descriptor
+  # bats-test-debian:
+  #   uses: ./.github/workflows/test-with-bats-debian.yml
   bats-test-ubuntu:
     uses: ./.github/workflows/test-with-bats-ubuntu.yml

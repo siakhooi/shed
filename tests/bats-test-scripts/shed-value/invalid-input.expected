@@ -1,1 +1,1 @@
-Error: 1:33: invalid input text "xxxxxx"
+Error: 1:33: lexer: invalid input text "xxxxxx"
