@@ -1,3 +1,10 @@
 #!/bin/bash
 
-export SHED_VERSION=1.30.0
+readonly COMPONENT_NAME=siakhooi-shed
+
+if command -v apt >/dev/null 2>&1; then
+  apt show "$COMPONENT_NAME" 2>/dev/null | grep 'Version:' | sed 's/Version: //'
+else
+  echo "apt not found." >&2
+  exit 1
+fi
