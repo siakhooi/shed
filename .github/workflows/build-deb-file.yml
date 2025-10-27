@@ -11,13 +11,13 @@ jobs:
           fetch-depth: 0
       - run: ./scripts/build-setup.sh
       - run: ./scripts/build.sh
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: deliverables
           path: |
             ./*.deb
             ./*.deb.*sum
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: target
           path: ./target/

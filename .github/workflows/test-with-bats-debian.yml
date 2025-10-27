@@ -12,7 +12,7 @@ jobs:
           name: deliverables
           path: ./
       - run: ./tests/bin/docker-run-bats-test-debian.sh
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: bats-test-result-debian
           path: ./tests/bats-test-result-*.log
