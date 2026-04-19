@@ -1,6 +1,9 @@
 name: Build all images
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 */14 * *'
 
 jobs:
   build-debian-bats-image:
