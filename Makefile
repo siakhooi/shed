@@ -19,8 +19,6 @@ set-version:
 build:
 	./scripts/shellcheck.sh
 	./scripts/build.sh
-commit:
-	scripts/git-commit-and-push.sh
 release:
 	scripts/create-release.sh
 
