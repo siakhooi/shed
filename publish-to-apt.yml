@@ -2,7 +2,7 @@ repo: siakhooi/apt
 branch: main
 git_commit_user: shed
 git_commit_email: shed@siakhooi.github.io
-git_commit_message: "shed: Auto deploy"
+git_commit_message: "{repo_name}: {ref_name} | {commit_short}"
 
 files:
   - source: siakhooi-shed_*_amd64.deb
