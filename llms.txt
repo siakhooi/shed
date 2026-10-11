@@ -1,0 +1,71 @@
+# Shed
+
+> Bash toolkit for working in several Kubernetes clusters and namespaces at once. A shed is one environment (a cluster, a set of clusters, a namespace, or a set of namespaces). A KubeConfig is one kubectl context plus an optional namespace. Each shell session picks its own shed and KubeConfig through environment variables.
+
+Installed as the Debian package `siakhooi-shed`. Users enable it with `source /usr/lib/shed/shed-init` (typically from `~/.bashrc`). That sources `/usr/lib/shed/init.d/shed-init/*`, then `~/.shed/init.d/shed-init/*`, then selects the startup shed. Commands are also reachable as `shed <subcommand>` (see `src/bin/shed`). Most kubectl and helm wrappers print the real command they run (`set -x`); set `SHED_BASH_DEBUG_MODE_OFF=Y` to silence that.
+
+Runtime state lives in the shell, not in a daemon: `SHED_CODE`, `SHED_KUBECONFIG_NUMBER`, `KUBECONFIG`, and a rewritten `PS1`. Config is YAML at `$SHED_CONFIG_FILE` (default `~/.shed/config.yaml`), read with `yq`. External tools: `yq` and `kubectl` are required; `helm` is optional. Each shed holds up to 10 KubeConfigs, selected with `shed-kubeconfig-use N` or the aliases `c0`–`c9`.
+
+Repository: https://github.com/siakhooi/shed. Paths below are relative to the repo root. User-facing docs are in `docs/`; man-page sources (pandoc Markdown) are in `src/md/`.
+
+## Overview
+
+- [README](README.md): install from the siakhooi apt repo, first-time setup, and the everyday flow (`shed-use`, then `c0`, then `k` or `h`)
+- [Documentation index](docs/documentation.md): every command, file, directory, and environment variable, with aliases
+- [shed](docs/shed.md): terminology and the `shed <subcommand>` dispatcher
+
+## Configuration
+
+- [config.yaml](docs/file-shed-config.yaml.md): schema for `sheds[]` (`code`, `name`, `kubeconfig[]` with `context`, `namespace`, `prompt-name`), `shed-init`, and `shed-kubeconfig-use`
+- [Sample config](src/share/config.yaml.sample): the file copied to `~/.shed/config.yaml` when none exists
+- [shed-config](docs/shed-config.md): print the active config path and file
+- [shed-config-edit](docs/shed-config-edit.md): open the config in `$EDITOR` (default `vi`)
+- [shed-config-get](docs/shed-config-get.md): read one YAML path from the config
+- [kubectl config directory](docs/directory-kubectl-config.md): files in `~/.shed/kubectl-config` are appended to `KUBECONFIG` at init when `shed-init.load-kubectl-config` is true
+- [kubectl resources directory](docs/directory-kubectl-resources.md): manifests for `shed-kubectl-apply` and `shed-kubectl-delete`, default `~/.shed/kubectl-resources`
+- [shed-init hooks](docs/directory-init.d-shed-init.md): user scripts sourced when the shell starts
+- [shed-use hooks](docs/directory-init.d-shed-use.md): user scripts sourced when `shed-use` changes the current shed
+- [shed-kubeconfig-use hooks](docs/directory-init.d-shed-kubeconfig-use.md): user scripts sourced when the KubeConfig number changes
+
+## Commands
+
+- [shed-use](docs/shed-use.md): `shed-use <shedCode>` sets `SHED_CODE` for this shell
+- [shed-kubeconfig-use](docs/shed-kubeconfig-use.md): `shed-kubeconfig-use N` and aliases `c0`–`c9`; may also `kubectl config use-context` when configured
+- [shed-list](docs/shed-list.md): list sheds from the config
+- [shed-list-code](docs/shed-list-code.md): list shed codes only
+- [shed-contexts](docs/shed-contexts.md): show contexts; alias `sc`
+- [shed-env](docs/shed-env.md): print shed-related environment variables
+- [shed-aliases](docs/shed-aliases.md): list the short aliases
+- [shed-kubectl](docs/shed-kubectl.md): `k` / `shed kubectl` runs kubectl against the current shed and KubeConfig
+- [shed-helm](docs/shed-helm.md): `h` / `shed helm` runs helm the same way
+- [shed-kubectl-apply](docs/shed-kubectl-apply.md): `ka` applies a named resource from the resources directory
+- [shed-kubectl-delete](docs/shed-kubectl-delete.md): `kd` deletes a named resource from the resources directory
+- [shed-kubectl-resources](docs/shed-kubectl-resources.md): list those named resources
+- [shed-kubectl-exec-sh](docs/shed-kubectl-exec-sh.md): `k-sh` execs `sh` in a pod
+- [shed-kubectl-exec-bash](docs/shed-kubectl-exec-bash.md): `k-bash` execs `bash` in a pod
+- [shed-kubectl-logs-follow](docs/shed-kubectl-logs-follow.md): `k-logs-f` follows pod logs
+- [shed-kubectl-logs-previous](docs/shed-kubectl-logs-previous.md): `k-logs-p` shows the previous container’s logs
+- [shed-kubectl-scale](docs/shed-kubectl-scale.md): `k-scale <replicas> <resource>`
+- [shed-kubectl-secret-decode](docs/shed-kubectl-secret-decode.md): `k-secret-decode` prints decoded Secret data
+- [shed-value](docs/shed-value.md): read one value from the current shed’s config
+- [shed-values](docs/shed-values.md): print the current shed’s values
+- [shed-value-key-list](docs/shed-value-key-list.md): list value keys
+- [shed-version](docs/shed-version.md): print the installed version
+
+## Source
+
+- [shed-init](src/lib/shed-init): session entrypoint; creates `~/.shed` and a sample config, then sources init.d scripts
+- [shed-init shed-use](src/lib/shed-init_shed-use): applies `shed-init.shed` when the shell starts
+- [Common functions](src/lib/shed-common-functions): shared helpers used by the commands
+- [System init.d](src/lib/init.d/shed-init): shipped hooks that define aliases, load kubeconfigs, and rewrite the prompt
+- [Command scripts](src/bin): one executable per command; `shed` dispatches to them
+- [Man page sources](src/md): pandoc Markdown for the `shed*.1` pages
+- [Dependencies](Dependencies.md): required packages, including `yq`, `kubectl`, `siakhooi-devutils-echo-colors`, and `siakhooi-textutils`
+- [Makefile](Makefile): `make build` runs shellcheck and `scripts/build.sh`; `make bats-debian` and `make bats-ubuntu` run the Bats suites in Docker
+
+## Optional
+
+- [Features changelog](Features-Changelog.md): feature history
+- [Bats tests](tests/bats-test-scripts): one directory per command, with `.bats` files and expected output
+- [GitHub workflows](.github/workflows): shellcheck, Bats on Debian and Ubuntu, image build, deb build, and apt publish
+- [License](LICENSE): GPL-3.0
